@@ -46,8 +46,6 @@ const Carta = () => {
             E é exatamente sobre isso que será o encontro mais aguardado desta temporada…
           </p>
         </div>
-        
-        <div className="text-center text-5xl mt-12 opacity-0 animate-fade-in delay-500">💌</div>
       </div>
     </section>
   );

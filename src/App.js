@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Carta from './components/Carta';
 import Evento from './components/Evento';
@@ -12,6 +13,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Hero />
       <Carta />
       <Evento />

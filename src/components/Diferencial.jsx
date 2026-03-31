@@ -15,7 +15,7 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4 bg-navy">
+    <section id="diferencial" className="py-24 px-4 bg-navy scroll-mt-20">
       <div className="container mx-auto max-w-5xl">
         <div 
           ref={titleRef}
