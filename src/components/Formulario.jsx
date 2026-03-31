@@ -7,8 +7,15 @@ const Formulario = () => {
     email: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    await fetch('http://localhost/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
     alert(`Obrigado, ${formData.nome}! Seu convite exclusivo será enviado em breve.`);
     setFormData({ nome: '', whatsapp: '', email: '' });
   };
