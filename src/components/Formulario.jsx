@@ -57,7 +57,7 @@ const Formulario = () => {
             onChange={handleChange}
             placeholder="NOME"
             required
-            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide uppercase focus:outline-none focus:border-gold transition-colors"
+            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
           />
           <input
             type="tel"
@@ -66,7 +66,7 @@ const Formulario = () => {
             onChange={handleChange}
             placeholder="WHATSAPP"
             required
-            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide uppercase focus:outline-none focus:border-gold transition-colors"
+            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
           />
           <input
             type="email"
@@ -75,7 +75,7 @@ const Formulario = () => {
             onChange={handleChange}
             placeholder="E-MAIL"
             required
-            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide uppercase focus:outline-none focus:border-gold transition-colors"
+            className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
           />
           <button
             type="submit"
