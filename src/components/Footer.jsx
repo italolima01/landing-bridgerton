@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="py-24 px-4 bg-navy text-center">
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-5xl mb-8">🕯</div>
         
         <p className="font-playfair text-xl md:text-2xl text-gray-400 leading-relaxed mb-8 italic">

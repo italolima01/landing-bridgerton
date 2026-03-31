@@ -14,7 +14,7 @@ const Evento = () => {
         <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
       </video>
       
-      <div className="relative z-10 container mx-auto max-w-6xl">
+      <div className="relative z-10 container mx-auto max-w-5xl">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Coluna Esquerda */}
           <div>
