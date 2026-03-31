@@ -1,6 +1,10 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Carta = () => {
+  const [iconRef, iconVisible] = useScrollAnimation();
+  const [contentRef, contentVisible] = useScrollAnimation();
+
   return (
     <section className="relative py-24 px-4 bg-cream overflow-hidden">
       {/* Background Image */}
@@ -12,8 +16,21 @@ const Carta = () => {
       />
       
       <div className="relative z-10 container mx-auto max-w-4xl">
+        <div 
+          ref={iconRef}
+          className={`text-center text-5xl mb-12 text-gold transition-all duration-800 ${
+            iconVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          ✦
+        </div>
         
-        <div className="font-playfair text-xl md:text-2xl leading-loose text-navy text-center space-y-8">
+        <div 
+          ref={contentRef}
+          className={`font-playfair text-xl md:text-2xl leading-loose text-navy text-center space-y-8 transition-all duration-1000 ${
+            contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <p className="italic text-navy">Prezada empreendedora,</p>
           
           <p>
@@ -30,6 +47,8 @@ const Carta = () => {
             E é exatamente sobre isso que será o encontro mais aguardado desta temporada…
           </p>
         </div>
+        
+        <div className="text-center text-5xl mt-12 opacity-0 animate-fade-in delay-500">💌</div>
       </div>
     </section>
   );
