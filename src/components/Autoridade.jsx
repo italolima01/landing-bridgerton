@@ -117,7 +117,12 @@ const Autoridade = () => {
           ))}
         </div>
         
-        <div className="text-center space-y-4 text-lg text-navy-light max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
+        <div 
+          className={`text-center space-y-4 text-lg text-navy-light max-w-3xl mx-auto transition-all duration-800 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ transitionDelay: '600ms' }}
+        >
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
           <p className="font-playfair text-2xl text-gold italic font-semibold">

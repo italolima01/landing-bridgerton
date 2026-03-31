@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Formulario = () => {
+  const [titleRef, titleVisible] = useScrollAnimation();
+  const [leftRef, leftVisible] = useScrollAnimation();
+  const [rightRef, rightVisible] = useScrollAnimation();
   const [formData, setFormData] = useState({
     nome: '',
     whatsapp: '',
@@ -30,13 +34,23 @@ const Formulario = () => {
   return (
     <section id="formulario" className="py-24 px-4 bg-white scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-12">
+        <div 
+          ref={titleRef}
+          className={`text-center text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           LISTA DE ESPERA
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-16">
 
-          <div className="flex-1 text-center md:text-left space-y-6 text-lg text-navy-light leading-relaxed">
+          <div 
+            ref={leftRef}
+            className={`flex-1 text-center md:text-left space-y-6 text-lg text-navy-light leading-relaxed transition-all duration-800 ${
+              leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}
+          >
             <h2 className="text-4xl md:text-5xl text-navy leading-tight">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
@@ -50,7 +64,12 @@ const Formulario = () => {
             </p>
           </div>
 
-          <div className="flex-1 w-full">
+          <div 
+            ref={rightRef}
+            className={`flex-1 w-full transition-all duration-800 ${
+              rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
             <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
