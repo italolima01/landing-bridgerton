@@ -1,12 +1,20 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Diamantes = () => {
+  const [contentRef, contentVisible] = useScrollAnimation();
+
   return (
     <section className="py-24 px-4 bg-navy relative overflow-hidden min-h-[500px]">
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
 
-          <div className="flex-1 text-center md:text-left">
+          <div 
+            ref={contentRef}
+            className={`flex-1 text-center md:text-left transition-all duration-800 ${
+              contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight">
               E nesta temporada…<br />algumas serão escolhidas
             </h2>
