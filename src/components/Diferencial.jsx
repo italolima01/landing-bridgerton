@@ -2,12 +2,12 @@ import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skills = [
-  { icon: '🎭', name: '— Shadow' },
-  { icon: '✦', name: '— Fios Realistas' },
-  { icon: '💋', name: '— Micropigmentação Labial' },
-  { icon: '✨', name: '— Brow Lamination' },
-  { icon: '👑', name: '— Posicionamento' },
-  { icon: '📈', name: '— Marketing' },
+  { icon: '🎭', name: '— Shadow', img: '/assets/img/dream-shadow.jpg' },
+  { icon: '✦', name: '— Fios Realistas', img: '/assets/img/fios-realistas.jpeg' },
+  { icon: '💋', name: '— Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg' },
+  { icon: '✨', name: '— Brow Lamination', img: '/assets/img/brow-lamination.jpg' },
+  { icon: '👑', name: '— Posicionamento', img: null },
+  { icon: '📈', name: '— Marketing', img: null },
 ];
 
 const Diferencial = () => {
@@ -43,13 +43,19 @@ const Diferencial = () => {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className={`bg-white/5 border border-gold/20 rounded-2xl p-8 text-center hover:bg-gold/10 hover:border-gold hover:-translate-y-2 transition-all duration-300 ${
+              className={`bg-white/5 border border-gold/20 rounded-2xl overflow-hidden text-center hover:bg-gold/10 hover:border-gold hover:-translate-y-2 transition-all duration-300 ${
                 gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl mb-4">{skill.icon}</div>
-              <div className="text-lg text-cream">{skill.name}</div>
+              {skill.img ? (
+                <img src={skill.img} alt={skill.name} className="w-full h-40 object-cover" />
+              ) : (
+                <div className="p-8 pb-0">
+                  <div className="text-5xl mb-4">{skill.icon}</div>
+                </div>
+              )}
+              <div className={`text-lg text-cream ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
             </div>
           ))}
         </div>
