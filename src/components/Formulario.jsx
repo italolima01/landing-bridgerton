@@ -21,7 +21,7 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 bg-white">
+    <section id="formulario" className="py-24 px-4 bg-white scroll-mt-20">
       <div className="container mx-auto max-w-3xl">
         <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
           LISTA DE ESPERA

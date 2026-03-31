@@ -6,7 +6,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-16 bg-navy">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 py-16 bg-navy">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-15"

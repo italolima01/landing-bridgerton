@@ -40,7 +40,7 @@ const Autoridade = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-cream">
+    <section id="autoridade" className="py-24 px-4 bg-cream scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <div 
           ref={titleRef}
