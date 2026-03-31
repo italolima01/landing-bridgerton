@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Carta from './components/Carta';
+import Envelope from './components/Envelope';
 import Evento from './components/Evento';
 import Diferencial from './components/Diferencial';
 import Autoridade from './components/Autoridade';
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Carta />
+      <Envelope />
       <Evento />
       <Diferencial />
       <Autoridade />
