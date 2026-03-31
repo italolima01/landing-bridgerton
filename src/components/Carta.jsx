@@ -6,14 +6,17 @@ const Carta = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="relative py-24 px-4 bg-cream overflow-hidden">
-      {/* Background Image */}
+    <section className="relative py-24 px-4 overflow-hidden">
+      {/* Background Image - Papel envelhecido */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-15 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`
         }}
       />
+      
+      {/* Overlay sutil para melhorar legibilidade */}
+      <div className="absolute inset-0 bg-cream/30" />
       
       <div className="relative z-10 container mx-auto max-w-4xl">
         <div 
