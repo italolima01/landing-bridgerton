@@ -66,7 +66,11 @@ export default function Envelope() {
                   aria-label="Abrir envelope"
                   type="button"
                 >
-                  E
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/img/selo.png`}
+                    alt="Selo"
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  />
                 </button>
               </div>
             </div>
