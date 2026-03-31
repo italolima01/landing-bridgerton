@@ -3,7 +3,7 @@ import React from 'react';
 const Urgencia = () => {
   return (
     <section className="py-24 px-4 bg-cream">
-      <div className="container mx-auto max-w-4xl">      
+      <div className="container mx-auto max-w-5xl">      
         <h2 className="text-4xl md:text-5xl text-navy text-center mb-12 leading-tight">
           O último e mais aguardado espetáculo da temporada está prestes a começar
         </h2>

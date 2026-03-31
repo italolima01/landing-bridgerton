@@ -41,7 +41,7 @@ const Autoridade = () => {
 
   return (
     <section id="autoridade" className="py-24 px-4 bg-cream scroll-mt-20">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-5xl">
         <div 
           ref={titleRef}
           className={`transition-all duration-800 ${
