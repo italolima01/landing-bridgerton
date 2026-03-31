@@ -128,23 +128,15 @@
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   z-index: 30;
   pointer-events: auto;
   border: 0;
   padding: 0;
   cursor: pointer;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 25%, #f5e6b3, #c9a84c 55%, #8a6c20);
-  color: #5e4312;
-  font-family: 'Playfair Display', 'Times New Roman', serif;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: bold;
-  line-height: 80px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.35), 0 0 30px rgba(201,168,76,0.45);
+  background: transparent;
+  box-shadow: none;
   transition: transform 0.3s ease;
   animation: sealPulse 2s ease-in-out infinite, sealGlow 3s ease-in-out infinite alternate;
 }
