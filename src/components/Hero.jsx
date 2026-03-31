@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wide opacity-0 animate-fade-in-up delay-100">
-          EVOLUTIONS<br />BROWS
+          EVOLUTION<br />BROWS
         </h1>
         
         <h2 className="text-3xl md:text-4xl text-gold mb-8 font-semibold tracking-wide opacity-0 animate-fade-in-up delay-200">
@@ -43,7 +43,7 @@ const Hero = () => {
           onClick={scrollToForm}
           className="bg-gold text-navy px-10 py-4 rounded-full font-bold text-sm tracking-wide uppercase hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 opacity-0 animate-scale-in delay-500"
         >
-          👉 QUERO ENTRAR PARA A LISTA DE ESPERA
+        QUERO ENTRAR PARA A LISTA DE ESPERA
         </button>
       </div>
     </section>
