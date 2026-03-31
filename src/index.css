@@ -114,3 +114,67 @@
     transform: scale(1);
   }
 }
+
+@keyframes penWrite {
+  0% {
+    transform: translateY(0) rotate(-5deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-3px) rotate(-8deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(2px) rotate(-3deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-2px) rotate(-6deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0) rotate(-5deg);
+    opacity: 1;
+  }
+}
+
+@keyframes foldEnvelope {
+  0% {
+    transform: perspective(1000px) rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: perspective(1000px) rotateX(-90deg) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(-180deg) scale(0) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-pen-write {
+  animation: penWrite 0.8s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+}
+
+.animate-fold-envelope {
+  animation: foldEnvelope 0.8s ease-in-out forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2s ease-in-out infinite;
+}
+
+.cursor-feather {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" stroke="%23d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="%23d4af37"/><line x1="16" y1="8" x2="2" y2="22" stroke="%23d4af37" stroke-width="2" stroke-linecap="round"/></svg>') 2 22, text;
+}
