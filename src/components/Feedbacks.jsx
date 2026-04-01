@@ -18,7 +18,7 @@ const Feedbacks = () => {
 
   return (
     <section className="py-24 px-4 bg-navy">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-6xl">
         <div
           ref={titleRef}
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -33,23 +33,39 @@ const Feedbacks = () => {
 
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-start"
         >
-          {feedbacks.map((file, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl overflow-hidden border border-gold/20 hover:border-gold transition-all duration-300 hover:-translate-y-1 ${
-                gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
-                alt={`Feedback ${index + 1}`}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          ))}
+          {feedbacks.map((file, index) => {
+            // Define tamanhos variados para criar um layout dinâmico
+            const sizes = [
+              'col-span-2 md:col-span-2', // Grande
+              'col-span-1', // Pequeno
+              'col-span-1', // Pequeno
+              'col-span-2 md:col-span-1', // Médio
+              'col-span-1', // Pequeno
+              'col-span-1', // Pequeno
+              'col-span-2 md:col-span-2', // Grande
+              'col-span-2 md:col-span-1', // Médio
+            ];
+
+            return (
+              <div
+                key={index}
+                className={`${sizes[index]} ${
+                  gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 80}ms` }}
+              >
+                <div className="rounded-xl overflow-hidden border border-gold/20 hover:border-gold transition-all duration-300 hover:-translate-y-1 w-fit">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
+                    alt={`Feedback ${index + 1}`}
+                    className="w-full h-auto object-contain max-h-[400px] block"
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
