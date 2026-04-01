@@ -1,6 +1,10 @@
 import React from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Evento = () => {
+  const [leftRef, leftVisible] = useScrollAnimation();
+  const [rightRef, rightVisible] = useScrollAnimation();
+
   return (
     <section id="evento" className="relative py-24 px-4 bg-navy overflow-hidden scroll-mt-20">
       {/* Background Video */}
@@ -17,7 +21,12 @@ const Evento = () => {
       <div className="relative z-10 container mx-auto max-w-5xl">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Coluna Esquerda */}
-          <div>
+          <div 
+            ref={leftRef}
+            className={`transition-all duration-800 ${
+              leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}
+          >
             <div className="text-gold text-xs font-bold tracking-[3px] mb-6">
               SOBRE O EVENTO
             </div>
@@ -28,7 +37,12 @@ const Evento = () => {
           </div>
           
           {/* Coluna Direita */}
-          <div className="space-y-6 text-base text-gray-300 leading-relaxed">
+          <div 
+            ref={rightRef}
+            className={`space-y-6 text-base text-gray-300 leading-relaxed transition-all duration-800 ${
+              rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
             <p>Este não é mais um evento sobre técnicas.</p>
             
             <p>
