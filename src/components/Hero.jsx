@@ -15,6 +15,8 @@ const Hero = () => {
       
       {/* Dark overlay para melhorar contraste */}
       <div className="absolute inset-0 bg-black/40" />
+      {/* Gradiente de transição na base */}
+      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, #0f1419)' }} />
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl">

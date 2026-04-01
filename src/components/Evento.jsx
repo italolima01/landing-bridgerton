@@ -6,13 +6,17 @@ const Evento = () => {
   const [rightRef, rightVisible] = useScrollAnimation();
 
   return (
-    <section id="evento" className="relative py-24 px-4 bg-navy overflow-hidden scroll-mt-20">
+    <section id="evento" className="relative py-24 px-4 bg-black overflow-hidden scroll-mt-20">
+      {/* Gradientes de transição */}
+      <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #0f1419, transparent)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to top, #0f1419, transparent)' }} />
+
       {/* Background Video */}
-      <video 
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
-        autoPlay 
-        muted 
-        loop 
+      <video
+        className="absolute inset-0 w-full h-full object-cover opacity-80"
+        autoPlay
+        muted
+        loop
         playsInline
       >
         <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
