@@ -107,7 +107,7 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 bg-white scroll-mt-20">
+    <section id="formulario" className="py-24 px-4 bg-navy scroll-mt-20">
       {/* Cursor de pena customizado */}
       {cursorPosition.show && (
         <div 
@@ -140,11 +140,11 @@ const Formulario = () => {
 
           <div 
             ref={leftRef}
-            className={`flex-1 text-center md:text-left space-y-6 text-lg text-navy-light leading-relaxed transition-all duration-800 ${
+            className={`flex-1 text-center md:text-left space-y-6 text-lg text-gray-300 leading-relaxed transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl text-navy leading-tight">
+            <h2 className="text-4xl md:text-5xl text-white leading-tight">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
             <p>
