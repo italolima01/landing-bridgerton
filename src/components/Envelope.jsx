@@ -2,21 +2,21 @@ import { useState } from "react";
 import "./Envelope.css";
 
 export default function Envelope() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [showCarta, setShowCarta] = useState(false);
+  const [opened, setOpened] = useState(false);
 
   const handleOpen = () => {
-    if (isOpen) return;
-    setIsOpen(true);
-    // Após animação do envelope, mostra a carta no fluxo normal
-    setTimeout(() => setShowCarta(true), 3200);
+    if (opened) return;
+    setOpened(true);
   };
 
   return (
     <div className="stage">
-      {showCarta ? (
-        /* Carta no fluxo normal, sem position absolute */
-        <div className="carta-final">
+      <div className={`carta-reveal-container ${opened ? "is-open" : ""}`}>
+
+        <div className="envelope-back" />
+
+        {/* Carta sobe por dentro do envelope */}
+        <article className="carta-wrapper">
           <div
             className="carta-content"
             style={{
@@ -40,44 +40,38 @@ export default function Envelope() {
               </p>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={`carta-reveal-container ${isOpen ? "is-open" : ""}`}>
+        </article>
 
-          {/* Carta sobe por dentro do envelope */}
-          <div className="carta-wrapper">
-            <div className="carta-inner-preview" />
+        {/* Máscara que esconde a carta atrás da borda inferior do envelope */}
+        <div className="pocket-mask" />
+
+        {/* Frente do envelope */}
+        <div className="envelope-front">
+          <div className="envelope-pocket">
+            <div className="envelope-fold-left" />
+            <div className="envelope-fold-right" />
+            <div className="envelope-fold-bottom" />
           </div>
-
-          {/* Envelope fica na frente */}
-          <div className="envelope-box">
-            <div className="envelope-back" />
-            <div className="envelope-front">
-              <div className="envelope-pocket">
-                <div className="envelope-fold-left" />
-                <div className="envelope-fold-right" />
-                <div className="envelope-fold-bottom" />
-              </div>
-              <div className="envelope-flap-wrapper">
-                <div className="envelope-flap-shape" />
-                <button
-                  className="envelope-seal"
-                  onClick={handleOpen}
-                  aria-label="Abrir envelope"
-                  type="button"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/img/selo.png`}
-                    alt="Selo"
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-
         </div>
-      )}
+
+        {/* Aba + selo — separados para o rotateX funcionar */}
+        <div className="envelope-flap-wrapper">
+          <div className="envelope-flap-shape" />
+          <button
+            className="envelope-seal"
+            onClick={handleOpen}
+            aria-label="Abrir envelope"
+            type="button"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/img/selo.png`}
+              alt="Selo"
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            />
+          </button>
+        </div>
+
+      </div>
     </div>
   );
 }
