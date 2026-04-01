@@ -60,13 +60,20 @@ const Diferencial = () => {
           ))}
         </div>
         
-        <p className="text-lg text-gray-400 text-center mb-6 leading-relaxed opacity-0 animate-fade-in-up delay-300">
-          Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
-        </p>
-        
-        <p className="font-playfair text-2xl text-gold text-center italic font-semibold mt-8 opacity-0 animate-fade-in-up delay-400">
-          Porque talento sem estratégia… passa despercebido.
-        </p>
+        <div 
+          className={`transition-all duration-800 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ transitionDelay: '600ms' }}
+        >
+          <p className="text-lg text-gray-400 text-center mb-6 leading-relaxed">
+            Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
+          </p>
+          
+          <p className="font-playfair text-2xl text-gold text-center italic font-semibold mt-8">
+            Porque talento sem estratégia… passa despercebido.
+          </p>
+        </div>
       </div>
     </section>
   );
