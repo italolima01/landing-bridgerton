@@ -174,12 +174,14 @@
   opacity: 0;
   transition:
     transform 1.8s ease-in-out 1.3s,
-    opacity 0.4s ease 1.3s;
+    opacity 0.4s ease 1.3s,
+    z-index 0s ease 1.3s;
 }
 
 .carta-reveal-container.is-open .carta-wrapper {
   transform: translateX(-50%) translateY(-160px);
   opacity: 1;
+  z-index: 15;
 }
 
 .carta-inner-preview {
