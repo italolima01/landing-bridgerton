@@ -2,7 +2,7 @@ import React from 'react';
 
 const Evento = () => {
   return (
-    <section id="evento" className="relative py-24 px-4 bg-black overflow-hidden scroll-mt-20">
+    <section id="evento" className="relative py-24 px-4 bg-navy overflow-hidden scroll-mt-20">
       {/* Background Video */}
       <video 
         className="absolute inset-0 w-full h-full object-cover opacity-20"
