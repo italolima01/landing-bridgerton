@@ -41,7 +41,8 @@ const Hero = () => {
         
         <button 
           onClick={scrollToForm}
-          className="bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-scale-in delay-500 animate-btn-glow"
+          className="bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:-translate-y-1 transition-transform duration-300"
+          style={{ animation: 'btn-glow 2.5s ease-in-out infinite' }}
         >
         QUERO ENTRAR PARA A LISTA DE ESPERA
         </button>

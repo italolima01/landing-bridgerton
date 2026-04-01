@@ -218,7 +218,8 @@ const Formulario = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 mt-4 disabled:opacity-50 disabled:cursor-not-allowed animate-btn-glow"
+                    className="w-full bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:-translate-y-1 transition-all duration-300 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{ animation: 'btn-glow 2.5s ease-in-out infinite' }}
                   >
                     {isSubmitting ? 'ENVIANDO...' : 'QUERO RECEBER MEU CONVITE EXCLUSIVO'}
                   </button>
