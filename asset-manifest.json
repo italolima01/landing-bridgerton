@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/landing-bridgerton/static/css/main.35af786d.css",
+    "main.js": "/landing-bridgerton/static/js/main.b46aafbb.js",
+    "index.html": "/landing-bridgerton/index.html",
+    "main.35af786d.css.map": "/landing-bridgerton/static/css/main.35af786d.css.map",
+    "main.b46aafbb.js.map": "/landing-bridgerton/static/js/main.b46aafbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35af786d.css",
+    "static/js/main.b46aafbb.js"
+  ]
+}
