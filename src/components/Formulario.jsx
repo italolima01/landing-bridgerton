@@ -61,6 +61,7 @@ const Formulario = () => {
       window.removeEventListener('scroll', updateCursorPosition);
       window.removeEventListener('resize', updateCursorPosition);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeField, formData]);
 
   const handleSubmit = async (e) => {
