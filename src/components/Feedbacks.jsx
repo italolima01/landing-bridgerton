@@ -17,7 +17,7 @@ const Feedbacks = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4 bg-navy">
+    <section className="py-24 px-4" style={{ backgroundColor: '#ebdac8' }}>
       <div className="container mx-auto max-w-6xl">
         <div
           ref={titleRef}
@@ -26,7 +26,7 @@ const Feedbacks = () => {
           <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
             DEPOIMENTOS
           </div>
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-navy text-center mb-16 leading-tight">
             O que dizem quem já viveu essa experiência
           </h2>
         </div>
@@ -35,9 +35,9 @@ const Feedbacks = () => {
         <div className="mb-16 rounded-2xl overflow-hidden border border-gold/30 max-w-3xl mx-auto">
           {/* Quando tiver o vídeo, substitua o conteúdo abaixo por: */}
           {/* <video src={`${process.env.PUBLIC_URL}/assets/video/depoimento.mp4`} controls className="w-full" /> */}
-          <div className="aspect-video bg-white/5 flex flex-col items-center justify-center gap-4">
+          <div className="aspect-video bg-white/45 flex flex-col items-center justify-center gap-4">
             <div className="text-4xl text-gold/40">▶</div>
-            <p className="text-gray-500 text-sm tracking-widest uppercase">Vídeo em breve</p>
+            <p className="text-navy/60 text-sm tracking-widest uppercase">Vídeo em breve</p>
           </div>
         </div>
 

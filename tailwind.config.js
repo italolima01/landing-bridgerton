@@ -11,6 +11,11 @@ module.exports = {
           DEFAULT: '#0f1419',
           light: '#1a2332',
         },
+        taupe: '#a8a68c',
+        blush: '#dead9c',
+        pearl: '#ebdac8',
+        sage: '#9cb7ae',
+        sand: '#c8af8a',
         gold: {
           DEFAULT: '#d4af37',
           light: '#f4e4c1',

@@ -10,9 +10,9 @@ export default function Envelope() {
   };
 
   return (
-    <div className="stage" style={{ backgroundImage: `linear-gradient(rgba(15,20,25,0.75), rgba(15,20,25,0.75)), url(${process.env.PUBLIC_URL}/assets/img/hero-bg.png)` }}>
-      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #0f1419, transparent)', zIndex: 0 }} />
-      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to top, #0f1419, transparent)', zIndex: 0 }} />
+    <div className="stage" style={{ backgroundImage: `linear-gradient(rgba(222,173,156,0.78), rgba(222,173,156,0.78)), url(${process.env.PUBLIC_URL}/assets/img/hero-bg.png)` }}>
+      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to bottom, #dead9c, transparent)', zIndex: 0 }} />
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to top, #ebdac8, transparent)', zIndex: 0 }} />
       <div className={`carta-reveal-container ${opened ? "is-open" : ""}`}>
 
         <div className="envelope-back" />

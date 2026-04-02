@@ -15,7 +15,7 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="py-24 px-4 bg-navy scroll-mt-20">
+    <section id="diferencial" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#9cb7ae' }}>
       <div className="container mx-auto max-w-5xl">
         <div 
           ref={titleRef}
@@ -27,11 +27,11 @@ const Diferencial = () => {
             O DIFERENCIAL
           </div>
           
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-navy text-center mb-12 leading-tight">
             Nem todas estão preparadas<br />para o que será revelado aqui…
           </h2>
           
-          <p className="text-lg text-gray-400 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-navy/80 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
             Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
           </p>
         </div>
@@ -43,7 +43,7 @@ const Diferencial = () => {
           {skills.map((skill, index) => (
             <div 
               key={index}
-              className={`bg-white/5 border border-gold/20 rounded-2xl overflow-hidden text-center hover:bg-gold/10 hover:border-gold hover:-translate-y-2 transition-all duration-300 ${
+              className={`bg-white/40 border border-gold/20 rounded-2xl overflow-hidden text-center hover:bg-white/60 hover:border-gold hover:-translate-y-2 transition-all duration-300 ${
                 gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -55,7 +55,7 @@ const Diferencial = () => {
                   <div className="text-5xl mb-4">{skill.icon}</div>
                 </div>
               )}
-              <div className={`text-lg text-cream ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
+              <div className={`text-lg text-navy ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
             </div>
           ))}
         </div>
@@ -66,7 +66,7 @@ const Diferencial = () => {
           }`}
           style={{ transitionDelay: '600ms' }}
         >
-          <p className="text-lg text-gray-400 text-center mb-6 leading-relaxed">
+          <p className="text-lg text-navy/80 text-center mb-6 leading-relaxed">
             Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
           </p>
           
