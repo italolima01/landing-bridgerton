@@ -49,7 +49,7 @@ const Diferencial = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {skill.img ? (
-                <img src={skill.img} alt={skill.name} className="w-full h-40 object-cover" />
+                <img src={`${process.env.PUBLIC_URL}${skill.img}`} alt={skill.name} className="w-full h-40 object-cover" />
               ) : (
                 <div className="p-8 pb-0">
                   <div className="text-5xl mb-4">{skill.icon}</div>
