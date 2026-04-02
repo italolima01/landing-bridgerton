@@ -31,6 +31,16 @@ const Feedbacks = () => {
           </h2>
         </div>
 
+        {/* Área de vídeo — substitua o src quando tiver o vídeo */}
+        <div className="mb-16 rounded-2xl overflow-hidden border border-gold/30 max-w-3xl mx-auto">
+          {/* Quando tiver o vídeo, substitua o conteúdo abaixo por: */}
+          {/* <video src={`${process.env.PUBLIC_URL}/assets/video/depoimento.mp4`} controls className="w-full" /> */}
+          <div className="aspect-video bg-white/5 flex flex-col items-center justify-center gap-4">
+            <div className="text-4xl text-gold/40">▶</div>
+            <p className="text-gray-500 text-sm tracking-widest uppercase">Vídeo em breve</p>
+          </div>
+        </div>
+
         <div
           ref={gridRef}
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 items-start"
