@@ -7,9 +7,9 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 py-16 bg-navy">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-60"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/hero-bg.png)`
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`
         }}
       />
       
