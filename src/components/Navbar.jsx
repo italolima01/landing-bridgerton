@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-black/40 backdrop-blur-xl shadow-lg border-b border-white/10' 
-          : 'bg-transparent'
+          ? 'bg-[#f4f0ea]/90 backdrop-blur-xl shadow-lg border-b border-navy/10' 
+          : 'bg-[#f4f0ea]/55 backdrop-blur-md'
       }`}
     >
       <div className="container mx-auto px-6">
@@ -41,7 +41,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300"
           >
             <span className="text-gold text-xl">✦</span>
-            <span className="text-white font-playfair text-lg font-semibold tracking-wide">
+            <span className="text-navy font-playfair text-lg font-semibold tracking-wide">
               Evolution Brows
             </span>
           </button>
@@ -50,25 +50,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('evento')}
-              className="text-gray-300 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
+              className="text-navy/75 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
             >
               O Evento
             </button>
             <button
               onClick={() => scrollToSection('diferencial')}
-              className="text-gray-300 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
+              className="text-navy/75 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
             >
               Diferencial
             </button>
             <button
               onClick={() => scrollToSection('autoridade')}
-              className="text-gray-300 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
+              className="text-navy/75 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
             >
               Palestrantes
             </button>
             <button
               onClick={() => scrollToSection('formulario')}
-              className="text-gray-300 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
+              className="text-navy/75 hover:text-gold transition-colors duration-300 text-sm tracking-widest uppercase"
             >
               Lista de Espera
             </button>

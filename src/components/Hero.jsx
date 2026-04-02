@@ -4,7 +4,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 py-16 bg-navy">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 py-16" style={{ backgroundColor: '#a8a68c' }}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-60"
@@ -14,9 +14,9 @@ const Hero = () => {
       />
       
       {/* Dark overlay para melhorar contraste */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-[#1a2332]/35" />
       {/* Gradiente de transição na base */}
-      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, #0f1419)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, #dead9c)' }} />
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl">
@@ -24,7 +24,7 @@ const Hero = () => {
           <span className="text-gold text-sm font-semibold tracking-[2px]">IMERSÃO 💎</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
+        <h1 className="text-5xl md:text-7xl font-bold text-navy mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
           EVOLUTION<br />BROWS
         </h1>
         
@@ -32,11 +32,11 @@ const Hero = () => {
           UM CONVITE EXCLUSIVO
         </h2>
         
-        <p className="text-lg md:text-xl text-cream mb-6 leading-relaxed animate-fade-in-up delay-300">
+        <p className="text-lg md:text-xl text-navy mb-6 leading-relaxed animate-fade-in-up delay-300">
           Apenas aquelas que compreendem que não basta dominar técnicas — é preciso ocupar o lugar de destaque que lhes pertence.
         </p>
         
-        <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed italic animate-fade-in-up delay-400">
+        <p className="text-base md:text-lg text-navy/75 mb-12 leading-relaxed italic animate-fade-in-up delay-400">
           Nesta temporada, não se trata apenas de técnica…<br />
           Trata-se de posição, estratégia e reconhecimento.
         </p>

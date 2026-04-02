@@ -6,14 +6,14 @@ const Evento = () => {
   const [rightRef, rightVisible] = useScrollAnimation();
 
   return (
-    <section id="evento" className="relative py-24 px-4 bg-black overflow-hidden scroll-mt-20">
+    <section id="evento" className="relative py-24 px-4 overflow-hidden scroll-mt-20" style={{ backgroundColor: '#ebdac8' }}>
       {/* Gradientes de transição */}
-      <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #0f1419, transparent)' }} />
-      <div className="absolute bottom-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to top, #0f1419, transparent)' }} />
+      <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #dead9c, transparent)' }} />
+      <div className="absolute bottom-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to top, #9cb7ae, transparent)' }} />
 
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover opacity-80"
+        className="absolute inset-0 w-full h-full object-cover opacity-25"
         autoPlay
         muted
         loop
@@ -35,7 +35,7 @@ const Evento = () => {
               SOBRE O EVENTO
             </div>
             
-            <h2 className="font-playfair text-4xl md:text-5xl text-white leading-tight mb-8">
+            <h2 className="font-playfair text-4xl md:text-5xl text-navy leading-tight mb-8">
               O evento que transforma profissionais comuns em nomes de referência
             </h2>
           </div>
@@ -43,14 +43,14 @@ const Evento = () => {
           {/* Coluna Direita */}
           <div 
             ref={rightRef}
-            className={`space-y-6 text-base text-gray-300 leading-relaxed transition-all duration-800 ${
+            className={`space-y-6 text-base text-navy/80 leading-relaxed transition-all duration-800 ${
               rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
             <p>Este não é mais um evento sobre técnicas.</p>
             
             <p>
-              É um encontro criado para empreendedoras que atuam na área das sobrancelhas e que já perceberam que <span className="text-white font-medium">apenas saber fazer não é mais suficiente.</span>
+              É um encontro criado para empreendedoras que atuam na área das sobrancelhas e que já perceberam que <span className="text-navy font-medium">apenas saber fazer não é mais suficiente.</span>
             </p>
             
             <p>
@@ -58,8 +58,8 @@ const Evento = () => {
             </p>
             
             <div className="border-l-2 border-gold/30 pl-6 mt-8 space-y-3">
-              <p className="text-sm italic text-gray-400">Porque no cenário atual…</p>
-              <p className="font-playfair text-lg text-white italic">
+              <p className="text-sm italic text-navy/70">Porque no cenário atual…</p>
+              <p className="font-playfair text-lg text-navy italic">
                 Não vence quem faz melhor.
               </p>
               <p className="font-playfair text-lg text-gold italic">

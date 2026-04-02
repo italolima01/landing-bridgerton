@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply font-inter text-gray-400 bg-navy;
+    @apply font-inter text-navy bg-pearl;
   }
   
   h1, h2, h3, h4, h5, h6 {

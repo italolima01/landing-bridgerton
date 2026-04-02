@@ -108,7 +108,7 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 bg-navy scroll-mt-20">
+    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#c8af8a' }}>
       {/* Cursor de pena customizado */}
       {cursorPosition.show && (
         <div 
@@ -141,11 +141,11 @@ const Formulario = () => {
 
           <div 
             ref={leftRef}
-            className={`flex-1 text-center md:text-left space-y-6 text-lg text-gray-300 leading-relaxed transition-all duration-800 ${
+            className={`flex-1 text-center md:text-left space-y-6 text-lg text-navy/80 leading-relaxed transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl text-navy leading-tight">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
             <p>
@@ -178,7 +178,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="NOME"
                       required
-                      className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
@@ -194,7 +194,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="WHATSAPP"
                       required
-                      className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
@@ -210,7 +210,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="E-MAIL"
                       required
-                      className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
