@@ -20,8 +20,8 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 max-w-4xl">
-        <div className="inline-block px-6 py-2 mb-8 border border-gold rounded-full bg-gold/10 animate-fade-in">
-          <span className="text-gold text-sm font-semibold tracking-[2px]">IMERSÃO 💎</span>
+        <div className="inline-block px-6 py-2 mb-8 border border-rose-300/50 rounded-full bg-rose-900/20 animate-fade-in">
+          <span className="text-base font-bold tracking-[3px]" style={{ color: '#c0394b' }}>IMERSÃO 💎</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-navy mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">

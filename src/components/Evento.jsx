@@ -8,7 +8,7 @@ const Evento = () => {
   return (
     <section id="evento" className="relative py-24 px-4 overflow-hidden scroll-mt-20" style={{ backgroundColor: '#ebdac8' }}>
       {/* Gradientes de transição */}
-      <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #dead9c, transparent)' }} />
+      <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #ebdac8, transparent)' }} />
       <div className="absolute bottom-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to top, #9cb7ae, transparent)' }} />
 
       {/* Background Video */}

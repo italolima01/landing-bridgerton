@@ -17,7 +17,7 @@ module.exports = {
         sage: '#9cb7ae',
         sand: '#c8af8a',
         gold: {
-          DEFAULT: '#d4af37',
+          DEFAULT: '#a67c00',
           light: '#f4e4c1',
         },
         cream: '#f5f1e8',
