@@ -67,6 +67,8 @@ const Formulario = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setActiveField(null); // Remove o campo ativo imediatamente
+    setCursorPosition({ x: 0, y: 0, show: false }); // Esconde o cursor
 
     // Simula envio
     await fetch('http://localhost/api/leads', {
@@ -78,14 +80,36 @@ const Formulario = () => {
     // Aguarda animação de dobra
     setTimeout(() => {
       setSubmitted(true);
+      
+      // Após 6 segundos, reseta o formulário
+      setTimeout(() => {
+        setSubmitted(false);
+        setIsSubmitting(false);
+        setFormData({
+          nome: '',
+          whatsapp: '',
+          email: ''
+        });
+      }, 6000);
     }, 800);
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    
+    // Se for o campo whatsapp, permite apenas números
+    if (name === 'whatsapp') {
+      const numbersOnly = value.replace(/\D/g, '');
+      setFormData({
+        ...formData,
+        [name]: numbersOnly
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value
+      });
+    }
     
     // Ativa animação durante digitação
     setIsTyping(true);
@@ -108,9 +132,9 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#c8af8a' }}>
+    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#b89968' }}>
       {/* Cursor de pena customizado */}
-      {cursorPosition.show && (
+      {cursorPosition.show && !submitted && (
         <div 
           className="fixed pointer-events-none z-50"
           style={{
@@ -130,30 +154,32 @@ const Formulario = () => {
       <div className="container mx-auto max-w-6xl">
         <div 
           ref={titleRef}
-          className={`text-center text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
+          className={`text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           LISTA DE ESPERA
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-16">
+        <div className="flex flex-col md:flex-row items-start gap-16 md:gap-24">
 
           <div 
             ref={leftRef}
-            className={`flex-1 text-center md:text-left space-y-6 text-lg text-navy/80 leading-relaxed transition-all duration-800 ${
+            className={`flex-1 text-left space-y-6 leading-relaxed transition-all duration-800 md:pr-8 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl text-navy leading-tight">
+            <h2 className="font-playfair text-4xl md:text-5xl text-navy leading-tight font-semibold">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
-            <p>
+            <p className="text-lg md:text-xl text-navy/70 leading-relaxed">
               Se você deseja parar de ser apenas mais uma profissional
-              e finalmente se tornar uma referência no seu mercado…<br />
-              <span className="text-gold font-playfair italic font-semibold">Este é o seu momento.</span>
+              e finalmente se tornar uma referência no seu mercado…
             </p>
-            <p>
+            <p className="text-2xl md:text-3xl text-navy font-playfair italic font-bold leading-snug">
+              Este é o seu momento.
+            </p>
+            <p className="text-base md:text-lg text-navy/70 leading-relaxed">
               Preencha seus dados ao lado e receba em primeira mão todas as informações e o convite oficial.
             </p>
           </div>
@@ -165,8 +191,24 @@ const Formulario = () => {
             }`}
           >
             {!submitted ? (
-              <div className={`transition-all duration-800 ${isSubmitting ? 'animate-fold-envelope' : ''}`}>
-                <form onSubmit={handleSubmit} className="space-y-4">
+              <div className={`relative transition-all duration-1000 ease-in-out ${isSubmitting ? 'animate-fold-envelope' : 'opacity-100'}`}>
+                {/* Moldura do formulário */}
+                <div 
+                  className="absolute inset-0 bg-contain bg-center bg-no-repeat pointer-events-none"
+                  style={{
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/form-frame.png)`,
+                    transform: 'scaleX(2.0) scaleY(1.3) translateY(-20px)',
+                  }}
+                />
+                
+                {/* Texto no topo da carta */}
+                <div className="relative z-10 text-center pt-6 pb-8">
+                  <h3 className="font-playfair text-2xl md:text-3xl text-navy italic">
+                    Seu Convite Exclusivo
+                  </h3>
+                </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-4 relative z-10 px-12 py-10">
                   <div className="relative">
                     <input
                       ref={inputRefs.nome}
@@ -178,7 +220,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="NOME"
                       required
-                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
@@ -194,7 +236,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="WHATSAPP"
                       required
-                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
@@ -210,7 +252,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="E-MAIL"
                       required
-                      className="w-full px-6 py-4 border-2 border-white/80 bg-white/70 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
+                      className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
                   </div>
@@ -218,10 +260,16 @@ const Formulario = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:-translate-y-1 transition-all duration-300 mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
-                    style={{ animation: 'btn-glow 2.5s ease-in-out infinite' }}
+                    className="animated-button w-full disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? 'ENVIANDO...' : 'QUERO RECEBER MEU CONVITE EXCLUSIVO'}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+                      <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                    <span className="text">{isSubmitting ? 'ENVIANDO...' : 'QUERO RECEBER MEU CONVITE EXCLUSIVO'}</span>
+                    <span className="circle"></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+                      <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
                   </button>
                 </form>
               </div>

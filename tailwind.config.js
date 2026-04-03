@@ -25,6 +25,8 @@ module.exports = {
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         inter: ['Inter', 'sans-serif'],
+        bodoni: ['"Bodoni Moda"', 'serif'],
+        script: ['"Great Vibes"', 'cursive'],
       },
     },
   },

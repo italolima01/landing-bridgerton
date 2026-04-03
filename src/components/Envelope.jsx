@@ -25,9 +25,18 @@ export default function Envelope() {
               backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              filter: 'sepia(40%) brightness(0.85) contrast(1.1)',
             }}
           >
-            <div className="carta-inner">
+            <div className="carta-inner" style={{ position: 'relative', zIndex: 1 }}>
+              {/* Overlay para tom envelhecido */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundColor: 'rgba(120, 53, 15, 0.15)',
+                pointerEvents: 'none',
+                zIndex: -1
+              }} />
               <p style={{ fontStyle: 'italic' }}>Prezada empreendedora,</p>
               <p>
                 Nesta nova temporada, observo atentamente aquelas que dominam mais do que técnicas…<br />
