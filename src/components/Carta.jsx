@@ -11,20 +11,26 @@ const Carta = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`,
+          filter: 'sepia(40%) brightness(0.85) contrast(1.1)',
         }}
       />
       
-      {/* Overlay sutil para melhorar legibilidade */}
-      <div className="absolute inset-0 bg-cream/30" />
+      {/* Overlay sutil para melhorar legibilidade e dar tom envelhecido */}
+      <div className="absolute inset-0 bg-amber-900/15" />
       
       <div className="relative z-10 container mx-auto max-w-4xl">
         <div 
           ref={iconRef}
-          className={`text-center text-5xl mb-12 text-gold transition-all duration-800 ${
+          className={`flex justify-center mb-12 transition-all duration-800 ${
             iconVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
+          <img 
+            src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+            alt="Diamante"
+            className="w-32 h-32 md:w-40 md:h-40 object-contain opacity-80"
+          />
         </div>
         
         <div 
