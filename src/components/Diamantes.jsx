@@ -45,11 +45,11 @@ const Diamantes = () => {
 
       <div className="hidden md:block absolute top-0 right-0 h-full w-[48%]">
         <img
-          src="/assets/img/diamante-bg.png"
+          src={`${process.env.PUBLIC_URL}/assets/img/diamante-bg.png`}
           alt="Diamante"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-80"
           style={{
-            mixBlendMode: 'screen',
+            mixBlendMode: 'multiply',
             maskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
             maskComposite: 'intersect',
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
