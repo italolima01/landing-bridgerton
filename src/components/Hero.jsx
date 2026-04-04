@@ -48,9 +48,7 @@ const Hero = () => {
           <span className="text-white text-base md:text-lg font-light tracking-[10px] uppercase">IMERSÃO</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold text-black mb-8 leading-tight tracking-wide animate-fade-in-up delay-100" style={{
-          filter: 'url(#ink-texture)',
-        }}>
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
           EVOLUTION<br />BROWS
         </h1>
         
@@ -60,10 +58,7 @@ const Hero = () => {
           UM CONVITE EXCLUSIVO
         </h2>
         
-        <p className="text-base md:text-lg text-navy/75 mb-12 leading-relaxed italic animate-fade-in-up delay-400">
-          Nesta temporada, não se trata apenas de técnica…<br />
-          Trata-se de posição, estratégia e reconhecimento.
-        </p>
+
         
         <div className="flex justify-center">
           <button 
