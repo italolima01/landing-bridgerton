@@ -11,7 +11,7 @@ const Evento = () => {
       <div className="absolute top-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to bottom, #ebdac8, transparent)' }} />
       <div className="absolute bottom-0 left-0 right-0 h-32 z-10" style={{ background: 'linear-gradient(to top, #9cb7ae, transparent)' }} />
       
-      <div className="relative z-10 w-full px-4 md:pl-8 md:pr-0">
+      <div className="relative z-10 w-full px-4 md:pl-12 md:pr-0">
         <div className="grid md:grid-cols-5 gap-12 items-center">
           {/* Coluna Esquerda — texto */}
           <div 
