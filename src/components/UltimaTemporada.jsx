@@ -2,7 +2,7 @@ import React from 'react';
 
 const UltimaTemporada = () => {
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: '#a8a68c' }}>
+    <section className="py-24 px-4" style={{ backgroundColor: '#f5f1e8' }}>
       <div className="container mx-auto max-w-5xl">
         <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
           A ÚLTIMA TEMPORADA

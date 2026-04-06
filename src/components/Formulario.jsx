@@ -132,7 +132,7 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#b89968' }}>
+    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#d4c4a8' }}>
       {/* Cursor de pena customizado */}
       {cursorPosition.show && !submitted && (
         <div 

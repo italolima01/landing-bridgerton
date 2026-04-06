@@ -17,7 +17,7 @@ const Feedbacks = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: '#ebdac8' }}>
+    <section className="py-24 px-4" style={{ backgroundColor: '#f5f1e8' }}>
       <div className="container mx-auto max-w-6xl">
         <div
           ref={titleRef}

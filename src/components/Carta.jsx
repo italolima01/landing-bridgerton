@@ -6,19 +6,7 @@ const Carta = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
-      {/* Background Image - Papel envelhecido */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`,
-          filter: 'sepia(40%) brightness(0.85) contrast(1.1)',
-        }}
-      />
-      
-      {/* Overlay sutil para melhorar legibilidade e dar tom envelhecido */}
-      <div className="absolute inset-0 bg-amber-900/15" />
-      
+    <section className="relative py-24 px-4 overflow-hidden" style={{ backgroundColor: '#f5f1e8' }}>
       <div className="relative z-10 container mx-auto max-w-4xl">
         <div 
           ref={iconRef}
