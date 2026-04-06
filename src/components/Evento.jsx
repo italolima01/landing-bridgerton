@@ -95,15 +95,13 @@ const Evento = () => {
               </svg>
             </div>
             
-            <video
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
-            </video>
+            <iframe
+              src="https://player.vimeo.com/video/1180600420?autoplay=1&loop=1&muted=1&background=1"
+              className="absolute inset-0 w-full h-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="Evento Evolution Brows"
+            />
           </div>
         </div>
       </div>
