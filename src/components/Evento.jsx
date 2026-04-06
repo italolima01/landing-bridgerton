@@ -8,7 +8,7 @@ const Evento = () => {
   return (
     <section id="evento" className="relative scroll-mt-20" style={{ backgroundColor: '#d4c4a8' }}>
       <div className="relative z-10 w-full">
-        <div className="grid md:grid-cols-2 min-h-screen">
+        <div className="grid md:grid-cols-2" style={{ minHeight: '100vh' }}>
           {/* Coluna Esquerda — texto */}
           <div 
             ref={leftRef}
@@ -73,7 +73,7 @@ const Evento = () => {
           {/* Coluna Direita — vídeo */}
           <div 
             ref={rightRef}
-            className={`relative h-full min-h-screen overflow-hidden transition-all duration-1000 ${
+            className={`relative overflow-hidden transition-all duration-1000 ${
               rightVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -95,13 +95,17 @@ const Evento = () => {
               </svg>
             </div>
             
-            <iframe
-              src="https://player.vimeo.com/video/1180600420?autoplay=1&loop=1&muted=1&background=1"
-              className="absolute inset-0 w-full h-full"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              title="Evento Evolution Brows"
-            />
+            <div className="absolute inset-0 w-full h-full">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
