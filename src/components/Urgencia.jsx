@@ -2,7 +2,7 @@ import React from 'react';
 
 const Urgencia = () => {
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: '#9cb7ae' }}>
+    <section className="py-24 px-4" style={{ backgroundColor: '#d4c4a8' }}>
       <div className="container mx-auto max-w-5xl">      
         <h2 className="text-4xl md:text-5xl text-navy text-center mb-12 leading-tight">
           O último e mais aguardado espetáculo da temporada está prestes a começar
