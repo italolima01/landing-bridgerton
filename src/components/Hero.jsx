@@ -22,7 +22,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0" 
         style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%)'
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%)'
         }}
       />
       
