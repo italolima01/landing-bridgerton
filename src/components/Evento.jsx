@@ -8,11 +8,7 @@ const Evento = () => {
   return (
     <section id="evento" className="relative scroll-mt-20" style={{ backgroundColor: '#d4c4a8' }}>
       <div className="relative z-10 w-full">
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2" style={{ minHeight: '100vh' }}>
-=======
-        <div className="grid md:grid-cols-2 min-h-screen">
->>>>>>> 5ba6733b0eaed3507427b56150fea5793a8ae6e5
           {/* Coluna Esquerda — texto */}
           <div 
             ref={leftRef}
@@ -77,11 +73,7 @@ const Evento = () => {
           {/* Coluna Direita — vídeo */}
           <div 
             ref={rightRef}
-<<<<<<< HEAD
             className={`relative overflow-hidden transition-all duration-1000 ${
-=======
-            className={`relative h-full min-h-screen overflow-hidden transition-all duration-1000 ${
->>>>>>> 5ba6733b0eaed3507427b56150fea5793a8ae6e5
               rightVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}
           >
@@ -103,7 +95,6 @@ const Evento = () => {
               </svg>
             </div>
             
-<<<<<<< HEAD
             <div className="absolute inset-0 w-full h-full">
               <video
                 className="w-full h-full object-cover"
@@ -115,17 +106,6 @@ const Evento = () => {
                 <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
               </video>
             </div>
-=======
-            <video
-              className="absolute inset-0 w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
-            </video>
->>>>>>> 5ba6733b0eaed3507427b56150fea5793a8ae6e5
           </div>
         </div>
       </div>
