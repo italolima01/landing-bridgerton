@@ -22,7 +22,11 @@ const Hero = () => {
       <div 
         className="absolute inset-0" 
         style={{
+<<<<<<< HEAD
           background: 'radial-gradient(ellipse at center, transparent 0%, transparent 20%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%)'
+=======
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(0, 0, 0, 0.7) 100%)'
+>>>>>>> 5ba6733b0eaed3507427b56150fea5793a8ae6e5
         }}
       />
       
@@ -77,7 +81,23 @@ const Hero = () => {
         </div>
       </div>
       
+<<<<<<< HEAD
 
+=======
+      {/* Efeito de papel rasgado na parte inferior */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-20">
+        <svg className="absolute bottom-0 w-full h-16" preserveAspectRatio="none" viewBox="0 0 1200 50" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'translateY(1px)' }}>
+          <path d="M0,0 
+                   L30,8 L60,13 Q70,15 120,5 L150,17 Q230,20 210,13 L243,5 L270,19 
+                   Q300,15 330,13 L360,25 Q390,24 410,23 L196,236 L380,10 Q410,29 540,27 
+                   L570,20 Q600,20 630,17 L660,20 L690,25 Q720,22 730,30 L740,19 Q810,20 840,13 
+                   L870,26 Q900,15 930,15 L940,22 L985,30 Q1020,10 1050,15 L1060,20 Q1110,22 1140,2 
+                   L1340,19 L1200,19
+                   L1200,50 L0,50 Z" 
+                fill="#f5f1e8"/>
+        </svg>
+      </div>
+>>>>>>> 5ba6733b0eaed3507427b56150fea5793a8ae6e5
     </section>
   );
 };
