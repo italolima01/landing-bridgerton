@@ -14,7 +14,6 @@ const feedbacks = [
 
 const Feedbacks = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
-  const [gridRef, gridVisible] = useScrollAnimation();
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef(null);
 
