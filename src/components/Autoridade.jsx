@@ -40,7 +40,7 @@ const Autoridade = () => {
   };
 
   return (
-    <section id="autoridade" className="py-24 px-4 bg-navy scroll-mt-20">
+    <section id="autoridade" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#f5f1e8' }}>
       <div className="container mx-auto max-w-5xl">
         <div 
           ref={titleRef}
@@ -52,11 +52,11 @@ const Autoridade = () => {
             AUTORIDADE
           </div>
           
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-navy text-center mb-12 leading-tight">
             Diretamente das maiores<br />referências do Brasil
           </h2>
           
-          <p className="text-lg text-gray-400 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-navy/80 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
             Profissionais que hoje são destaque nacional estarão presentes para compartilhar o que realmente funciona no mercado.
           </p>
         </div>
@@ -74,7 +74,7 @@ const Autoridade = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => handleCardHover(index)}
             >
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-navy border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#e9edf1] border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
                 {speaker.revealed ? (
                   <>
                     {/* Imagem revelada - fica colorida no hover e permanece */}
@@ -98,7 +98,7 @@ const Autoridade = () => {
                       <div className="text-6xl text-gold/30 mb-4 font-playfair group-hover:opacity-0 transition-opacity duration-300">
                         ?
                       </div>
-                      <p className="text-gray-400 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
+                      <p className="text-navy/60 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
                         Convidado especial
                       </p>
                     </div>
@@ -117,7 +117,7 @@ const Autoridade = () => {
           ))}
         </div>
         
-        <div className="text-center space-y-4 text-lg text-gray-400 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
+        <div className="text-center space-y-4 text-lg text-navy/80 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
           <p className="font-playfair text-2xl text-gold italic font-semibold">

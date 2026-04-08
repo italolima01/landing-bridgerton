@@ -51,7 +51,7 @@ h1, h2, h3 {
     height: 100%;
     background: url('assets/img/hero_mansion.png') center/cover no-repeat;
     opacity: 0.15;
-    filter: blur(1px);
+    filter: blur(2px);
 }
 
 .hero-content {

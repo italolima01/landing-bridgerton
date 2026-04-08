@@ -5,7 +5,7 @@ const Diamantes = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4 bg-navy relative overflow-hidden min-h-[500px]">
+    <section className="py-24 px-4 relative overflow-hidden min-h-[500px]" style={{ backgroundColor: '#dead9c' }}>
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
 
@@ -15,11 +15,11 @@ const Diamantes = () => {
               contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl text-navy mb-8 leading-tight">
               E nesta temporada…<br />algumas serão escolhidas
             </h2>
 
-            <p className="text-lg text-gray-400 mb-6 leading-relaxed">
+            <p className="text-lg text-navy/80 mb-6 leading-relaxed">
               Entre as participantes, empreendedoras serão reconhecidas como:
             </p>
 
@@ -27,8 +27,8 @@ const Diamantes = () => {
               As Diamantes da Temporada.
             </p>
 
-            <div className="bg-white/5 border border-gold/30 rounded-2xl p-8 space-y-6">
-              <p className="text-lg text-gray-400 leading-relaxed">
+            <div className="bg-white/55 border border-gold/30 rounded-2xl p-8 space-y-6">
+              <p className="text-lg text-navy/80 leading-relaxed">
                 Os critérios ainda não foram revelados.
               </p>
               <p className="font-playfair text-xl text-gold italic font-semibold leading-relaxed">
@@ -45,11 +45,11 @@ const Diamantes = () => {
 
       <div className="hidden md:block absolute top-0 right-0 h-full w-[48%]">
         <img
-          src="/assets/img/diamante-bg.png"
+          src={`${process.env.PUBLIC_URL}/assets/img/diamante-bg.png`}
           alt="Diamante"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-80"
           style={{
-            mixBlendMode: 'screen',
+            mixBlendMode: 'multiply',
             maskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
             maskComposite: 'intersect',
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
