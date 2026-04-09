@@ -27,6 +27,11 @@ const speakers = [
     name: 'Em breve',
     role: 'Convidado especial',
     revealed: false
+  },
+  {
+    name: 'Em breve',
+    role: 'Convidado especial',
+    revealed: false
   }
 ];
 
@@ -40,7 +45,14 @@ const Autoridade = () => {
   };
 
   return (
-    <section id="autoridade" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#f5f1e8' }}>
+    <section id="autoridade" className="py-24 px-4 scroll-mt-20" style={{ 
+      backgroundColor: '#8B1A1A',
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundSize: '100% auto',
+      backgroundPosition: 'center',
+      backgroundBlendMode: 'multiply',
+      backgroundRepeat: 'repeat'
+    }}>
       <div className="container mx-auto max-w-5xl">
         <div 
           ref={titleRef}
@@ -52,18 +64,18 @@ const Autoridade = () => {
             AUTORIDADE
           </div>
           
-          <h2 className="text-4xl md:text-5xl text-navy text-center mb-12 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
             Diretamente das maiores<br />referências do Brasil
           </h2>
           
-          <p className="text-lg text-navy/80 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
             Profissionais que hoje são destaque nacional estarão presentes para compartilhar o que realmente funciona no mercado.
           </p>
         </div>
         
         <div 
           ref={gridRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16"
         >
           {speakers.map((speaker, index) => (
             <div 
@@ -74,16 +86,17 @@ const Autoridade = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => handleCardHover(index)}
             >
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#e9edf1] border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-black/30 backdrop-blur-sm border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
                 {speaker.revealed ? (
                   <>
                     {/* Imagem revelada - fica colorida no hover e permanece */}
                     <img 
                       src={`${process.env.PUBLIC_URL}/assets/img/${speaker.image}`}
                       alt={speaker.name} 
-                      className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                      className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
                         hoveredCards[index] ? '' : 'grayscale'
                       }`}
+                      style={{ objectPosition: 'center 20%', transform: 'scale(1.3)' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform transition-all duration-300 group-hover:translate-y-0">
@@ -95,10 +108,13 @@ const Autoridade = () => {
                   <>
                     {/* Card misterioso - revela info no hover */}
                     <div className="w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500">
-                      <div className="text-6xl text-gold/30 mb-4 font-playfair group-hover:opacity-0 transition-opacity duration-300">
-                        ?
-                      </div>
-                      <p className="text-navy/60 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
+                      <img 
+                        src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
+                        alt="Diamante"
+                        className="w-20 h-20 mb-4 group-hover:opacity-0 transition-opacity duration-300"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(65%) sepia(48%) saturate(466%) hue-rotate(8deg) brightness(95%) contrast(87%)' }}
+                      />
+                      <p className="text-white/70 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
                         Convidado especial
                       </p>
                     </div>
@@ -117,7 +133,7 @@ const Autoridade = () => {
           ))}
         </div>
         
-        <div className="text-center space-y-4 text-lg text-navy/80 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
+        <div className="text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
           <p className="font-playfair text-2xl text-gold italic font-semibold">
