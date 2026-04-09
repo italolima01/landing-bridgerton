@@ -143,8 +143,10 @@ const Evento = () => {
               muted
               loop
               playsInline
+              preload="metadata"
             >
               <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
+              Seu navegador não suporta vídeos.
             </video>
             
             {/* Ícone de mute/unmute */}

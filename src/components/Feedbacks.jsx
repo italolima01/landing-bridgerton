@@ -61,7 +61,7 @@ const Feedbacks = () => {
           <div className="rounded-2xl overflow-hidden border border-gold/30 relative group cursor-pointer w-full" onClick={toggleMute}>
             <video 
               ref={videoRef}
-              src={`${process.env.PUBLIC_URL}/assets/video/feedbacks1.mp4`} 
+              src={`${process.env.PUBLIC_URL}/assets/video/feedbacks1.MP4`} 
               autoPlay
               muted
               loop
