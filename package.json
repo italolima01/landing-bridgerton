@@ -2,7 +2,6 @@
   "name": "evolution-brows",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://italolima01.github.io/landing-bridgerton",
   "dependencies": {
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",

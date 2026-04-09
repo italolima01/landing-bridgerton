@@ -27,15 +27,7 @@ const Diamantes = () => {
               As Diamantes da Temporada.
             </p>
 
-            <div className="bg-white/55 border border-gold/30 rounded-2xl p-8 space-y-6">
-              <p className="text-lg text-navy/80 leading-relaxed">
-                Os critérios ainda não foram revelados.
-              </p>
-              <p className="font-playfair text-xl text-gold italic font-semibold leading-relaxed">
-                Mas uma coisa é certa…<br />
-                Você não vai querer descobrir isso depois que tudo já tiver acontecido.
-              </p>
-            </div>
+
           </div>
 
           <div className="hidden md:block flex-shrink-0 w-[480px]"></div>

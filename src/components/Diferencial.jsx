@@ -4,8 +4,8 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const skills = [
   { icon: '🎭', name: 'Shadow', img: '/assets/img/dream-shadow.jpg' },
   { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg' },
-  { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg' },
-  { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg' },
+  { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
+  { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: null },
   { icon: '📈', name: 'Marketing', img: null },
 ];
@@ -15,14 +15,15 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="relative py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#8b7355' }}>
+    <section id="diferencial" className="relative py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#540810' }}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/flowers-bg.png)`,
-          opacity: 0.5,
-          filter: 'sepia(0.2) brightness(0.5) contrast(1.2)'
+          opacity: 0.6,
+          mixBlendMode: 'luminosity',
+          filter: 'contrast(1.2) sepia(0.3)'
         }}
       />
       
@@ -77,6 +78,7 @@ const Diferencial = () => {
                     className={`w-full h-full object-cover transition-transform duration-300 hover:scale-110 ${
                       skill.name === '— Shadow' ? 'scale-125' : ''
                     }`}
+                    style={skill.objectPosition ? { objectPosition: skill.objectPosition } : {}}
                   />
                 </div>
               ) : (
