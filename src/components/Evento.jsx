@@ -6,7 +6,17 @@ const Evento = () => {
   const [rightRef, rightVisible] = useScrollAnimation();
 
   return (
-    <section id="evento" className="relative scroll-mt-20" style={{ backgroundColor: '#d4c4a8' }}>
+    <section 
+      id="evento" 
+      className="relative scroll-mt-20" 
+      style={{ 
+        backgroundColor: '#8B1A1A',
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'multiply'
+      }}
+    >
       <div className="relative z-10 w-full">
         <div className="grid md:grid-cols-2" style={{ minHeight: '100vh' }}>
           {/* Coluna Esquerda — texto */}
