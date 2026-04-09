@@ -45,7 +45,7 @@ const Hero = () => {
           <span className="text-white text-base md:text-lg font-light tracking-[10px] uppercase">IMERSÃO</span>
         </div>
 
-        <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
+        <h1 className="hero-title font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
           EVOLUTION<br />BROWS
         </h1>
 

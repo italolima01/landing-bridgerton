@@ -65,6 +65,16 @@
   }
 }
 
+.hero-title {
+  font-size: 56px;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -201,6 +211,7 @@
   padding: 16px 50px;
   border: none;
   font-size: 16px;
+  font-family: 'Playfair Display', serif;
   background: linear-gradient(135deg, #d4af37 0%, #f4e4c1 50%, #d4af37 100%);
   background-size: 200% 200%;
   border-radius: 100px;
@@ -229,7 +240,7 @@
     font-size: 11px;
     line-height: 1.4;
     white-space: nowrap;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.5px;
   }
   
