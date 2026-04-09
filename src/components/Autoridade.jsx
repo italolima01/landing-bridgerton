@@ -41,10 +41,12 @@ const Autoridade = () => {
 
   return (
     <section id="autoridade" className="py-24 px-4 scroll-mt-20" style={{ 
+      backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
-      backgroundSize: 'cover',
+      backgroundSize: '100% auto',
       backgroundPosition: 'center',
-      backgroundColor: '#f5f1e8'
+      backgroundBlendMode: 'multiply',
+      backgroundRepeat: 'repeat'
     }}>
       <div className="container mx-auto max-w-5xl">
         <div 
