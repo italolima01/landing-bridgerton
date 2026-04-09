@@ -121,7 +121,7 @@ const Feedbacks = () => {
           >
             <video
               ref={videoRef}
-              src={`${process.env.PUBLIC_URL}/assets/video/FEEDBACK - IMERSÃO VÍDEO .MP4`}
+              src={`${process.env.PUBLIC_URL}/assets/video/feedbackv2.mp4`}
               className="w-full h-full object-cover"
               muted
               loop
