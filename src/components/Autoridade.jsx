@@ -45,7 +45,7 @@ const Autoridade = () => {
   };
 
   return (
-    <section id="autoridade" className="py-24 px-4 scroll-mt-20" style={{ 
+    <section id="autoridade" className="py-24 px-4 scroll-mt-20 relative" style={{ 
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
       backgroundSize: '100% auto',
@@ -53,7 +53,16 @@ const Autoridade = () => {
       backgroundBlendMode: 'multiply',
       backgroundRepeat: 'repeat'
     }}>
-      <div className="container mx-auto max-w-5xl">
+      {/* Flores decorativas no canto superior esquerdo */}
+      <div className="absolute top-0 left-0 w-64 md:w-80 opacity-30 pointer-events-none -translate-y-12 md:-translate-y-16">
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/flor1-dtlh.png`}
+          alt="Flores decorativas"
+          className="w-full h-auto"
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-5xl relative z-10">
         <div 
           ref={titleRef}
           className={`transition-all duration-800 ${
