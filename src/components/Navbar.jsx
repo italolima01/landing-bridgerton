@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id) => {
+    setIsMenuOpen(false); // Fecha o menu ao clicar
     const element = document.getElementById(id);
     if (element) {
       // Adiciona um pequeno delay para garantir que o DOM está pronto
@@ -90,12 +92,57 @@ const Navbar = () => {
           </div>
 
           {/* Menu Mobile */}
-          <button className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Menu Mobile Dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 space-y-3 border-t border-white/20">
+            <button
+              onClick={() => scrollToSection('evento')}
+              className={`block w-full text-left px-4 py-2 text-sm tracking-widest uppercase transition-colors ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+            >
+              O Evento
+            </button>
+            <button
+              onClick={() => scrollToSection('diferencial')}
+              className={`block w-full text-left px-4 py-2 text-sm tracking-widest uppercase transition-colors ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+            >
+              Diferencial
+            </button>
+            <button
+              onClick={() => scrollToSection('autoridade')}
+              className={`block w-full text-left px-4 py-2 text-sm tracking-widest uppercase transition-colors ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+            >
+              Palestrantes
+            </button>
+            <button
+              onClick={() => scrollToSection('formulario')}
+              className={`block w-full text-left px-4 py-2 text-sm tracking-widest uppercase transition-colors ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+            >
+              Lista de Espera
+            </button>
+            <button
+              onClick={() => scrollToSection('formulario')}
+              className={`mx-4 border transition-all duration-500 px-4 py-2 rounded-full text-sm tracking-widest uppercase font-medium ${isScrolled ? 'border-black text-black hover:bg-black hover:text-white' : 'border-gold text-gold hover:bg-gold hover:text-black'}`}
+            >
+              Meu Convite
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );
