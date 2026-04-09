@@ -30,6 +30,11 @@ const Feedbacks = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
         
+        // Garantir que o vídeo inicie mutado
+        playerRef.current.setVolume(0).then(() => {
+          setIsMuted(true);
+        });
+        
         // Configurar Intersection Observer para controlar volume
         const observer = new IntersectionObserver(
           (entries) => {
