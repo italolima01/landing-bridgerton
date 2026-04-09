@@ -10,7 +10,16 @@ export default function Envelope() {
   };
 
   return (
-    <div className="stage" style={{ backgroundColor: '#f5f1e8' }}>
+    <div 
+      className="stage" 
+      style={{ 
+        backgroundColor: '#8B1A1A',
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'multiply'
+      }}
+    >
       <div className={`carta-reveal-container ${opened ? "is-open" : ""}`}>
 
         <div className="envelope-back" />
@@ -47,6 +56,14 @@ export default function Envelope() {
               <p className="gold">
                 E é exatamente sobre isso que será o encontro mais aguardado desta temporada…
               </p>
+              <button
+                onClick={() => {
+                  document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="carta-cta-button"
+              >
+                Desejo Meu Convite
+              </button>
             </div>
           </div>
         </article>

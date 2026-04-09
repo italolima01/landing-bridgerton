@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id) => {
+    setIsMenuOpen(false); // Fecha o menu ao clicar
     const element = document.getElementById(id);
     if (element) {
       // Adiciona um pequeno delay para garantir que o DOM está pronto
@@ -47,10 +49,10 @@ const Navbar = () => {
             <img 
               src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
               alt="Diamante"
-              className="w-4 h-4 object-contain mb-0.5"
+              className="w-6 h-6 object-contain mb-0.5"
               style={{ filter: isScrolled ? 'grayscale(100%) brightness(0)' : 'none' }}
             />
-            <span className={`font-playfair text-base font-semibold tracking-wide transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}>
+            <span className={`font-playfair text-lg font-semibold tracking-wide transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}>
               Evolution Brows
             </span>
           </button>
@@ -90,12 +92,59 @@ const Navbar = () => {
           </div>
 
           {/* Menu Mobile */}
-          <button className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}>
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Menu Mobile Dropdown */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-white/20">
+            <div className="grid grid-cols-2 gap-3 px-4">
+              <button
+                onClick={() => scrollToSection('evento')}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+              >
+                O Evento
+              </button>
+              <button
+                onClick={() => scrollToSection('diferencial')}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+              >
+                Diferencial
+              </button>
+              <button
+                onClick={() => scrollToSection('autoridade')}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+              >
+                Palestrantes
+              </button>
+              <button
+                onClick={() => scrollToSection('formulario')}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+              >
+                Lista de Espera
+              </button>
+            </div>
+            <button
+              onClick={() => scrollToSection('formulario')}
+              className={`mt-3 mx-4 w-[calc(100%-2rem)] transition-all duration-500 px-4 py-2 rounded-full text-xs tracking-widest uppercase font-medium bg-gold text-white hover:bg-gold/90`}
+            >
+              Meu Convite
+            </button>
+          </div>
+        )}
       </div>
     </nav>
   );
