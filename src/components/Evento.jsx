@@ -67,9 +67,10 @@ const Evento = () => {
       style={{ 
         backgroundColor: '#8B1A1A',
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
-        backgroundSize: 'cover',
+        backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply',
+        backgroundRepeat: 'repeat',
         scrollMarginTop: '56px'
       }}
     >

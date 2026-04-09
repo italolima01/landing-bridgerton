@@ -17,7 +17,8 @@ export default function Envelope() {
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply'
+        backgroundBlendMode: 'multiply',
+        backgroundAttachment: 'scroll'
       }}
     >
       <div className={`carta-reveal-container ${opened ? "is-open" : ""}`}>
