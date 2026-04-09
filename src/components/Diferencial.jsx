@@ -15,14 +15,15 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="relative py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#8b7355' }}>
+    <section id="diferencial" className="relative py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#540810' }}>
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/flowers-bg.png)`,
-          opacity: 0.5,
-          filter: 'sepia(0.2) brightness(0.5) contrast(1.2)'
+          opacity: 0.6,
+          mixBlendMode: 'luminosity',
+          filter: 'contrast(1.2) sepia(0.3)'
         }}
       />
       
