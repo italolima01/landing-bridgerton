@@ -20,10 +20,10 @@ const Diferencial = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/flowers-bg.png)`,
-          opacity: 0.6,
-          mixBlendMode: 'luminosity',
-          filter: 'contrast(1.2) sepia(0.3)'
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile-it-is-great-background.jpg)`,
+          backgroundSize: '100%',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'multiply'
         }}
       />
       
