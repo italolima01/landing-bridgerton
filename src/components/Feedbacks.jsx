@@ -26,7 +26,12 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: '#f5f1e8' }}>
+    <section className="py-24 px-4" style={{
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundColor: '#f5f1e8'
+    }}>
       <div className="container mx-auto max-w-7xl">
         <div
           ref={titleRef}
@@ -35,7 +40,7 @@ const Feedbacks = () => {
           <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
             DEPOIMENTOS
           </div>
-          <h2 className="text-4xl md:text-5xl text-navy text-center mb-16 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
             O que dizem quem já viveu essa experiência
           </h2>
         </div>
@@ -59,9 +64,9 @@ const Feedbacks = () => {
 
           {/* Vídeo Central */}
           <div className="rounded-2xl overflow-hidden border border-gold/30 relative group cursor-pointer w-full" onClick={toggleMute}>
-            <video 
+            <video
               ref={videoRef}
-              src={`${process.env.PUBLIC_URL}/assets/video/feedbacks1.MP4`} 
+              src={`${process.env.PUBLIC_URL}/assets/video/FEEDBACK - IMERSÃO VÍDEO .MP4`}
               autoPlay
               muted
               loop
