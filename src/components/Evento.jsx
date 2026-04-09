@@ -67,9 +67,10 @@ const Evento = () => {
       style={{ 
         backgroundColor: '#8B1A1A',
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
-        backgroundSize: 'cover',
+        backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply',
+        backgroundRepeat: 'repeat',
         scrollMarginTop: '56px'
       }}
     >
@@ -142,8 +143,10 @@ const Evento = () => {
               muted
               loop
               playsInline
+              preload="metadata"
             >
               <source src={`${process.env.PUBLIC_URL}/assets/video/evento1.mp4`} type="video/mp4" />
+              Seu navegador não suporta vídeos.
             </video>
             
             {/* Ícone de mute/unmute */}
