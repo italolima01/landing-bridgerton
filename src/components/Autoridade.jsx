@@ -27,6 +27,11 @@ const speakers = [
     name: 'Em breve',
     role: 'Convidado especial',
     revealed: false
+  },
+  {
+    name: 'Em breve',
+    role: 'Convidado especial',
+    revealed: false
   }
 ];
 
@@ -70,7 +75,7 @@ const Autoridade = () => {
         
         <div 
           ref={gridRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16"
         >
           {speakers.map((speaker, index) => (
             <div 
@@ -88,9 +93,10 @@ const Autoridade = () => {
                     <img 
                       src={`${process.env.PUBLIC_URL}/assets/img/${speaker.image}`}
                       alt={speaker.name} 
-                      className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                      className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
                         hoveredCards[index] ? '' : 'grayscale'
                       }`}
+                      style={{ objectPosition: 'center 20%', transform: 'scale(1.3)' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform transition-all duration-300 group-hover:translate-y-0">
@@ -102,9 +108,12 @@ const Autoridade = () => {
                   <>
                     {/* Card misterioso - revela info no hover */}
                     <div className="w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500">
-                      <div className="text-6xl text-gold/30 mb-4 font-playfair group-hover:opacity-0 transition-opacity duration-300">
-                        ?
-                      </div>
+                      <img 
+                        src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
+                        alt="Diamante"
+                        className="w-20 h-20 mb-4 group-hover:opacity-0 transition-opacity duration-300"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(65%) sepia(48%) saturate(466%) hue-rotate(8deg) brightness(95%) contrast(87%)' }}
+                      />
                       <p className="text-white/70 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
                         Convidado especial
                       </p>
