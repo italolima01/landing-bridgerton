@@ -111,10 +111,9 @@ const Autoridade = () => {
                     {/* Card misterioso - revela info no hover */}
                     <div className="w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500">
                       <img 
-                        src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
+                        src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
                         alt="Diamante"
-                        className="w-20 h-20 mb-4 group-hover:opacity-0 transition-opacity duration-300"
-                        style={{ filter: 'brightness(0) saturate(100%) invert(65%) sepia(48%) saturate(466%) hue-rotate(8deg) brightness(95%) contrast(87%)' }}
+                        className="w-20 h-20 mb-4 opacity-50 group-hover:opacity-0 transition-opacity duration-300 object-contain"
                       />
                       <p className="text-white/70 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
                         Convidado especial

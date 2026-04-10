@@ -25,10 +25,9 @@ const Footer = () => {
         
         <div className="mt-8">
           <img 
-            src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
+            src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
             alt="Diamante"
-            className="w-16 h-16 mx-auto"
-            style={{ filter: 'brightness(0) saturate(100%) invert(77%) sepia(48%) saturate(466%) hue-rotate(8deg) brightness(95%) contrast(87%)' }}
+            className="w-16 h-16 mx-auto opacity-50 object-contain"
           />
         </div>
       </div>
