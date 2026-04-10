@@ -5,7 +5,11 @@ const Diamantes = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="py-32 px-4 relative overflow-hidden min-h-[500px]" style={{ backgroundColor: '#dead9c' }}>
+    <section className="py-32 px-4 relative overflow-hidden min-h-[500px] bg-cover bg-center" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/erika-integrantes.jpg)` }}>
+      {/* Overlay de fundo para legibilidade */}
+      <div className="absolute inset-0 bg-[#dead9c]/80 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-white/40"></div>
+      
       {/* Diamante decorativo no topo central */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20" style={{ opacity: 0.7 }}>
         <img 
@@ -16,11 +20,11 @@ const Diamantes = () => {
       </div>
       
       <div className="container mx-auto max-w-5xl relative z-10 mt-8">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col items-center justify-center text-center gap-12">
 
           <div 
             ref={contentRef}
-            className={`flex-1 text-center md:text-left transition-all duration-800 ${
+            className={`transition-all duration-800 max-w-2xl ${
               contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -28,35 +32,16 @@ const Diamantes = () => {
               E nesta temporada…<br />algumas serão escolhidas
             </h2>
 
-            <p className="text-lg text-navy/80 mb-6 leading-relaxed">
+            <p className="text-lg text-navy/80 mb-6 leading-relaxed font-medium">
               Entre as participantes, empreendedoras serão reconhecidas como:
             </p>
 
-            <p className="font-playfair text-3xl md:text-4xl text-gold mb-10 italic">
+            <p className="font-playfair text-4xl text-gold mb-2 italic">
               As Diamantes da Temporada.
             </p>
-
-
           </div>
 
-          <div className="hidden md:block flex-shrink-0 w-[480px]"></div>
-
         </div>
-      </div>
-
-      <div className="hidden md:block absolute top-0 right-0 h-full w-[48%]">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/img/diamante-bg.png`}
-          alt="Diamante"
-          className="w-full h-full object-cover opacity-80"
-          style={{
-            mixBlendMode: 'multiply',
-            maskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
-            maskComposite: 'intersect',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
-            WebkitMaskComposite: 'source-in',
-          }}
-        />
       </div>
       
 
