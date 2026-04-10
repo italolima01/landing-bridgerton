@@ -49,6 +49,16 @@ const Diamantes = () => {
           }}
         />
       </div>
+      
+      {/* Xícara decorativa no canto inferior direito */}
+      <div className="absolute bottom-2 right-8 z-20">
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/xicara-dtlh.png`}
+          alt="Xícara decorativa"
+          className="w-40 md:w-52 opacity-70 animate-fade-in delay-500"
+          style={{ transform: 'rotate(-8deg)' }}
+        />
+      </div>
     </section>
   );
 };
