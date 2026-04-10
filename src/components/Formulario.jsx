@@ -132,7 +132,14 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{ backgroundColor: '#d4c4a8' }}>
+    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{
+      backgroundColor: '#8B1A1A',
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundSize: '100% auto',
+      backgroundPosition: 'center',
+      backgroundBlendMode: 'multiply',
+      backgroundRepeat: 'repeat'
+    }}>
       {/* Cursor de pena customizado */}
       {cursorPosition.show && !submitted && (
         <div 
@@ -169,17 +176,17 @@ const Formulario = () => {
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-navy leading-tight font-semibold">
+            <h2 className="font-playfair text-4xl md:text-5xl text-white leading-tight font-semibold">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
-            <p className="text-lg md:text-xl text-navy/70 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
               Se você deseja parar de ser apenas mais uma profissional
               e finalmente se tornar uma referência no seu mercado…
             </p>
-            <p className="text-2xl md:text-3xl text-navy font-playfair italic font-bold leading-snug">
+            <p className="text-2xl md:text-3xl text-gold font-playfair italic font-bold leading-snug">
               Este é o seu momento.
             </p>
-            <p className="text-base md:text-lg text-navy/70 leading-relaxed">
+            <p className="text-base md:text-lg text-white/80 leading-relaxed">
               Preencha seus dados ao lado e receba em primeira mão todas as informações e o convite oficial.
             </p>
           </div>
