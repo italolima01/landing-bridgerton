@@ -9,20 +9,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
-          filter: 'blur(3px)',
-          transform: 'scale(1.0)'
-        }}
-      />
-
-      {/* Overlay escuro para opacidade */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Vinheta - escurecimento nas bordas */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%)'
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`
         }}
       />
 
