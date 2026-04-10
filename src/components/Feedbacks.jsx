@@ -85,7 +85,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="py-24 px-4" style={{
+    <section className="py-24 px-4 relative" style={{
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
       backgroundSize: '100% auto',
@@ -93,6 +93,16 @@ const Feedbacks = () => {
       backgroundBlendMode: 'multiply',
       backgroundRepeat: 'repeat'
     }}>
+      {/* Carta decorativa no canto superior esquerdo */}
+      <div className="absolute left-0 z-0" style={{ opacity: 0.4, top: '-2px' }}>
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/papel1-dtlh.png`}
+          alt="Carta antiga decorativa"
+          className="w-56 md:w-80 animate-fade-in delay-500"
+          style={{ transform: 'scale(-1, -1)' }}
+        />
+      </div>
+      
       <div className="container mx-auto max-w-7xl">
         <div
           ref={titleRef}
@@ -163,7 +173,7 @@ const Feedbacks = () => {
           </div>
 
           {/* Carrossel Inferior (Mobile) / Direito (Desktop) - Desce */}
-          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative">
+          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10">
             <div className="animate-scroll-down md:animate-scroll-down animate-scroll-right md:space-y-4 flex md:flex-col space-x-4 md:space-x-0">
               {[...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:flex-shrink">
@@ -177,6 +187,15 @@ const Feedbacks = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Carta decorativa no canto inferior direito */}
+      <div className="absolute right-0 z-0" style={{ opacity: 0.4, bottom: '-2px' }}>
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/papel1-dtlh.png`}
+          alt="Carta antiga decorativa"
+          className="w-56 md:w-80 animate-fade-in delay-500"
+        />
       </div>
     </section>
   );

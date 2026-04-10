@@ -193,8 +193,8 @@ const Evento = () => {
                 <img 
                   src={`${process.env.PUBLIC_URL}/assets/img/chave-dtlh.png`}
                   alt="Chave dourada"
-                  className={`absolute -right-1 md:-right-20 -top-20 w-32 md:w-48 transition-all duration-1000 ${
-                    leftVisible ? 'opacity-80 rotate-0' : 'opacity-0 -rotate-12 translate-x-10'
+                  className={`absolute -right-8 md:-right-16 -top-20 w-32 md:w-48 opacity-50 transition-all duration-1000 ${
+                    leftVisible ? 'rotate-0' : '-rotate-12 translate-x-10'
                   }`}
                 />
                 <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
