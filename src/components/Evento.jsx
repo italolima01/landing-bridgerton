@@ -19,6 +19,11 @@ const Evento = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
         
+        // Garantir que o vídeo inicie mutado
+        playerRef.current.setVolume(0).then(() => {
+          setIsMuted(true);
+        });
+        
         // Configurar Intersection Observer para controlar volume
         const observer = new IntersectionObserver(
           (entries) => {
@@ -138,8 +143,10 @@ const Evento = () => {
           
           {/* Vídeo */}
           <div 
-            className="relative overflow-hidden rounded-lg mb-8 cursor-pointer"
+            className="relative overflow-hidden rounded-lg mb-8 cursor-pointer mx-auto"
             style={{ 
+              width: '100%',
+              maxWidth: '800px',
               aspectRatio: '16/9',
               boxShadow: '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)',
               border: '2px solid rgba(212, 175, 55, 0.3)'
@@ -151,7 +158,7 @@ const Evento = () => {
               src="https://player.vimeo.com/video/1180600420?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              className="w-full h-full pointer-events-none"
+              className="absolute inset-0 w-full h-full pointer-events-none"
               title="Vídeo do Evento"
             />
             
