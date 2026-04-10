@@ -29,12 +29,12 @@ const Feedbacks = () => {
     script.onload = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
-        
+
         // Garantir que o vídeo inicie mutado
         playerRef.current.setVolume(0).then(() => {
           setIsMuted(true);
         });
-        
+
         // Configurar Intersection Observer para controlar volume
         const observer = new IntersectionObserver(
           (entries) => {
@@ -43,7 +43,7 @@ const Feedbacks = () => {
                 playerRef.current.getVolume().then((currentVolume) => {
                   // Se o vídeo está mutado (volume 0), não fazer nada
                   if (currentVolume === 0) return;
-                  
+
                   // Ajustar volume baseado na visibilidade
                   const ratio = entry.intersectionRatio;
                   const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
@@ -106,7 +106,7 @@ const Feedbacks = () => {
             DEPOIMENTOS
           </div>
           <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
-            O que dizem quem já viveu essa experiência
+            Algumas experiências terminam. Outras deixam marcas para sempre.
           </h2>
         </div>
 
@@ -128,9 +128,9 @@ const Feedbacks = () => {
           </div>
 
           {/* Vídeo Central */}
-          <div 
+          <div
             className="rounded-2xl overflow-hidden relative cursor-pointer"
-            style={{ 
+            style={{
               width: '350px',
               height: '260px',
               maxWidth: '100%',
@@ -149,7 +149,7 @@ const Feedbacks = () => {
               style={{ width: '350px', height: '600px', top: '-170px', left: '0' }}
               title="Vídeo de Feedbacks"
             />
-            
+
             {/* Ícone de mute/unmute */}
             {showIcon && (
               <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-3 animate-fade-in pointer-events-none">
