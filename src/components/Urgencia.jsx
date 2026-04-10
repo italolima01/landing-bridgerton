@@ -28,14 +28,7 @@ const Urgencia = () => {
           </div>
         </div>
         
-        {/* Divisor ornamental dourado */}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center translate-y-1/2 z-20">
-          <img 
-            src={`${process.env.PUBLIC_URL}/assets/img/divisor2.png`}
-            alt="Divisor ornamental"
-            className="w-80 md:w-[600px] lg:w-[800px]"
-          />
-        </div>
+
       </section>
       <Envelope />
     </>

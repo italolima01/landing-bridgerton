@@ -93,15 +93,7 @@ const Feedbacks = () => {
       backgroundBlendMode: 'multiply',
       backgroundRepeat: 'repeat'
     }}>
-      {/* Carta decorativa no canto superior esquerdo */}
-      <div className="absolute left-0 z-0" style={{ opacity: 0.4, top: '-2px' }}>
-        <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/papel1-dtlh.png`}
-          alt="Carta antiga decorativa"
-          className="w-56 md:w-80 animate-fade-in delay-500"
-          style={{ transform: 'scale(-1, -1)' }}
-        />
-      </div>
+
       
       <div className="container mx-auto max-w-7xl">
         <div
@@ -189,14 +181,7 @@ const Feedbacks = () => {
         </div>
       </div>
       
-      {/* Laço decorativo na divisão */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20" style={{ opacity: 0.5 }}>
-        <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/laço-dtlh.png`}
-          alt="Laço decorativo"
-          className="w-40 md:w-56 animate-fade-in"
-        />
-      </div>
+
     </section>
   );
 };

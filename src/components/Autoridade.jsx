@@ -53,14 +53,7 @@ const Autoridade = () => {
       backgroundBlendMode: 'multiply',
       backgroundRepeat: 'repeat'
     }}>
-      {/* Flores decorativas no canto superior esquerdo */}
-      <div className="absolute top-0 left-0 w-64 md:w-80 opacity-30 pointer-events-none -translate-y-12 md:-translate-y-16">
-        <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/flor1-dtlh.png`}
-          alt="Flores decorativas"
-          className="w-full h-auto"
-        />
-      </div>
+
       
       <div className="container mx-auto max-w-5xl relative z-10">
         <div 
@@ -150,23 +143,7 @@ const Autoridade = () => {
           </p>
         </div>
         
-        {/* Imagem da pena e tinteiro decorativos */}
-        <div className="flex justify-center items-center gap-2 mt-16">
-          <div className="animate-slide-from-left delay-500">
-            <img 
-              src={`${process.env.PUBLIC_URL}/assets/img/tinteiro-dtlh.png`}
-              alt="Tinteiro decorativo"
-              className="w-32 md:w-40"
-            />
-          </div>
-          <div className="animate-slide-from-right delay-600">
-            <img 
-              src={`${process.env.PUBLIC_URL}/assets/img/pena-dtlh.png`}
-              alt="Pena decorativa"
-              className="w-48 md:w-64"
-            />
-          </div>
-        </div>
+
       </div>
     </section>
   );
