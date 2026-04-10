@@ -52,7 +52,7 @@ const Navbar = () => {
               className="w-6 h-6 object-contain mb-0.5"
               style={{ filter: isScrolled ? 'grayscale(100%) brightness(0)' : 'none' }}
             />
-            <span className={`font-playfair text-lg font-semibold tracking-wide transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}>
+            <span className={`font-playfair text-lg font-semibold tracking-wide transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-white'}`}>
               Evolution Brows
             </span>
           </button>
@@ -61,25 +61,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection('evento')}
-              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-gold/75 hover:text-gold'}`}
+              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-white/80 hover:text-white'}`}
             >
               O Evento
             </button>
             <button
               onClick={() => scrollToSection('diferencial')}
-              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-gold/75 hover:text-gold'}`}
+              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-white/80 hover:text-white'}`}
             >
               Diferencial
             </button>
             <button
               onClick={() => scrollToSection('autoridade')}
-              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-gold/75 hover:text-gold'}`}
+              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-white/80 hover:text-white'}`}
             >
               Palestrantes
             </button>
             <button
               onClick={() => scrollToSection('formulario')}
-              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-gold/75 hover:text-gold'}`}
+              className={`transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold ${isScrolled ? 'text-black/75 hover:text-black' : 'text-white/80 hover:text-white'}`}
             >
               Lista de Espera
             </button>
@@ -94,7 +94,7 @@ const Navbar = () => {
           {/* Menu Mobile */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-gold'}`}
+            className={`md:hidden transition-colors duration-500 ${isScrolled ? 'text-black' : 'text-white'}`}
           >
             {isMenuOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,25 +114,25 @@ const Navbar = () => {
             <div className="grid grid-cols-2 gap-3 px-4">
               <button
                 onClick={() => scrollToSection('evento')}
-                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
               >
                 O Evento
               </button>
               <button
                 onClick={() => scrollToSection('diferencial')}
-                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
               >
                 Diferencial
               </button>
               <button
                 onClick={() => scrollToSection('autoridade')}
-                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
               >
                 Palestrantes
               </button>
               <button
                 onClick={() => scrollToSection('formulario')}
-                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-gold/75 hover:text-gold hover:bg-white/5'}`}
+                className={`text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg ${isScrolled ? 'text-black/75 hover:text-black hover:bg-black/5' : 'text-white/80 hover:text-white hover:bg-white/10'}`}
               >
                 Lista de Espera
               </button>

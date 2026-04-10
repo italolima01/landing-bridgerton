@@ -4,14 +4,23 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: 'calc(100vh + 63px)' }}>
+    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '100vh' }}>
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
+          filter: 'saturate(1.4) contrast(1.1)',
+          backgroundSize: '100% 120%',
+          backgroundRepeat: 'no-repeat'
         }}
       />
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black opacity-40" />
+      
+      {/* Bottom Gradient */}
+      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black via-black/70 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl pt-0 md:pt-16 px-4 md:px-8">
