@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Envelope from './components/Envelope';
+import Espaco from './components/Espaco';
 import Evento from './components/Evento';
 import Diferencial from './components/Diferencial';
 import Autoridade from './components/Autoridade';
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Envelope />
+      <Espaco />
       <Evento />
       <Diferencial />
       <Autoridade />

@@ -87,14 +87,7 @@ const Evento = () => {
         scrollMarginTop: '56px'
       }}
     >
-      {/* Divisor Ornamental */}
-      <div className="absolute top-0 left-0 right-0 flex justify-center -translate-y-8 md:-translate-y-12 z-20">
-        <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/divisor-dourado.png`}
-          alt="Divisor ornamental"
-          className="w-80 md:w-[600px] lg:w-[800px]"
-        />
-      </div>
+
       
       <div className="relative z-10 w-full pt-14 md:pt-20">
         <div className="max-w-6xl mx-auto px-8 md:px-16 py-16 md:py-24">
@@ -105,24 +98,7 @@ const Evento = () => {
               leftVisible ? '' : ''
             }`}
           >
-            {/* Ornamento floral */}
-            <div className={`transition-all duration-800 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="30" cy="20" r="3" fill="#d4af37" opacity="0.8"/>
-                <ellipse cx="30" cy="12" rx="4" ry="8" fill="#d4af37" opacity="0.6"/>
-                <ellipse cx="30" cy="28" rx="4" ry="8" fill="#d4af37" opacity="0.6"/>
-                <ellipse cx="22" cy="20" rx="8" ry="4" fill="#d4af37" opacity="0.6"/>
-                <ellipse cx="38" cy="20" rx="8" ry="4" fill="#d4af37" opacity="0.6"/>
-                <ellipse cx="24" cy="14" rx="3" ry="6" fill="#d4af37" opacity="0.5" transform="rotate(-45 24 14)"/>
-                <ellipse cx="36" cy="14" rx="3" ry="6" fill="#d4af37" opacity="0.5" transform="rotate(45 36 14)"/>
-                <ellipse cx="24" cy="26" rx="3" ry="6" fill="#d4af37" opacity="0.5" transform="rotate(45 24 26)"/>
-                <ellipse cx="36" cy="26" rx="3" ry="6" fill="#d4af37" opacity="0.5" transform="rotate(-45 36 26)"/>
-                <path d="M10 20 Q15 15 20 20 Q15 25 10 20" fill="#d4af37" opacity="0.4"/>
-                <path d="M50 20 Q45 15 40 20 Q45 25 50 20" fill="#d4af37" opacity="0.4"/>
-              </svg>
-            </div>
+
             
             <div className={`text-gold text-xs font-bold tracking-[3px] uppercase transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -187,16 +163,7 @@ const Evento = () => {
             }`}>
               <p className="text-sm md:text-base italic text-white/70 font-light">Porque no cenário atual…</p>
               
-              {/* Texto com imagem da chave */}
               <div className="relative">
-                {/* Imagem da chave - posicionada à direita do texto */}
-                <img 
-                  src={`${process.env.PUBLIC_URL}/assets/img/chave-dtlh.png`}
-                  alt="Chave dourada"
-                  className={`absolute -right-8 md:-right-16 -top-20 w-32 md:w-48 opacity-50 transition-all duration-1000 ${
-                    leftVisible ? 'rotate-0' : '-rotate-12 translate-x-10'
-                  }`}
-                />
                 <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
                   Não vence quem faz melhor.
                 </p>

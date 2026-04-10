@@ -9,20 +9,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
-          filter: 'blur(3px)',
-          transform: 'scale(1.0)'
-        }}
-      />
-
-      {/* Overlay escuro para opacidade */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Vinheta - escurecimento nas bordas */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%)'
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`
         }}
       />
 
@@ -45,8 +32,9 @@ const Hero = () => {
           <span className="text-white text-base md:text-lg font-light tracking-[10px] uppercase">IMERSÃO</span>
         </div>
 
-        <h1 className="hero-title font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
-          EVOLUTION<br />BROWS
+        <h1 className="hero-title font-bold text-white mb-8 leading-tight animate-fade-in-up delay-100 flex flex-col items-center">
+          <span style={{ fontFamily: "'Great Vibes', cursive", fontWeight: 'normal', letterSpacing: 'normal', transform: 'translateY(10px)' }}>Evolution</span>
+          <span style={{ fontFamily: "'Cinzel Decorative', 'Cinzel', serif", letterSpacing: '0.05em' }}>BROWS</span>
         </h1>
 
         <h2 className="text-5xl md:text-6xl text-gold mb-8 font-script font-normal tracking-wide animate-fade-in-up delay-200" style={{
