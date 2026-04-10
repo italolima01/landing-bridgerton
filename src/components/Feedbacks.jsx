@@ -189,12 +189,12 @@ const Feedbacks = () => {
         </div>
       </div>
       
-      {/* Carta decorativa no canto inferior direito */}
-      <div className="absolute right-0 z-0" style={{ opacity: 0.4, bottom: '-2px' }}>
+      {/* Laço decorativo na divisão */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20" style={{ opacity: 0.5 }}>
         <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/papel1-dtlh.png`}
-          alt="Carta antiga decorativa"
-          className="w-56 md:w-80 animate-fade-in delay-500"
+          src={`${process.env.PUBLIC_URL}/assets/img/laço-dtlh.png`}
+          alt="Laço decorativo"
+          className="w-40 md:w-56 animate-fade-in"
         />
       </div>
     </section>
