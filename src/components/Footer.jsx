@@ -11,8 +11,8 @@ const Footer = () => {
           E os olhares estarão voltados para aquelas que ousarem se destacar.
         </p>
         
-        <p className="text-base text-navy/75 mb-2">Com expectativa,</p>
-        <p className="text-gold text-lg">— Lady Erika Sousa</p>
+        <p className="text-base text-navy/75 mb-4">Com expectativa,</p>
+        <p className="text-gold text-4xl md:text-5xl font-script font-normal">— Lady Erika Sousa</p>
         
         <div className="mt-12">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
