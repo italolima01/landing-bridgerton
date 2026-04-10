@@ -39,16 +39,11 @@ const Feedbacks = () => {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current) {
-                playerRef.current.getVolume().then((currentVolume) => {
-                  // Se o vídeo está mutado (volume 0), não fazer nada
-                  if (currentVolume === 0) return;
-                  
-                  // Ajustar volume baseado na visibilidade
-                  const ratio = entry.intersectionRatio;
-                  const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
-                  playerRef.current.setVolume(newVolume);
-                });
+              if (playerRef.current && !isMuted) {
+                // Só ajustar volume se o usuário tiver desmutado manualmente
+                const ratio = entry.intersectionRatio;
+                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
+                playerRef.current.setVolume(newVolume);
               }
             });
           },
@@ -70,6 +65,7 @@ const Feedbacks = () => {
         document.body.removeChild(script);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleMute = () => {

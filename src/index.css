@@ -419,3 +419,35 @@
 .animate-scroll-right {
   animation: scrollRight 20s linear infinite;
 }
+
+  .animate-slide-from-left {
+    animation: slideFromLeft 1.2s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-from-right {
+    animation: slideFromRight 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: rotate(15deg) translateY(60px) translateX(-100px);
+  }
+  to {
+    opacity: 0.5;
+    transform: rotate(15deg) translateY(60px) translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: rotate(-75deg) scaleY(-1) translateX(100px);
+  }
+  to {
+    opacity: 0.5;
+    transform: rotate(-75deg) scaleY(-1) translateX(0);
+  }
+}

@@ -149,6 +149,24 @@ const Autoridade = () => {
             Apenas direcionamentos validados que já transformaram empreendedoras comuns em grandes referências.
           </p>
         </div>
+        
+        {/* Imagem da pena e tinteiro decorativos */}
+        <div className="flex justify-center items-center gap-2 mt-16">
+          <div className="animate-slide-from-left delay-500">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/img/tinteiro-dtlh.png`}
+              alt="Tinteiro decorativo"
+              className="w-32 md:w-40"
+            />
+          </div>
+          <div className="animate-slide-from-right delay-600">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/img/pena-dtlh.png`}
+              alt="Pena decorativa"
+              className="w-48 md:w-64"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
