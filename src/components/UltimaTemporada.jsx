@@ -2,7 +2,7 @@ import React from 'react';
 
 const UltimaTemporada = () => {
   return (
-    <section className="py-24 px-4" style={{
+    <section className="py-12 px-4" style={{
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
       backgroundSize: '100% auto',

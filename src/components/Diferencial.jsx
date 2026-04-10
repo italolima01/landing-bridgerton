@@ -3,7 +3,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skills = [
   { icon: '🎭', name: 'Shadow', img: '/assets/img/dream-shadow.jpg' },
-  { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg' },
+  { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg', objectPosition: 'center 30%' },
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: null },
@@ -69,21 +69,22 @@ const Diferencial = () => {
               }}
             >
               {skill.img ? (
-                <div className="w-full h-40 overflow-hidden">
+                <div className="w-full h-32 overflow-hidden">
                   <img
                     src={`${process.env.PUBLIC_URL}${skill.img}`}
                     alt={skill.name}
-                    className={`w-full h-full object-cover transition-transform duration-300 hover:scale-110 ${skill.name === '— Shadow' ? 'scale-125' : ''
-                      }`}
+                    className={`w-full h-full object-cover transition-transform duration-300 hover:scale-110 ${
+                      skill.name === '— Shadow' ? 'scale-125' : ''
+                    }`}
                     style={skill.objectPosition ? { objectPosition: skill.objectPosition } : {}}
                   />
                 </div>
               ) : (
-                <div className="p-8 pb-0">
-                  <div className="text-5xl mb-4">{skill.icon}</div>
+                <div className="p-6 pb-0">
+                  <div className="text-4xl mb-3">{skill.icon}</div>
                 </div>
               )}
-              <div className={`text-lg text-white ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
+              <div className={`text-base text-gold ${skill.img ? 'p-3' : 'pb-6'}`}>{skill.name}</div>
             </div>
           ))}
         </div>

@@ -28,16 +28,11 @@ const Evento = () => {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current) {
-                playerRef.current.getVolume().then((currentVolume) => {
-                  // Se o vídeo está mutado (volume 0), não fazer nada
-                  if (currentVolume === 0) return;
-                  
-                  // Ajustar volume baseado na visibilidade
-                  const ratio = entry.intersectionRatio;
-                  const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
-                  playerRef.current.setVolume(newVolume);
-                });
+              if (playerRef.current && !isMuted) {
+                // Só ajustar volume se o usuário tiver desmutado manualmente
+                const ratio = entry.intersectionRatio;
+                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
+                playerRef.current.setVolume(newVolume);
               }
             });
           },
@@ -59,6 +54,7 @@ const Evento = () => {
         document.body.removeChild(script);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleMute = () => {
@@ -190,9 +186,22 @@ const Evento = () => {
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <p className="text-sm md:text-base italic text-white/70 font-light">Porque no cenário atual…</p>
-              <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
-                Não vence quem faz melhor.
-              </p>
+              
+              {/* Texto com imagem da chave */}
+              <div className="relative">
+                {/* Imagem da chave - posicionada à direita do texto */}
+                <img 
+                  src={`${process.env.PUBLIC_URL}/assets/img/chave-dtlh.png`}
+                  alt="Chave dourada"
+                  className={`absolute -right-8 md:-right-16 -top-20 w-32 md:w-48 opacity-50 transition-all duration-1000 ${
+                    leftVisible ? 'rotate-0' : '-rotate-12 translate-x-10'
+                  }`}
+                />
+                <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
+                  Não vence quem faz melhor.
+                </p>
+              </div>
+              
               <p className="font-playfair text-xl md:text-2xl text-gold italic leading-snug">
                 Vence quem é lembrada, reconhecida e desejada.
               </p>

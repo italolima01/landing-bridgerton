@@ -5,8 +5,17 @@ const Diamantes = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden min-h-[500px]" style={{ backgroundColor: '#dead9c' }}>
-      <div className="container mx-auto max-w-5xl relative z-10">
+    <section className="py-32 px-4 relative overflow-hidden min-h-[500px]" style={{ backgroundColor: '#dead9c' }}>
+      {/* Diamante decorativo no topo central */}
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20" style={{ opacity: 0.7 }}>
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+          alt="Diamante decorativo"
+          className="w-24 md:w-32 animate-fade-in"
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-5xl relative z-10 mt-8">
         <div className="flex flex-col md:flex-row items-center gap-12">
 
           <div 
@@ -47,6 +56,16 @@ const Diamantes = () => {
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 35%, black 75%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)',
             WebkitMaskComposite: 'source-in',
           }}
+        />
+      </div>
+      
+      {/* Xícara decorativa no canto inferior direito */}
+      <div className="absolute -bottom-12 right-0 z-20" style={{ opacity: 0.7 }}>
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/xicara-dtlh.png`}
+          alt="Xícara decorativa"
+          className="w-56 md:w-80 animate-fade-in delay-500"
+          style={{ transform: 'rotate(-8deg)' }}
         />
       </div>
     </section>
