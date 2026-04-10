@@ -4,50 +4,72 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center text-center px-4 py-16 bg-navy">
+    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: 'calc(100vh + 63px)' }}>
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+      <div
+        className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/hero-bg.png)`
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
+          filter: 'blur(3px)',
+          transform: 'scale(1.0)'
         }}
       />
-      
-      {/* Dark overlay para melhorar contraste */}
-      <div className="absolute inset-0 bg-black/40" />
-      {/* Gradiente de transição na base */}
-      <div className="absolute bottom-0 left-0 right-0 h-32" style={{ background: 'linear-gradient(to bottom, transparent, #0f1419)' }} />
-      
+
+      {/* Overlay escuro para opacidade */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Vinheta - escurecimento nas bordas */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%)'
+        }}
+      />
+
       {/* Content */}
-      <div className="relative z-10 max-w-4xl">
-        <div className="inline-block px-6 py-2 mb-8 border border-gold rounded-full bg-gold/10 animate-fade-in">
-          <span className="text-gold text-sm font-semibold tracking-[2px]">IMERSÃO 💎</span>
+      <div className="relative z-10 max-w-4xl pt-0 md:pt-16 px-4 md:px-8">
+        {/* SVG Filter para textura de tinta */}
+        <svg width="0" height="0" style={{ position: 'absolute' }}>
+          <defs>
+            <filter id="ink-texture">
+              <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R" yChannelSelector="G" />
+              <feGaussianBlur stdDeviation="0.2" />
+            </filter>
+          </defs>
+        </svg>
+
+        <div
+          className="inline-block px-4 py-2 mb-4 animate-fade-in"
+        >
+          <span className="text-white text-base md:text-lg font-light tracking-[10px] uppercase">IMERSÃO</span>
         </div>
-        
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
+
+        <h1 className="hero-title font-bold text-white mb-8 leading-tight tracking-wide animate-fade-in-up delay-100">
           EVOLUTION<br />BROWS
         </h1>
-        
-        <h2 className="text-3xl md:text-4xl text-gold mb-8 font-semibold tracking-wide animate-fade-in-up delay-200">
-          UM CONVITE EXCLUSIVO
+
+        <h2 className="text-5xl md:text-6xl text-gold mb-8 font-script font-normal tracking-wide animate-fade-in-up delay-200" style={{
+          filter: 'url(#ink-texture)',
+        }}>
+          Um Convite Exclusivo
         </h2>
-        
-        <p className="text-lg md:text-xl text-cream mb-6 leading-relaxed animate-fade-in-up delay-300">
-          Apenas aquelas que compreendem que não basta dominar técnicas — é preciso ocupar o lugar de destaque que lhes pertence.
-        </p>
-        
-        <p className="text-base md:text-lg text-gray-400 mb-12 leading-relaxed italic animate-fade-in-up delay-400">
-          Nesta temporada, não se trata apenas de técnica…<br />
-          Trata-se de posição, estratégia e reconhecimento.
-        </p>
-        
-        <button 
-          onClick={scrollToForm}
-          className="bg-gold text-navy px-10 py-5 rounded-full font-bold text-sm tracking-wide uppercase hover:-translate-y-1 transition-transform duration-300"
-          style={{ animation: 'btn-glow 2.5s ease-in-out infinite' }}
-        >
-        QUERO ENTRAR PARA A LISTA DE ESPERA
-        </button>
+
+        <div className="flex justify-center px-4">
+          <button
+            onClick={scrollToForm}
+            className="animated-button text-sm md:text-base px-6 md:px-12 py-3 md:py-4"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+            <span className="text">QUERO ENTRAR PARA A LISTA DE ESPERA</span>
+            <span className="circle"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+              <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );

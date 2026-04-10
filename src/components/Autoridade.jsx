@@ -27,6 +27,11 @@ const speakers = [
     name: 'Em breve',
     role: 'Convidado especial',
     revealed: false
+  },
+  {
+    name: 'Em breve',
+    role: 'Convidado especial',
+    revealed: false
   }
 ];
 
@@ -40,8 +45,24 @@ const Autoridade = () => {
   };
 
   return (
-    <section id="autoridade" className="py-24 px-4 bg-navy scroll-mt-20">
-      <div className="container mx-auto max-w-5xl">
+    <section id="autoridade" className="py-24 px-4 scroll-mt-20 relative" style={{ 
+      backgroundColor: '#8B1A1A',
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundSize: '100% auto',
+      backgroundPosition: 'center',
+      backgroundBlendMode: 'multiply',
+      backgroundRepeat: 'repeat'
+    }}>
+      {/* Flores decorativas no canto superior esquerdo */}
+      <div className="absolute top-0 left-0 w-64 md:w-80 opacity-30 pointer-events-none -translate-y-12 md:-translate-y-16">
+        <img 
+          src={`${process.env.PUBLIC_URL}/assets/img/flor1-dtlh.png`}
+          alt="Flores decorativas"
+          className="w-full h-auto"
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-5xl relative z-10">
         <div 
           ref={titleRef}
           className={`transition-all duration-800 ${
@@ -56,14 +77,14 @@ const Autoridade = () => {
             Diretamente das maiores<br />referências do Brasil
           </h2>
           
-          <p className="text-lg text-gray-400 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
             Profissionais que hoje são destaque nacional estarão presentes para compartilhar o que realmente funciona no mercado.
           </p>
         </div>
         
         <div 
           ref={gridRef}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-16"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16"
         >
           {speakers.map((speaker, index) => (
             <div 
@@ -74,16 +95,17 @@ const Autoridade = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
               onMouseEnter={() => handleCardHover(index)}
             >
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-navy border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-black/30 backdrop-blur-sm border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
                 {speaker.revealed ? (
                   <>
                     {/* Imagem revelada - fica colorida no hover e permanece */}
                     <img 
                       src={`${process.env.PUBLIC_URL}/assets/img/${speaker.image}`}
                       alt={speaker.name} 
-                      className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                      className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
                         hoveredCards[index] ? '' : 'grayscale'
                       }`}
+                      style={{ objectPosition: 'center 20%', transform: 'scale(1.3)' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform transition-all duration-300 group-hover:translate-y-0">
@@ -95,10 +117,13 @@ const Autoridade = () => {
                   <>
                     {/* Card misterioso - revela info no hover */}
                     <div className="w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500">
-                      <div className="text-6xl text-gold/30 mb-4 font-playfair group-hover:opacity-0 transition-opacity duration-300">
-                        ?
-                      </div>
-                      <p className="text-gray-400 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
+                      <img 
+                        src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
+                        alt="Diamante"
+                        className="w-20 h-20 mb-4 group-hover:opacity-0 transition-opacity duration-300"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(65%) sepia(48%) saturate(466%) hue-rotate(8deg) brightness(95%) contrast(87%)' }}
+                      />
+                      <p className="text-white/70 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
                         Convidado especial
                       </p>
                     </div>
@@ -117,12 +142,30 @@ const Autoridade = () => {
           ))}
         </div>
         
-        <div className="text-center space-y-4 text-lg text-gray-400 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
+        <div className="text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
           <p className="font-playfair text-2xl text-gold italic font-semibold">
             Apenas direcionamentos validados que já transformaram empreendedoras comuns em grandes referências.
           </p>
+        </div>
+        
+        {/* Imagem da pena e tinteiro decorativos */}
+        <div className="flex justify-center items-center gap-2 mt-16">
+          <div className="animate-slide-from-left delay-500">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/img/tinteiro-dtlh.png`}
+              alt="Tinteiro decorativo"
+              className="w-32 md:w-40"
+            />
+          </div>
+          <div className="animate-slide-from-right delay-600">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/img/pena-dtlh.png`}
+              alt="Pena decorativa"
+              className="w-48 md:w-64"
+            />
+          </div>
         </div>
       </div>
     </section>
