@@ -31,7 +31,7 @@ const Evento = () => {
               if (playerRef.current && !isMuted) {
                 // Só ajustar volume se o usuário tiver desmutado manualmente
                 const ratio = entry.intersectionRatio;
-                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
+                const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
                 playerRef.current.setVolume(newVolume);
               }
             });
@@ -64,7 +64,7 @@ const Evento = () => {
           playerRef.current.setVolume(0);
           setIsMuted(true);
         } else {
-          playerRef.current.setVolume(0.5);
+          playerRef.current.setVolume(0.3);
           setIsMuted(false);
         }
         setShowIcon(true);
@@ -130,7 +130,15 @@ const Evento = () => {
               src="https://player.vimeo.com/video/1180600420?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '110%',
+                height: '110%',
+                transform: 'translate(-50%, -50%)'
+              }}
+              className="pointer-events-none"
               title="Vídeo do Evento"
             />
             

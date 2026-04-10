@@ -18,6 +18,7 @@ const Feedbacks = () => {
   const [showIcon, setShowIcon] = useState(false);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
+  const videoContainerRef = useRef(null);
 
   useEffect(() => {
     // Carregar a API do Vimeo Player
@@ -39,21 +40,26 @@ const Feedbacks = () => {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current && !isMuted) {
-                // Só ajustar volume se o usuário tiver desmutado manualmente
+              if (playerRef.current) {
                 const ratio = entry.intersectionRatio;
-                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
-                playerRef.current.setVolume(newVolume);
+                
+                // Se o vídeo está desmutado, ajustar volume baseado na visibilidade
+                playerRef.current.getVolume().then((currentVolume) => {
+                  if (currentVolume > 0) {
+                    const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
+                    playerRef.current.setVolume(newVolume);
+                  }
+                });
               }
             });
           },
           {
-            threshold: Array.from({ length: 101 }, (_, i) => i / 100) // 0 a 1 em incrementos de 0.01
+            threshold: Array.from({ length: 101 }, (_, i) => i / 100)
           }
         );
 
-        if (iframeRef.current) {
-          observer.observe(iframeRef.current);
+        if (videoContainerRef.current) {
+          observer.observe(videoContainerRef.current);
         }
 
         return () => observer.disconnect();
@@ -75,7 +81,7 @@ const Feedbacks = () => {
           playerRef.current.setVolume(0);
           setIsMuted(true);
         } else {
-          playerRef.current.setVolume(0.5);
+          playerRef.current.setVolume(0.3);
           setIsMuted(false);
         }
         setShowIcon(true);
@@ -127,6 +133,7 @@ const Feedbacks = () => {
 
           {/* Vídeo Central */}
           <div
+            ref={videoContainerRef}
             className="rounded-2xl overflow-hidden relative cursor-pointer"
             style={{
               width: '350px',
@@ -144,7 +151,7 @@ const Feedbacks = () => {
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               className="pointer-events-none absolute"
-              style={{ width: '350px', height: '600px', top: '-170px', left: '0' }}
+              style={{ width: '385px', height: '660px', top: '-200px', left: '-17.5px' }}
               title="Vídeo de Feedbacks"
             />
 
