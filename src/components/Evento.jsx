@@ -160,26 +160,30 @@ const Evento = () => {
 
           {/* Continuação do conteúdo */}
           <div className="space-y-8">
-            <p className={`text-base md:text-lg text-white/90 leading-relaxed transition-all duration-800 delay-200 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              Algumas vão assistir de longe. Outras vão viver essa história.
-            </p>
-            
             <div className={`space-y-6 transition-all duration-800 delay-300 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              <p className="text-sm md:text-base italic text-white/70 font-light">Porque no cenário atual…</p>
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
+                A primeira temporada foi extraordinária.
+              </p>
               
-              <div className="relative">
-                <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
-                  Não vence quem faz melhor.
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
+                A segunda superou todas as expectativas.
+              </p>
+              
+              <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug mt-10">
+                Mas dessa vez… será histórico.
+              </p>
+              
+              <div className="space-y-4 mt-8">
+                <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight">
+                  Porque essa será a última temporada da Imersão Evolution Brows.
+                </p>
+                
+                <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug">
+                  A última vez que esse evento vai acontecer.
                 </p>
               </div>
-              
-              <p className="font-playfair text-xl md:text-2xl text-gold italic leading-snug">
-                Vence quem é lembrada, reconhecida e desejada.
-              </p>
             </div>
           </div>
         </div>
