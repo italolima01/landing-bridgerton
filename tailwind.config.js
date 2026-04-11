@@ -24,6 +24,7 @@ module.exports = {
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         bodoni: ['"Bodoni Moda"', 'serif'],
         script: ['"Great Vibes"', 'cursive'],

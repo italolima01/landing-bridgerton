@@ -9,7 +9,7 @@
   }
   
   body {
-    @apply font-inter text-navy bg-pearl;
+    @apply font-montserrat text-navy bg-pearl;
     overflow-x: hidden;
   }
   

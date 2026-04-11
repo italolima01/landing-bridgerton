@@ -93,17 +93,19 @@ const Espaco = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 md:py-32" 
+      className="py-20 md:py-32 bg-cover bg-center relative" 
       style={{ 
-        backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
-        backgroundSize: '100% auto',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
-        backgroundRepeat: 'repeat'
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/writing-letter.jpg)`,
       }}
     >
-      <div className="max-w-6xl mx-auto px-8 md:px-16">
+      {/* Degradê superior para transição suave */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#4a3f35] to-transparent z-0"></div>
+      
+      {/* Overlay escuro para legibilidade */}
+      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-[#8B1A1A]/50 mix-blend-multiply"></div>
+      
+      <div className="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
         {/* Texto acima do vídeo */}
         <div className="text-center mb-12 space-y-6">
           <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-4xl mx-auto">
