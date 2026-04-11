@@ -106,17 +106,13 @@ const Espaco = () => {
       <div className="max-w-6xl mx-auto px-8 md:px-16">
         {/* Texto acima do vídeo */}
         <div className="text-center mb-12 space-y-6">
-          <p className="text-sm md:text-base italic text-white/70 font-light">No cenário atual…</p>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-4xl mx-auto">
+            A última temporada da Imersão Evolution Brows não será apenas um evento.
+          </p>
           
-          <div className="space-y-2">
-            <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug">
-              Não vence quem faz melhor.
-            </p>
-            
-            <p className="font-playfair text-2xl md:text-3xl text-gold italic leading-snug">
-              Vence quem é lembrada, reconhecida e desejada.
-            </p>
-          </div>
+          <p className="font-playfair text-2xl md:text-3xl text-gold italic leading-snug max-w-4xl mx-auto">
+            Será a oportunidade de viver o nível que poucas profissionais conseguem alcançar.
+          </p>
         </div>
 
         <div 
