@@ -104,6 +104,21 @@ const Espaco = () => {
       }}
     >
       <div className="max-w-6xl mx-auto px-8 md:px-16">
+        {/* Texto acima do vídeo */}
+        <div className="text-center mb-12 space-y-6">
+          <p className="text-sm md:text-base italic text-white/70 font-light">No cenário atual…</p>
+          
+          <div className="space-y-2">
+            <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug">
+              Não vence quem faz melhor.
+            </p>
+            
+            <p className="font-playfair text-2xl md:text-3xl text-gold italic leading-snug">
+              Vence quem é lembrada, reconhecida e desejada.
+            </p>
+          </div>
+        </div>
+
         <div 
           className="relative overflow-hidden rounded-lg cursor-pointer mx-auto"
           style={{ 
