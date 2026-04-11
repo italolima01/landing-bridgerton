@@ -11,9 +11,9 @@ const Hero = () => {
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
           filter: 'saturate(1.4) contrast(1.05)',
-          backgroundSize: '170% 90%',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top'
+          backgroundPosition: 'center center'
         }}
       />
       
