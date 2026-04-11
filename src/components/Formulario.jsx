@@ -168,7 +168,7 @@ const Formulario = () => {
           LISTA DE ESPERA
         </div>
 
-        <div className="flex flex-col md:flex-row items-start gap-16 md:gap-24">
+        <div className="flex flex-col md:flex-row items-start md:items-end gap-16 md:gap-24">
 
           <div 
             ref={leftRef}
@@ -186,14 +186,11 @@ const Formulario = () => {
             <p className="text-2xl md:text-3xl text-gold font-playfair italic font-bold leading-snug">
               Este é o seu momento.
             </p>
-            <p className="text-base md:text-lg text-white/80 leading-relaxed">
-              Preencha seus dados ao lado e receba em primeira mão todas as informações e o convite oficial.
-            </p>
           </div>
 
           <div 
             ref={rightRef}
-            className={`flex-1 w-full transition-all duration-800 ${
+            className={`flex-1 w-full transition-all duration-800 mt-16 md:mt-0 ${
               rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
