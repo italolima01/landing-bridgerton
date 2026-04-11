@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const Espaco = () => {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const [showIcon, setShowIcon] = useState(false);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
@@ -18,9 +18,9 @@ const Espaco = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
         
-        // Configurar volume mas não iniciar ainda
-        playerRef.current.setVolume(0.5).then(() => {
-          setIsMuted(false);
+        // Iniciar mutado para evitar erro de autoplay
+        playerRef.current.setVolume(0).then(() => {
+          setIsMuted(true);
         });
         
         // Observer para detectar quando a seção está visível e iniciar o vídeo
