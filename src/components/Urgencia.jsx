@@ -4,15 +4,14 @@ import Envelope from './Envelope';
 const Urgencia = () => {
   return (
     <>
-      <section className="py-24 px-4 relative" style={{
-        backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
-        backgroundSize: '100% auto',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
-        backgroundRepeat: 'repeat'
+      <section className="py-24 px-4 relative bg-cover bg-center" style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/mask-invitation.jpg)`,
       }}>
-        <div className="container mx-auto max-w-5xl">      
+        {/* Overlay escuro para legibilidade */}
+        <div className="absolute inset-0 bg-black/75"></div>
+        <div className="absolute inset-0 bg-[#8B1A1A]/50 mix-blend-multiply"></div>
+        
+        <div className="container mx-auto max-w-5xl relative z-10">      
           <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
             O último e mais aguardado espetáculo da temporada está prestes a começar
           </h2>
