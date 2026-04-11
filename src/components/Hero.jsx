@@ -4,14 +4,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '85vh' }}>
+    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '100vh' }}>
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center animate-zoom-out"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
-          filter: 'saturate(1.4) contrast(1.0)',
-          backgroundSize: '120% 100%',
+          filter: 'saturate(1.4) contrast(1.05)',
+          backgroundSize: '140% 120%',
           backgroundRepeat: 'no-repeat'
         }}
       />
