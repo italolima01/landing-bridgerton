@@ -32,12 +32,12 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/20 backdrop-blur-xl shadow-2xl border-b border-white/30' 
-          : 'bg-white/10 backdrop-blur-lg border-b border-white/20'
+          : 'bg-transparent'
       }`}
-      style={{
+      style={isScrolled ? {
         backdropFilter: 'blur(20px) saturate(180%)',
         WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-      }}
+      } : {}}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-14">

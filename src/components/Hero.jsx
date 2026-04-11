@@ -4,7 +4,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '100vh' }}>
+    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '85vh' }}>
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center animate-zoom-out"
