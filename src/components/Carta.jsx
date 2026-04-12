@@ -6,7 +6,7 @@ const Carta = () => {
   const [contentRef, contentVisible] = useScrollAnimation();
 
   return (
-    <section className="relative py-24 px-4 overflow-hidden" style={{ backgroundColor: '#f5f1e8' }}>
+    <section className="relative py-32 px-4 overflow-hidden" style={{ backgroundColor: '#f5f1e8' }}>
       <div className="relative z-10 container mx-auto max-w-4xl">
         <div 
           ref={iconRef}
