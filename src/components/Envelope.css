@@ -290,6 +290,7 @@
 .carta-inner {
   padding: 40px 32px;
   background: rgba(247,242,234,0.55);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -309,18 +310,19 @@
 }
 
 .carta-cta-button {
-  margin-top: 2rem;
-  padding: 14px 32px;
+  margin: 2rem 0 0;
+  padding: 12px 28px;
   background: linear-gradient(135deg, #c9a85c 0%, #d9b86a 50%, #c9a85c 100%);
   border: 2px solid #d9b86a;
   border-radius: 50px;
   color: #1a2340;
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(217, 184, 106, 0.3);
+  white-space: nowrap;
 }
 
 .carta-cta-button:hover {

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Formulario = () => {
@@ -16,6 +16,7 @@ const Formulario = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, show: false });
   const [isTyping, setIsTyping] = useState(false);
   const typingTimeoutRef = useRef(null);
+  const [showFormFields, setShowFormFields] = useState(true);
   
   const inputRefs = {
     nome: useRef(null),
@@ -67,8 +68,9 @@ const Formulario = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setActiveField(null); // Remove o campo ativo imediatamente
-    setCursorPosition({ x: 0, y: 0, show: false }); // Esconde o cursor
+    setActiveField(null);
+    setCursorPosition({ x: 0, y: 0, show: false });
+    setShowFormFields(false); // Esconde os campos
 
     // Simula envio
     await fetch('http://localhost/api/leads', {
@@ -81,16 +83,25 @@ const Formulario = () => {
     setTimeout(() => {
       setSubmitted(true);
       
-      // Após 6 segundos, reseta o formulário
+      // Após 7 segundos, reseta o formulário
       setTimeout(() => {
         setSubmitted(false);
-        setIsSubmitting(false);
-        setFormData({
-          nome: '',
-          whatsapp: '',
-          email: ''
-        });
-      }, 6000);
+        
+        // Aguarda 600ms para o form-frame aparecer primeiro
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setFormData({
+            nome: '',
+            whatsapp: '',
+            email: ''
+          });
+          
+          // Depois de mais 400ms, mostra os campos
+          setTimeout(() => {
+            setShowFormFields(true);
+          }, 400);
+        }, 600);
+      }, 7000);
     }, 800);
   };
 
@@ -195,24 +206,29 @@ const Formulario = () => {
             }`}
           >
             {!submitted ? (
-              <div className={`relative transition-all duration-1000 ease-in-out ${isSubmitting ? 'animate-fold-envelope' : 'opacity-100'}`}>
+              <div className={`relative transition-all duration-1000 ease-in-out ${isSubmitting ? 'animate-fold-envelope' : 'animate-slide-in-right'}`}>
                 {/* Moldura do formulário */}
                 <div 
-                  className="absolute inset-0 bg-contain bg-center bg-no-repeat pointer-events-none"
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
                   style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/form-frame.png)`,
-                    transform: 'scaleX(2.0) scaleY(1.3) translateY(-20px)',
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/form-frame.jpg)`,
                   }}
                 />
                 
                 {/* Texto no topo da carta */}
-                <div className="relative z-10 text-center pt-6 pb-8">
+                <div className={`relative z-10 text-center pt-6 pb-8 transition-all duration-500 ${showFormFields ? 'opacity-100' : 'opacity-0'}`}>
                   <h3 className="font-playfair text-2xl md:text-3xl text-navy italic">
-                    Seu Convite Exclusivo
+                    {formData.nome ? (
+                      <>
+                        {formData.nome.split(' ')[0]}, este é seu convite exclusivo
+                      </>
+                    ) : (
+                      'Seu Convite Exclusivo'
+                    )}
                   </h3>
                 </div>
                 
-                <form onSubmit={handleSubmit} className="space-y-4 relative z-10 px-12 py-10">
+                <form onSubmit={handleSubmit} className={`space-y-4 relative z-10 px-12 py-10 transition-all duration-500 ${showFormFields ? 'opacity-100' : 'opacity-0'}`}>
                   <div className="relative">
                     <input
                       ref={inputRefs.nome}
@@ -282,11 +298,11 @@ const Formulario = () => {
               </div>
             ) : (
               <div className="text-center py-12 animate-fade-in">
-                <div className="text-6xl mb-6 animate-bounce-slow">💌</div>
-                <h3 className="font-playfair text-2xl text-navy mb-4">
+                <div className="text-6xl mb-6 animate-bounce-slow">✉️</div>
+                <h3 className="font-playfair text-2xl text-gold mb-4">
                   Seu pedido foi enviado ao Palácio
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-white/90">
                   Verifique sua correspondência (e-mail) em instantes.
                 </p>
               </div>

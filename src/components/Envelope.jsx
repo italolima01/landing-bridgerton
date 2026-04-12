@@ -1,8 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Envelope.css";
 
 export default function Envelope() {
   const [opened, setOpened] = useState(false);
+  const envelopeRef = useRef(null);
+
+  useEffect(() => {
+    const currentRef = envelopeRef.current; // Copia a ref para uma variável
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !opened) {
+            // Aguarda 500ms após entrar na viewport para abrir
+            setTimeout(() => {
+              setOpened(true);
+            }, 500);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Ativa quando 30% do elemento está visível
+      }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [opened]);
 
   const handleOpen = () => {
     if (opened) return;
@@ -11,6 +42,7 @@ export default function Envelope() {
 
   return (
     <div 
+      ref={envelopeRef}
       className="stage" 
       style={{ 
         backgroundColor: '#8B1A1A',
@@ -57,14 +89,16 @@ export default function Envelope() {
               <p className="gold">
                 E é exatamente sobre isso que será o encontro mais aguardado desta temporada…
               </p>
-              <button
-                onClick={() => {
-                  document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="carta-cta-button"
-              >
-                Desejo Meu Convite
-              </button>
+              <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <button
+                  onClick={() => {
+                    document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="carta-cta-button"
+                >
+                  DESEJO RECEBER MEU CONVITE
+                </button>
+              </div>
             </div>
           </div>
         </article>
