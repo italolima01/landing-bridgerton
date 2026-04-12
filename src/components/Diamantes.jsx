@@ -44,7 +44,7 @@ const Diamantes = () => {
               Entre as participantes, empreendedoras serão reconhecidas como:
             </p>
 
-            <p className="font-playfair text-4xl text-gold mb-2 italic">
+            <p className="font-playfair text-4xl text-gold mb-16 italic">
               As Diamantes da Temporada.
             </p>
           </div>
