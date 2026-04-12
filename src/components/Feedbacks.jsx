@@ -106,10 +106,10 @@ const Feedbacks = () => {
           ref={titleRef}
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
+          <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
             DEPOIMENTOS
           </div>
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight animate-rotate-in delay-200">
             Algumas experiências terminam. Outras deixam marcas para sempre.
           </h2>
         </div>

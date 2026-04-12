@@ -11,17 +11,19 @@ const UltimaTemporada = () => {
       backgroundRepeat: 'repeat'
     }}>
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
+        <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           A ÚLTIMA TEMPORADA
         </div>
 
-        <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
-          Conteúdo em breve
+        <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight animate-rotate-in delay-200">
+          Algumas vão assistir de longe.<br />Outras vão viver essa história.
         </h2>
 
-        <div className="bg-white/45 border border-gold/20 rounded-2xl p-16 flex flex-col items-center justify-center gap-6 text-center">
-          <div className="text-5xl text-gold/30">✦</div>
-          <p className="text-navy/60 text-sm tracking-widest uppercase">Placeholder — conteúdo será adicionado em breve</p>
+        <div className="bg-white/10 backdrop-blur-sm border border-gold/30 rounded-2xl p-12 flex flex-col items-center justify-center gap-6 text-center animate-zoom-in delay-400">
+          <div className="text-5xl text-gold">✦</div>
+          <p className="text-white/90 text-lg font-playfair italic leading-relaxed">
+            Esta é a sua chance de fazer parte de algo que nunca mais se repetirá.
+          </p>
         </div>
       </div>
     </section>

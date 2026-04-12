@@ -160,27 +160,25 @@ const Evento = () => {
 
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
-            <div className={`space-y-6 transition-all duration-800 delay-300 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-left delay-300">
                 A primeira temporada foi extraordinária.
               </p>
               
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-right delay-400">
                 A segunda superou todas as expectativas.
               </p>
               
-              <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug mt-10">
+              <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug mt-10 animate-bounce-in delay-500">
                 Mas dessa vez… será histórico.
               </p>
               
               <div className="space-y-4 mt-8">
-                <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight">
+                <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight animate-rotate-in delay-600">
                   Porque essa será a última temporada da Imersão Evolution Brows.
                 </p>
                 
-                <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug">
+                <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug animate-fade-in-up delay-700">
                   A última vez que esse evento vai acontecer.
                 </p>
               </div>

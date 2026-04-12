@@ -38,10 +38,16 @@ const speakers = [
 const Autoridade = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
   const [gridRef, gridVisible] = useScrollAnimation();
-  const [hoveredCards, setHoveredCards] = useState({});
+  const [clickedCards, setClickedCards] = useState({});
 
-  const handleCardHover = (index) => {
-    setHoveredCards(prev => ({ ...prev, [index]: true }));
+  const handleCardClick = (index) => {
+    // Ativa a animação
+    setClickedCards(prev => ({ ...prev, [index]: true }));
+    
+    // Volta ao estado inicial após 2 segundos
+    setTimeout(() => {
+      setClickedCards(prev => ({ ...prev, [index]: false }));
+    }, 2000);
   };
 
   return (
@@ -82,47 +88,57 @@ const Autoridade = () => {
           {speakers.map((speaker, index) => (
             <div 
               key={index}
-              className={`relative group transition-all duration-500 ${
+              className={`relative transition-all duration-500 cursor-pointer ${
                 gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
-              onMouseEnter={() => handleCardHover(index)}
+              onClick={() => handleCardClick(index)}
             >
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-black/30 backdrop-blur-sm border border-gold/20 group-hover:border-gold transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20">
+              <div className={`relative aspect-[3/4] rounded-2xl overflow-hidden bg-black/30 backdrop-blur-sm border transition-all duration-300 ${
+                clickedCards[index] ? 'border-gold shadow-2xl shadow-gold/20' : 'border-gold/20'
+              }`}>
                 {speaker.revealed ? (
                   <>
-                    {/* Imagem revelada - fica colorida no hover e permanece */}
+                    {/* Imagem revelada - fica colorida no click */}
                     <img 
                       src={`${process.env.PUBLIC_URL}/assets/img/${speaker.image}`}
                       alt={speaker.name} 
-                      className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
-                        hoveredCards[index] ? '' : 'grayscale'
+                      className={`w-full h-full object-cover object-top transition-all duration-500 ${
+                        clickedCards[index] ? 'scale-105' : ''
+                      } ${
+                        clickedCards[index] ? '' : 'grayscale'
                       }`}
-                      style={{ objectPosition: 'center 20%', transform: 'scale(1.3)' }}
+                      style={{ objectPosition: 'center 20%', transform: clickedCards[index] ? 'scale(1.35)' : 'scale(1.3)' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform transition-all duration-300 group-hover:translate-y-0">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
                       <p className="text-white font-medium text-sm mb-1">{speaker.name}</p>
                       <p className="text-gold text-xs font-playfair italic">{speaker.role}</p>
                     </div>
                   </>
                 ) : (
                   <>
-                    {/* Card misterioso - revela info no hover */}
-                    <div className="w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500">
+                    {/* Card misterioso - revela info no click */}
+                    <div className={`w-full h-full flex flex-col items-center justify-center p-4 transition-all duration-500 ${
+                      clickedCards[index] ? 'opacity-0' : 'opacity-100'
+                    }`}>
                       <img 
                         src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
                         alt="Diamante"
-                        className="w-20 h-20 mb-4 opacity-50 group-hover:opacity-0 transition-opacity duration-300 object-contain"
+                        className="w-20 h-20 mb-4 opacity-50 object-contain"
                       />
-                      <p className="text-white/70 text-xs font-playfair italic text-center group-hover:opacity-0 transition-opacity duration-300">
+                      <p className="text-white/70 text-xs font-playfair italic text-center">
                         Convidado especial
                       </p>
                     </div>
                     
-                    {/* Informação revelada no hover */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-gradient-to-t from-black/90 via-black/60 to-black/30">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    {/* Informação revelada no click */}
+                    <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 transition-all duration-500 bg-gradient-to-t from-black/90 via-black/60 to-black/30 ${
+                      clickedCards[index] ? 'opacity-100' : 'opacity-0'
+                    }`}>
+                      <div className={`transform transition-transform duration-500 ${
+                        clickedCards[index] ? 'translate-y-0' : 'translate-y-4'
+                      }`}>
                         <p className="text-white font-medium text-sm mb-2 text-center">{speaker.name}</p>
                         <p className="text-gold text-xs font-playfair italic text-center">{speaker.role}</p>
                       </div>

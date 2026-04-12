@@ -36,15 +36,15 @@ const Diamantes = () => {
               contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl text-white mb-8 leading-tight animate-fade-in-down delay-100">
               E nesta temporada…<br />algumas serão escolhidas
             </h2>
 
-            <p className="text-lg text-white/90 mb-6 leading-relaxed font-medium">
+            <p className="text-lg text-white/90 mb-6 leading-relaxed font-medium animate-slide-in-left delay-300">
               Entre as participantes, empreendedoras serão reconhecidas como:
             </p>
 
-            <p className="font-playfair text-4xl text-gold mb-16 italic">
+            <p className="font-playfair text-4xl text-gold mb-16 italic animate-bounce-in delay-500">
               As Diamantes da Temporada.
             </p>
           </div>
