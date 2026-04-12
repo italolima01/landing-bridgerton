@@ -1,8 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Envelope.css";
 
 export default function Envelope() {
   const [opened, setOpened] = useState(false);
+  const envelopeRef = useRef(null);
+
+  useEffect(() => {
+    const currentRef = envelopeRef.current; // Copia a ref para uma variável
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !opened) {
+            // Aguarda 500ms após entrar na viewport para abrir
+            setTimeout(() => {
+              setOpened(true);
+            }, 500);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Ativa quando 30% do elemento está visível
+      }
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [opened]);
 
   const handleOpen = () => {
     if (opened) return;
@@ -11,10 +42,11 @@ export default function Envelope() {
 
   return (
     <div 
+      ref={envelopeRef}
       className="stage" 
       style={{ 
         backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply',
@@ -30,7 +62,7 @@ export default function Envelope() {
           <div
             className="carta-content"
             style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`,
+              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.webp)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'sepia(40%) brightness(0.85) contrast(1.1)',
@@ -47,24 +79,19 @@ export default function Envelope() {
               }} />
               <p style={{ fontStyle: 'italic' }}>Prezada empreendedora,</p>
               <p>
-                Nesta nova temporada, observo atentamente aquelas que dominam mais do que técnicas…<br />
-                Mas que compreendem o verdadeiro jogo por trás de um nome respeitado.
+                No cenário atual…<br />
+                Não vence quem faz melhor. <span className="gold">Vence quem é lembrada, reconhecida e desejada.</span>
               </p>
-              <p>
-                O mercado está repleto de profissionais.<br />
-                Mas são raras aquelas que se tornam impossíveis de ignorar.
-              </p>
-              <p className="gold">
-                E é exatamente sobre isso que será o encontro mais aguardado desta temporada…
-              </p>
-              <button
-                onClick={() => {
-                  document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="carta-cta-button"
-              >
-                Desejo Meu Convite
-              </button>
+              <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <button
+                  onClick={() => {
+                    document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="carta-cta-button"
+                >
+                  DESEJO RECEBER MEU CONVITE
+                </button>
+              </div>
             </div>
           </div>
         </article>
@@ -91,7 +118,7 @@ export default function Envelope() {
             type="button"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/assets/img/selo.png`}
+              src={`${process.env.PUBLIC_URL}/assets/img/selo.webp`}
               alt="Selo"
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />

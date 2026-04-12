@@ -18,6 +18,7 @@ const Feedbacks = () => {
   const [showIcon, setShowIcon] = useState(false);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
+  const videoContainerRef = useRef(null);
 
   useEffect(() => {
     // Carregar a API do Vimeo Player
@@ -39,21 +40,26 @@ const Feedbacks = () => {
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current && !isMuted) {
-                // Só ajustar volume se o usuário tiver desmutado manualmente
+              if (playerRef.current) {
                 const ratio = entry.intersectionRatio;
-                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
-                playerRef.current.setVolume(newVolume);
+                
+                // Se o vídeo está desmutado, ajustar volume baseado na visibilidade
+                playerRef.current.getVolume().then((currentVolume) => {
+                  if (currentVolume > 0) {
+                    const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
+                    playerRef.current.setVolume(newVolume);
+                  }
+                });
               }
             });
           },
           {
-            threshold: Array.from({ length: 101 }, (_, i) => i / 100) // 0 a 1 em incrementos de 0.01
+            threshold: Array.from({ length: 101 }, (_, i) => i / 100)
           }
         );
 
-        if (iframeRef.current) {
-          observer.observe(iframeRef.current);
+        if (videoContainerRef.current) {
+          observer.observe(videoContainerRef.current);
         }
 
         return () => observer.disconnect();
@@ -75,7 +81,7 @@ const Feedbacks = () => {
           playerRef.current.setVolume(0);
           setIsMuted(true);
         } else {
-          playerRef.current.setVolume(0.5);
+          playerRef.current.setVolume(0.3);
           setIsMuted(false);
         }
         setShowIcon(true);
@@ -87,7 +93,7 @@ const Feedbacks = () => {
   return (
     <section className="py-24 px-4 relative" style={{
       backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
       backgroundSize: '100% auto',
       backgroundPosition: 'center',
       backgroundBlendMode: 'multiply',
@@ -100,10 +106,10 @@ const Feedbacks = () => {
           ref={titleRef}
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
+          <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
             DEPOIMENTOS
           </div>
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight">
+          <h2 className="text-4xl md:text-5xl text-white text-center mb-16 leading-tight animate-rotate-in delay-200">
             Algumas experiências terminam. Outras deixam marcas para sempre.
           </h2>
         </div>
@@ -127,14 +133,15 @@ const Feedbacks = () => {
 
           {/* Vídeo Central */}
           <div
+            ref={videoContainerRef}
             className="rounded-2xl overflow-hidden relative cursor-pointer"
             style={{
               width: '350px',
               height: '260px',
               maxWidth: '100%',
               margin: '0 auto',
-              boxShadow: '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)',
-              border: '2px solid rgba(212, 175, 55, 0.3)'
+              boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
+              border: '2px solid rgba(217, 184, 106, 0.3)'
             }}
             onClick={toggleMute}
           >
@@ -143,8 +150,9 @@ const Feedbacks = () => {
               src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              loading="lazy"
               className="pointer-events-none absolute"
-              style={{ width: '350px', height: '600px', top: '-170px', left: '0' }}
+              style={{ width: '385px', height: '660px', top: '-200px', left: '-17.5px' }}
               title="Vídeo de Feedbacks"
             />
 

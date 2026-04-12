@@ -31,7 +31,7 @@ const Evento = () => {
               if (playerRef.current && !isMuted) {
                 // Só ajustar volume se o usuário tiver desmutado manualmente
                 const ratio = entry.intersectionRatio;
-                const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
+                const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
                 playerRef.current.setVolume(newVolume);
               }
             });
@@ -64,7 +64,7 @@ const Evento = () => {
           playerRef.current.setVolume(0);
           setIsMuted(true);
         } else {
-          playerRef.current.setVolume(0.5);
+          playerRef.current.setVolume(0.3);
           setIsMuted(false);
         }
         setShowIcon(true);
@@ -79,7 +79,7 @@ const Evento = () => {
       className="relative" 
       style={{ 
         backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
         backgroundSize: '100% auto',
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply',
@@ -89,8 +89,8 @@ const Evento = () => {
     >
 
       
-      <div className="relative z-10 w-full pt-14 md:pt-20">
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-16 md:py-24">
+      <div className="relative z-10 w-full pt-8 md:pt-12">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">
           {/* Conteúdo */}
           <div 
             ref={leftRef}
@@ -100,13 +100,13 @@ const Evento = () => {
           >
 
             
-            <div className={`text-gold text-xs font-bold tracking-[3px] uppercase transition-all duration-800 ${
+            <div className={`text-gold text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               Sobre o Evento
             </div>
             
-            <h2 className={`font-playfair text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold transition-all duration-800 delay-100 ${
+            <h2 className={`font-playfair text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               O evento que transforma profissionais comuns em nomes de referência
@@ -120,8 +120,8 @@ const Evento = () => {
               width: '100%',
               maxWidth: '800px',
               aspectRatio: '16/9',
-              boxShadow: '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)',
-              border: '2px solid rgba(212, 175, 55, 0.3)'
+              boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
+              border: '2px solid rgba(217, 184, 106, 0.3)'
             }}
             onClick={toggleMute}
           >
@@ -130,7 +130,16 @@ const Evento = () => {
               src="https://player.vimeo.com/video/1180600420?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              loading="lazy"
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                width: '110%',
+                height: '110%',
+                transform: 'translate(-50%, -50%)'
+              }}
+              className="pointer-events-none"
               title="Vídeo do Evento"
             />
             
@@ -151,27 +160,29 @@ const Evento = () => {
           </div>
 
           {/* Continuação do conteúdo */}
-          <div className="space-y-8">
-            <p className={`text-base md:text-lg text-white/90 leading-relaxed transition-all duration-800 delay-200 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              Algumas vão assistir de longe. Outras vão viver essa história.
-            </p>
-            
-            <div className={`space-y-6 transition-all duration-800 delay-300 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <p className="text-sm md:text-base italic text-white/70 font-light">Porque no cenário atual…</p>
+          <div className="space-y-8 text-center">
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-left delay-300">
+                A primeira temporada foi extraordinária.
+              </p>
               
-              <div className="relative">
-                <p className="font-playfair text-xl md:text-2xl text-white italic leading-snug">
-                  Não vence quem faz melhor.
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-right delay-400">
+                A segunda superou todas as expectativas.
+              </p>
+              
+              <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug mt-10 animate-bounce-in delay-500">
+                Mas dessa vez… será histórico.
+              </p>
+              
+              <div className="space-y-4 mt-8">
+                <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight animate-rotate-in delay-600">
+                  Porque essa será a última temporada da Imersão <span className="whitespace-nowrap">Evolution Brows.</span>
+                </p>
+                
+                <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug animate-fade-in-up delay-700">
+                  A última vez que esse evento vai acontecer.
                 </p>
               </div>
-              
-              <p className="font-playfair text-xl md:text-2xl text-gold italic leading-snug">
-                Vence quem é lembrada, reconhecida e desejada.
-              </p>
             </div>
           </div>
         </div>

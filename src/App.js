@@ -5,7 +5,6 @@ import Espaco from './components/Espaco';
 import Evento from './components/Evento';
 import Diferencial from './components/Diferencial';
 import Autoridade from './components/Autoridade';
-import UltimaTemporada from './components/UltimaTemporada';
 import Diamantes from './components/Diamantes';
 import Feedbacks from './components/Feedbacks';
 import Urgencia from './components/Urgencia';
@@ -21,7 +20,6 @@ function App() {
       <Evento />
       <Diferencial />
       <Autoridade />
-      <UltimaTemporada />
       <Diamantes />
       <Feedbacks />
       <Urgencia />

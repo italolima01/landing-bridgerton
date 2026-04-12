@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Formulario = () => {
@@ -16,6 +16,7 @@ const Formulario = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, show: false });
   const [isTyping, setIsTyping] = useState(false);
   const typingTimeoutRef = useRef(null);
+  const [showFormFields, setShowFormFields] = useState(true);
   
   const inputRefs = {
     nome: useRef(null),
@@ -67,8 +68,9 @@ const Formulario = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setActiveField(null); // Remove o campo ativo imediatamente
-    setCursorPosition({ x: 0, y: 0, show: false }); // Esconde o cursor
+    setActiveField(null);
+    setCursorPosition({ x: 0, y: 0, show: false });
+    setShowFormFields(false); // Esconde os campos
 
     // Simula envio
     await fetch('http://localhost/api/leads', {
@@ -81,16 +83,25 @@ const Formulario = () => {
     setTimeout(() => {
       setSubmitted(true);
       
-      // Após 6 segundos, reseta o formulário
+      // Após 7 segundos, reseta o formulário
       setTimeout(() => {
         setSubmitted(false);
-        setIsSubmitting(false);
-        setFormData({
-          nome: '',
-          whatsapp: '',
-          email: ''
-        });
-      }, 6000);
+        
+        // Aguarda 600ms para o form-frame aparecer primeiro
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setFormData({
+            nome: '',
+            whatsapp: '',
+            email: ''
+          });
+          
+          // Depois de mais 400ms, mostra os campos
+          setTimeout(() => {
+            setShowFormFields(true);
+          }, 400);
+        }, 600);
+      }, 7000);
     }, 800);
   };
 
@@ -132,9 +143,9 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{
+    <section id="formulario" className="py-16 px-4 scroll-mt-20" style={{
       backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
       backgroundSize: '100% auto',
       backgroundPosition: 'center',
       backgroundBlendMode: 'multiply',
@@ -152,8 +163,8 @@ const Formulario = () => {
           }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={isTyping ? 'animate-pen-write' : ''}>
-            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" stroke="#d4af37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#d4af37" opacity="0.9"/>
-            <line x1="16" y1="8" x2="2" y2="22" stroke="#d4af37" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" stroke="#d9b86a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="#d9b86a" opacity="0.9"/>
+            <line x1="16" y1="8" x2="2" y2="22" stroke="#d9b86a" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </div>
       )}
@@ -161,18 +172,18 @@ const Formulario = () => {
       <div className="container mx-auto max-w-6xl">
         <div 
           ref={titleRef}
-          className={`text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
+          className={`text-center md:text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
           LISTA DE ESPERA
         </div>
 
-        <div className="flex flex-col md:flex-row items-start gap-16 md:gap-24">
+        <div className="flex flex-col md:flex-row items-start md:items-end gap-16 md:gap-24">
 
           <div 
             ref={leftRef}
-            className={`flex-1 text-left space-y-6 leading-relaxed transition-all duration-800 md:pr-8 ${
+            className={`flex-1 text-center md:text-left space-y-6 leading-relaxed transition-all duration-800 md:pr-8 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
@@ -186,36 +197,38 @@ const Formulario = () => {
             <p className="text-2xl md:text-3xl text-gold font-playfair italic font-bold leading-snug">
               Este é o seu momento.
             </p>
-            <p className="text-base md:text-lg text-white/80 leading-relaxed">
-              Preencha seus dados ao lado e receba em primeira mão todas as informações e o convite oficial.
-            </p>
           </div>
 
           <div 
             ref={rightRef}
-            className={`flex-1 w-full transition-all duration-800 ${
+            className={`flex-1 w-full transition-all duration-800 mt-16 md:mt-0 ${
               rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
             {!submitted ? (
-              <div className={`relative transition-all duration-1000 ease-in-out ${isSubmitting ? 'animate-fold-envelope' : 'opacity-100'}`}>
+              <div className={`relative transition-all duration-1000 ease-in-out ${isSubmitting ? 'animate-fold-envelope' : 'animate-slide-in-right'}`}>
                 {/* Moldura do formulário */}
                 <div 
-                  className="absolute inset-0 bg-contain bg-center bg-no-repeat pointer-events-none"
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
                   style={{
-                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/form-frame.png)`,
-                    transform: 'scaleX(2.0) scaleY(1.3) translateY(-20px)',
+                    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/form-frame.webp)`,
                   }}
                 />
                 
                 {/* Texto no topo da carta */}
-                <div className="relative z-10 text-center pt-6 pb-8">
+                <div className={`relative z-10 text-center pt-6 pb-8 transition-all duration-500 ${showFormFields ? 'opacity-100' : 'opacity-0'}`}>
                   <h3 className="font-playfair text-2xl md:text-3xl text-navy italic">
-                    Seu Convite Exclusivo
+                    {formData.nome ? (
+                      <>
+                        {formData.nome.split(' ')[0]}, este é seu convite exclusivo
+                      </>
+                    ) : (
+                      'Seu Convite Exclusivo'
+                    )}
                   </h3>
                 </div>
                 
-                <form onSubmit={handleSubmit} className="space-y-4 relative z-10 px-12 py-10">
+                <form onSubmit={handleSubmit} className={`space-y-4 relative z-10 px-12 py-10 transition-all duration-500 ${showFormFields ? 'opacity-100' : 'opacity-0'}`}>
                   <div className="relative">
                     <input
                       ref={inputRefs.nome}
@@ -227,6 +240,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="NOME"
                       required
+                      autoComplete="name"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
@@ -243,6 +257,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="WHATSAPP"
                       required
+                      autoComplete="tel"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
@@ -259,6 +274,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="E-MAIL"
                       required
+                      autoComplete="email"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
@@ -272,7 +288,7 @@ const Formulario = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                     </svg>
-                    <span className="text">{isSubmitting ? 'ENVIANDO...' : 'QUERO RECEBER MEU CONVITE EXCLUSIVO'}</span>
+                    <span className="text">{isSubmitting ? 'ENVIANDO...' : 'RECEBER CONVITE EXCLUSIVO'}</span>
                     <span className="circle"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -282,11 +298,11 @@ const Formulario = () => {
               </div>
             ) : (
               <div className="text-center py-12 animate-fade-in">
-                <div className="text-6xl mb-6 animate-bounce-slow">💌</div>
-                <h3 className="font-playfair text-2xl text-navy mb-4">
+                <div className="text-6xl mb-6 animate-bounce-slow">✉️</div>
+                <h3 className="font-playfair text-2xl text-gold mb-4">
                   Seu pedido foi enviado ao Palácio
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-white/90">
                   Verifique sua correspondência (e-mail) em instantes.
                 </p>
               </div>

@@ -6,8 +6,8 @@ const skills = [
   { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg', objectPosition: 'center 30%' },
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
-  { icon: '👑', name: 'Posicionamento', img: null },
-  { icon: '📈', name: 'Marketing', img: null },
+  { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.webp', objectPosition: 'center 40%' },
+  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.JPG', objectPosition: 'center 35%' },
 ];
 
 const Diferencial = () => {
@@ -20,7 +20,7 @@ const Diferencial = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile-it-is-great-background.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile.webp)`,
           backgroundSize: '100%',
           backgroundPosition: 'center',
           backgroundBlendMode: 'multiply'
@@ -41,15 +41,15 @@ const Diferencial = () => {
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
-          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8">
+          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
             O DIFERENCIAL
           </div>
 
-          <h2 className="text-5xl md:text-6xl text-white text-center mb-12 leading-tight">
+          <h2 className="text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
             Nem todas estão preparadas<br />para o que será revelado aqui…
           </h2>
 
-          <p className="text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
             Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
           </p>
         </div>
@@ -69,22 +69,24 @@ const Diferencial = () => {
               }}
             >
               {skill.img ? (
-                <div className="w-full h-32 overflow-hidden">
+                <div className="w-full h-48 overflow-hidden">
                   <img
                     src={`${process.env.PUBLIC_URL}${skill.img}`}
                     alt={skill.name}
-                    className={`w-full h-full object-cover transition-transform duration-300 hover:scale-110 ${
-                      skill.name === '— Shadow' ? 'scale-125' : ''
+                    className={`w-full h-full object-cover transition-transform duration-300 ${
+                      skill.name === 'Shadow' ? 'scale-150 hover:scale-[1.6]' : 'hover:scale-110'
+                    } ${
+                      skill.name === 'Posicionamento' ? 'scale-100' : ''
                     }`}
                     style={skill.objectPosition ? { objectPosition: skill.objectPosition } : {}}
                   />
                 </div>
               ) : (
-                <div className="p-6 pb-0">
-                  <div className="text-4xl mb-3">{skill.icon}</div>
+                <div className="p-8 pb-0">
+                  <div className="text-5xl mb-4">{skill.icon}</div>
                 </div>
               )}
-              <div className={`text-base text-gold ${skill.img ? 'p-3' : 'pb-6'}`}>{skill.name}</div>
+              <div className={`text-base text-gold ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
             </div>
           ))}
         </div>
@@ -94,11 +96,11 @@ const Diferencial = () => {
             }`}
           style={{ transitionDelay: '600ms' }}
         >
-          <p className="text-lg text-white/90 text-center mb-6 leading-relaxed">
+          <p className="text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
             Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
           </p>
 
-          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8">
+          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8 animate-bounce-in delay-700">
             Porque talento sem estratégia… passa despercebido.
           </p>
         </div>
