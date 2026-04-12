@@ -37,21 +37,20 @@ const Hero = () => {
         </svg>
 
         <div
-          className="inline-block px-4 py-2 mb-4 animate-fade-in"
+          className="inline-block px-4 py-2 -mb-4 animate-fade-in"
         >
-          <span className="text-white text-base md:text-lg font-light tracking-[10px] uppercase">IMERSÃO</span>
+          <span className="text-white text-base md:text-lg font-outfit font-semibold tracking-[10px] uppercase">IMERSÃO</span>
         </div>
 
-        <h1 className="hero-title font-bold text-white mb-8 leading-tight flex flex-col items-center">
-          <span className="animate-handwriting-evolution" style={{ fontFamily: "'Great Vibes', cursive", fontWeight: 'normal', letterSpacing: 'normal', transform: 'translateY(10px)' }}>Evolution</span>
-          <span className="animate-handwriting-brows" style={{ fontFamily: "'Cinzel Decorative', 'Cinzel', serif", letterSpacing: '0.05em' }}>BROWS</span>
+        <h1 className="hero-title font-outfit font-semibold text-white mb-8 leading-tight flex flex-col items-center">
+          <span className="animate-handwriting-evolution">EVOLUTION</span>
+          <span className="animate-handwriting-brows tracking-wider">BROWS</span>
         </h1>
 
-        <h2 className="text-5xl md:text-6xl text-gold mb-8 font-script font-normal tracking-wide animate-fade-in-up delay-200" style={{
-          filter: 'url(#ink-texture)',
-          textShadow: '2px 2px 8px rgba(0, 0, 0, 0.6)'
+        <h2 className="text-xl md:text-2xl text-gold mb-8 font-outfit font-extralight tracking-[0.3em] animate-fade-in-up delay-200 whitespace-nowrap" style={{
+          textShadow: '1px 1px 4px rgba(0, 0, 0, 0.4)'
         }}>
-          Um Convite Exclusivo
+          UM CONVITE EXCLUSIVO
         </h2>
 
         <div className="flex justify-center px-4 animate-fade-in-up delay-300">
@@ -62,7 +61,7 @@ const Hero = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
               <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
             </svg>
-            <span className="text">ENTRAR PARA A LISTA DE ESPERA</span>
+            <span className="text font-outfit font-semibold">QUERO ENTRAR PARA A LISTA DE ESPERA</span>
             <span className="circle"></span>
             <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
               <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>

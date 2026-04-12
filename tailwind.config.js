@@ -17,8 +17,8 @@ module.exports = {
         sage: '#9cb7ae',
         sand: '#c8af8a',
         gold: {
-          DEFAULT: '#a67c00',
-          light: '#f4e4c1',
+          DEFAULT: '#d9b86a',
+          light: '#e9c87e',
         },
         cream: '#f5f1e8',
       },
@@ -28,6 +28,7 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
         bodoni: ['"Bodoni Moda"', 'serif'],
         script: ['"Great Vibes"', 'cursive'],
+        outfit: ['Outfit', 'sans-serif'],
       },
     },
   },

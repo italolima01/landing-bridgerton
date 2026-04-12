@@ -140,8 +140,8 @@ const Feedbacks = () => {
               height: '260px',
               maxWidth: '100%',
               margin: '0 auto',
-              boxShadow: '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)',
-              border: '2px solid rgba(212, 175, 55, 0.3)'
+              boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
+              border: '2px solid rgba(217, 184, 106, 0.3)'
             }}
             onClick={toggleMute}
           >
