@@ -224,6 +224,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="NOME"
                       required
+                      autoComplete="name"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
@@ -240,6 +241,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="WHATSAPP"
                       required
+                      autoComplete="tel"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />
@@ -256,6 +258,7 @@ const Formulario = () => {
                       onBlur={handleBlur}
                       placeholder="E-MAIL"
                       required
+                      autoComplete="email"
                       className="w-full px-6 py-3 border-2 border-white/80 bg-white/95 text-navy rounded-xl text-sm font-semibold tracking-wide focus:outline-none focus:border-gold transition-colors"
                       style={{ caretColor: 'transparent' }}
                     />

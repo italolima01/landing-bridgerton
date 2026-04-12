@@ -41,15 +41,15 @@ const Diferencial = () => {
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
-          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8">
+          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
             O DIFERENCIAL
           </div>
 
-          <h2 className="text-5xl md:text-6xl text-white text-center mb-12 leading-tight">
+          <h2 className="text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
             Nem todas estão preparadas<br />para o que será revelado aqui…
           </h2>
 
-          <p className="text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
             Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
           </p>
         </div>
@@ -96,11 +96,11 @@ const Diferencial = () => {
             }`}
           style={{ transitionDelay: '600ms' }}
         >
-          <p className="text-lg text-white/90 text-center mb-6 leading-relaxed">
+          <p className="text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
             Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
           </p>
 
-          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8">
+          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8 animate-bounce-in delay-700">
             Porque talento sem estratégia… passa despercebido.
           </p>
         </div>
