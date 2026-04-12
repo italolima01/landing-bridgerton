@@ -125,7 +125,7 @@ export default function Envelope() {
             type="button"
           >
             <img
-              src={`${process.env.PUBLIC_URL}/assets/img/selo.png`}
+              src={`${process.env.PUBLIC_URL}/assets/img/selo.webp`}
               alt="Selo"
               style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
