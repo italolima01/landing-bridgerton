@@ -89,8 +89,8 @@ const Evento = () => {
     >
 
       
-      <div className="relative z-10 w-full pt-14 md:pt-20">
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-16 md:py-24">
+      <div className="relative z-10 w-full pt-8 md:pt-12">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">
           {/* Conteúdo */}
           <div 
             ref={leftRef}
