@@ -99,14 +99,12 @@ const Autoridade = () => {
               }`}>
                 {speaker.revealed ? (
                   <>
-                    {/* Imagem revelada - fica colorida no click */}
+                    {/* Imagem revelada - sempre colorida */}
                     <img 
                       src={`${process.env.PUBLIC_URL}/assets/img/${speaker.image}`}
                       alt={speaker.name} 
                       className={`w-full h-full object-cover object-top transition-all duration-500 ${
                         clickedCards[index] ? 'scale-105' : ''
-                      } ${
-                        clickedCards[index] ? '' : 'grayscale'
                       }`}
                       style={{ objectPosition: 'center 20%', transform: clickedCards[index] ? 'scale(1.35)' : 'scale(1.3)' }}
                     />
