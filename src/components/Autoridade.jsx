@@ -5,7 +5,7 @@ const speakers = [
   {
     name: 'Erika Sousa',
     role: 'Micropigmentadora',
-    image: 'erika-sousa.jpg',
+    image: 'erika-sousa.webp',
     revealed: true
   },
   {

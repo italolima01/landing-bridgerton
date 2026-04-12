@@ -6,7 +6,7 @@ const skills = [
   { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg', objectPosition: 'center 30%' },
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
-  { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.jpg', objectPosition: 'center 40%' },
+  { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.webp', objectPosition: 'center 40%' },
   { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.JPG', objectPosition: 'center 35%' },
 ];
 
