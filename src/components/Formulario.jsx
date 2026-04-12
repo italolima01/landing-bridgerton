@@ -132,7 +132,7 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-24 px-4 scroll-mt-20" style={{
+    <section id="formulario" className="py-16 px-4 scroll-mt-20" style={{
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
       backgroundSize: '100% auto',
@@ -161,7 +161,7 @@ const Formulario = () => {
       <div className="container mx-auto max-w-6xl">
         <div 
           ref={titleRef}
-          className={`text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
+          className={`text-center md:text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -172,7 +172,7 @@ const Formulario = () => {
 
           <div 
             ref={leftRef}
-            className={`flex-1 text-left space-y-6 leading-relaxed transition-all duration-800 md:pr-8 ${
+            className={`flex-1 text-center md:text-left space-y-6 leading-relaxed transition-all duration-800 md:pr-8 ${
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
@@ -269,7 +269,7 @@ const Formulario = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                     </svg>
-                    <span className="text">{isSubmitting ? 'ENVIANDO...' : 'QUERO RECEBER MEU CONVITE EXCLUSIVO'}</span>
+                    <span className="text">{isSubmitting ? 'ENVIANDO...' : 'RECEBER CONVITE EXCLUSIVO'}</span>
                     <span className="circle"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
                       <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
