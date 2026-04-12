@@ -100,13 +100,13 @@ const Evento = () => {
           >
 
             
-            <div className={`text-gold text-xs font-bold tracking-[3px] uppercase transition-all duration-800 ${
+            <div className={`text-gold text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               Sobre o Evento
             </div>
             
-            <h2 className={`font-playfair text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold transition-all duration-800 delay-100 ${
+            <h2 className={`font-playfair text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               O evento que transforma profissionais comuns em nomes de referência
@@ -159,7 +159,7 @@ const Evento = () => {
           </div>
 
           {/* Continuação do conteúdo */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-center">
             <div className={`space-y-6 transition-all duration-800 delay-300 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
