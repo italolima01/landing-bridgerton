@@ -6,6 +6,8 @@ export default function Envelope() {
   const envelopeRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = envelopeRef.current; // Copia a ref para uma variável
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,13 +24,13 @@ export default function Envelope() {
       }
     );
 
-    if (envelopeRef.current) {
-      observer.observe(envelopeRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (envelopeRef.current) {
-        observer.unobserve(envelopeRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [opened]);
