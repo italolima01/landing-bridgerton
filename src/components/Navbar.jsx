@@ -30,11 +30,11 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
+        isScrolled || isMenuOpen
           ? 'bg-white/20 backdrop-blur-xl shadow-2xl border-b border-white/30' 
           : 'bg-transparent'
       }`}
-      style={isScrolled ? {
+      style={(isScrolled || isMenuOpen) ? {
         backdropFilter: 'blur(20px) saturate(180%)',
         WebkitBackdropFilter: 'blur(20px) saturate(180%)',
       } : {}}
