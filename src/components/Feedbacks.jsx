@@ -150,6 +150,7 @@ const Feedbacks = () => {
               src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              loading="lazy"
               className="pointer-events-none absolute"
               style={{ width: '385px', height: '660px', top: '-200px', left: '-17.5px' }}
               title="Vídeo de Feedbacks"
