@@ -7,7 +7,7 @@ const skills = [
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.jpg', objectPosition: 'center 40%' },
-  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.jpg', objectPosition: 'center 35%' },
+  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.JPG', objectPosition: 'center 35%' },
 ];
 
 const Diferencial = () => {
