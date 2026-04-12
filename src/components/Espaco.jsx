@@ -95,7 +95,7 @@ const Espaco = () => {
       ref={sectionRef}
       className="py-20 md:py-32 bg-cover bg-center relative" 
       style={{ 
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/writing-letter.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/writing-letter.webp)`,
       }}
     >
       {/* Degradê superior para transição suave */}

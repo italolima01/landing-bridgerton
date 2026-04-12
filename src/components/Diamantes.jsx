@@ -6,7 +6,7 @@ const Diamantes = () => {
 
   return (
     <section className="py-16 px-4 relative overflow-hidden min-h-[500px] bg-cover" style={{ 
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/erika-integrantes.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/erika-integrantes.webp)`,
       backgroundPosition: 'center top'
     }}>
       {/* Overlay de fundo para legibilidade */}

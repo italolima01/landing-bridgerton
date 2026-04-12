@@ -53,7 +53,7 @@ const Autoridade = () => {
   return (
     <section id="autoridade" className="py-24 px-4 scroll-mt-20 relative" style={{ 
       backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
       backgroundSize: '100% auto',
       backgroundPosition: 'center',
       backgroundBlendMode: 'multiply',

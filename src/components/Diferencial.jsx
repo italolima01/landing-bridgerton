@@ -20,7 +20,7 @@ const Diferencial = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile-it-is-great-background.jpg)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile.webp)`,
           backgroundSize: '100%',
           backgroundPosition: 'center',
           backgroundBlendMode: 'multiply'

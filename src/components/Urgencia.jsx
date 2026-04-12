@@ -5,7 +5,7 @@ const Urgencia = () => {
   return (
     <>
       <section className="py-24 px-4 relative bg-cover bg-center" style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/mask-invitation.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/mask-invitation.webp)`,
       }}>
         {/* Overlay escuro para legibilidade */}
         <div className="absolute inset-0 bg-black/75"></div>

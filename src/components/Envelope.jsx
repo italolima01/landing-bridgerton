@@ -46,7 +46,7 @@ export default function Envelope() {
       className="stage" 
       style={{ 
         backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.jpg)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'multiply',
@@ -62,7 +62,7 @@ export default function Envelope() {
           <div
             className="carta-content"
             style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.jpg)`,
+              backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-bg.webp)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'sepia(40%) brightness(0.85) contrast(1.1)',

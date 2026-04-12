@@ -9,7 +9,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 animate-zoom-out"
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta%20fundo.png)`,
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/carta-fundo.webp)`,
           filter: 'saturate(1.4) contrast(1.05)',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
