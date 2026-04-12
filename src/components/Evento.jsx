@@ -120,8 +120,8 @@ const Evento = () => {
               width: '100%',
               maxWidth: '800px',
               aspectRatio: '16/9',
-              boxShadow: '0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.1)',
-              border: '2px solid rgba(212, 175, 55, 0.3)'
+              boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
+              border: '2px solid rgba(217, 184, 106, 0.3)'
             }}
             onClick={toggleMute}
           >
@@ -175,7 +175,7 @@ const Evento = () => {
               
               <div className="space-y-4 mt-8">
                 <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight animate-rotate-in delay-600">
-                  Porque essa será a última temporada da Imersão Evolution Brows.
+                  Porque essa será a última temporada da Imersão <span className="whitespace-nowrap">Evolution Brows.</span>
                 </p>
                 
                 <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug animate-fade-in-up delay-700">

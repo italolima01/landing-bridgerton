@@ -292,7 +292,7 @@
 
 .animate-pen-write {
   animation: penWrite 0.8s ease-in-out infinite;
-  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(217, 184, 106, 0.3));
 }
 
 .animate-fold-envelope {
@@ -304,12 +304,12 @@
 }
 
 .cursor-feather {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" stroke="%23d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="%23d4af37"/><line x1="16" y1="8" x2="2" y2="22" stroke="%23d4af37" stroke-width="2" stroke-linecap="round"/></svg>') 2 22, text;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" stroke="%23d9b86a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="%23d9b86a"/><line x1="16" y1="8" x2="2" y2="22" stroke="%23d9b86a" stroke-width="2" stroke-linecap="round"/></svg>') 2 22, text;
 }
 
 @keyframes btn-glow {
-  0%, 100% { box-shadow: 0 0 0px rgba(201, 168, 76, 0); }
-  50% { box-shadow: 0 0 24px rgba(201, 168, 76, 0.7), 0 0 48px rgba(201, 168, 76, 0.3); }
+  0%, 100% { box-shadow: 0 0 0px rgba(217, 184, 106, 0); }
+  50% { box-shadow: 0 0 24px rgba(217, 184, 106, 0.7), 0 0 48px rgba(217, 184, 106, 0.3); }
 }
 
 .animate-btn-glow {
@@ -327,12 +327,12 @@
   border: none;
   font-size: 16px;
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #c9a84c 0%, #d4af37 50%, #c9a84c 100%);
+  background: linear-gradient(135deg, #c9a85c 0%, #d9b86a 50%, #c9a85c 100%);
   background-size: 200% 200%;
   border-radius: 100px;
   font-weight: 600;
   color: #000000;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 4px 15px rgba(217, 184, 106, 0.2);
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -397,7 +397,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, #f4e4c1 0%, #d4af37 50%, #c9a84c 100%);
+  background: radial-gradient(circle, #e9c87e 0%, #d9b86a 50%, #c9a85c 100%);
   border-radius: 50%;
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -420,8 +420,8 @@
 }
 
 .animated-button:hover {
-  background: linear-gradient(135deg, #c9a84c 0%, #d4af37 50%, #c9a84c 100%);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+  background: linear-gradient(135deg, #c9a85c 0%, #d9b86a 50%, #c9a85c 100%);
+  box-shadow: 0 8px 25px rgba(217, 184, 106, 0.6);
   color: #000000;
   border-radius: 12px;
   transform: translateY(-2px);
@@ -445,7 +445,7 @@
 
 .animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px #d4af37, 0 0 20px rgba(212, 175, 55, 0.8);
+  box-shadow: 0 0 0 4px #d9b86a, 0 0 20px rgba(217, 184, 106, 0.8);
 }
 
 .animated-button:hover .circle {
