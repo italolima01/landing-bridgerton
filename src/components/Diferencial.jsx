@@ -2,12 +2,12 @@ import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const skills = [
-  { icon: '🎭', name: 'Shadow', img: '/assets/img/dream-shadow.jpg' },
-  { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.jpeg', objectPosition: 'center 30%' },
-  { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.jpeg', objectPosition: 'center 55%' },
-  { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.jpg', objectPosition: 'center 35%' },
+  { icon: '🎭', name: 'Shadow', img: '/assets/img/dream-shadow.webp' },
+  { icon: '✦', name: 'Fios Realistas', img: '/assets/img/fios-realistas.webp', objectPosition: 'center 30%' },
+  { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.webp', objectPosition: 'center 55%' },
+  { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.webp', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.webp', objectPosition: 'center 40%' },
-  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.JPG', objectPosition: 'center 35%' },
+  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.webp', objectPosition: 'center 35%' },
 ];
 
 const Diferencial = () => {
