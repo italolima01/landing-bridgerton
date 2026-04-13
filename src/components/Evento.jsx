@@ -103,7 +103,7 @@ const Evento = () => {
               Sobre o Evento
             </div>
             
-            <h2 className={`font-playfair text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
+            <h2 className={`font-outfit text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               O evento que transforma profissionais comuns em nomes de referência
@@ -159,15 +159,15 @@ const Evento = () => {
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-left delay-300">
+              <p className="font-outfit text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-left delay-300">
                 A primeira temporada foi extraordinária.
               </p>
               
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-right delay-400">
+              <p className="font-outfit text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-right delay-400">
                 A segunda superou todas as expectativas.
               </p>
               
-              <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug mt-10 animate-bounce-in delay-500">
+              <p className="font-outfit text-2xl md:text-3xl text-white italic leading-snug mt-10 animate-bounce-in delay-500">
                 Mas dessa vez… será histórico.
               </p>
               

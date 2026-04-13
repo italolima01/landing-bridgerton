@@ -79,8 +79,13 @@ export default function Envelope() {
               }} />
               <p style={{ fontStyle: 'italic' }}>Prezada empreendedora,</p>
               <p>
-                No cenário atual…<br />
-                Não vence quem faz melhor. <span className="gold">Vence quem é lembrada, reconhecida e desejada.</span>
+                No cenário atual…
+              </p>
+              <p>
+                Não vence quem faz melhor.
+              </p>
+              <p>
+                <span className="gold" style={{ fontWeight: 600 }}>Vence quem é lembrada, reconhecida e desejada.</span>
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
                 <button

@@ -7,7 +7,7 @@ const skills = [
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.webp', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.webp', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.webp', objectPosition: 'center 40%' },
-  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.webp', objectPosition: 'center 35%' },
+  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.webp', objectPosition: '20% 30%' },
 ];
 
 const Diferencial = () => {
@@ -45,11 +45,11 @@ const Diferencial = () => {
             O DIFERENCIAL
           </div>
 
-          <h2 className="text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
+          <h2 className="font-outfit text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
             Nem todas estão preparadas<br />para o que será revelado aqui…
           </h2>
 
-          <p className="text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
+          <p className="font-outfit text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
             Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
           </p>
         </div>
@@ -74,11 +74,16 @@ const Diferencial = () => {
                     src={`${process.env.PUBLIC_URL}${skill.img}`}
                     alt={skill.name}
                     className={`w-full h-full object-cover transition-transform duration-300 ${
-                      skill.name === 'Shadow' ? 'scale-150 hover:scale-[1.6]' : 'hover:scale-110'
+                      skill.name === 'Shadow' ? 'scale-150 hover:scale-[1.6]' : 
+                      skill.name === 'Marketing' ? 'scale-125 hover:scale-[1.35] translate-x-8' :
+                      'hover:scale-110'
                     } ${
                       skill.name === 'Posicionamento' ? 'scale-100' : ''
                     }`}
-                    style={skill.objectPosition ? { objectPosition: skill.objectPosition } : {}}
+                    style={{
+                      objectPosition: skill.objectPosition || 'center center',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
               ) : (
@@ -96,7 +101,7 @@ const Diferencial = () => {
             }`}
           style={{ transitionDelay: '600ms' }}
         >
-          <p className="text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
+          <p className="font-outfit text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
             Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
           </p>
 
