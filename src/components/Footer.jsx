@@ -15,12 +15,12 @@ const Footer = () => {
       <div className="container mx-auto max-w-5xl relative z-10">
         
 
-        <p className="font-playfair text-xl md:text-2xl text-white/90 leading-relaxed mb-8 italic">
+        <p className="font-outfit text-xl md:text-2xl text-white/90 leading-relaxed mb-8 italic">
           A temporada está prestes a começar…<br />
           E os olhares estarão voltados para aquelas que ousarem se destacar.
         </p>
         
-        <p className="text-base text-white/75 mb-4">Com expectativa,</p>
+        <p className="font-outfit text-base text-white/75 mb-4">Com expectativa,</p>
         <p className="text-gold text-4xl md:text-5xl font-script font-normal">— Lady Erika Sousa</p>
         
         <div className="mt-8">

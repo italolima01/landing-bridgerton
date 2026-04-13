@@ -51,7 +51,7 @@ const Navbar = () => {
               alt="Diamante"
               className="w-6 h-6 object-contain mb-0.5"
             />
-            <span className="font-playfair text-lg font-semibold tracking-wide text-white transition-colors duration-500">
+            <span className="font-outfit text-lg font-light tracking-wide text-white transition-colors duration-500">
               Evolution Brows
             </span>
           </button>
@@ -60,25 +60,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection('evento')}
-              className="transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
+              className="font-outfit transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
             >
               O Evento
             </button>
             <button
               onClick={() => scrollToSection('diferencial')}
-              className="transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
+              className="font-outfit transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
             >
               Diferencial
             </button>
             <button
               onClick={() => scrollToSection('autoridade')}
-              className="transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
+              className="font-outfit transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
             >
               Palestrantes
             </button>
             <button
               onClick={() => scrollToSection('formulario')}
-              className="transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
+              className="font-outfit transition-all duration-500 text-xs tracking-widest uppercase hover:scale-110 hover:font-bold text-white/80 hover:text-white"
             >
               Lista de Espera
             </button>
@@ -113,32 +113,32 @@ const Navbar = () => {
             <div className="grid grid-cols-2 gap-3 px-4">
               <button
                 onClick={() => scrollToSection('evento')}
-                className="text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
+                className="font-outfit text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 O Evento
               </button>
               <button
                 onClick={() => scrollToSection('diferencial')}
-                className="text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
+                className="font-outfit text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 Diferencial
               </button>
               <button
                 onClick={() => scrollToSection('autoridade')}
-                className="text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
+                className="font-outfit text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 Palestrantes
               </button>
               <button
                 onClick={() => scrollToSection('formulario')}
-                className="text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
+                className="font-outfit text-center px-3 py-3 text-xs tracking-widest uppercase transition-colors rounded-lg text-white/80 hover:text-white hover:bg-white/10"
               >
                 Lista de Espera
               </button>
             </div>
             <button
               onClick={() => scrollToSection('formulario')}
-              className="mt-3 mx-4 w-[calc(100%-2rem)] transition-all duration-500 px-4 py-2 rounded-full text-xs tracking-widest uppercase font-medium bg-gold text-white hover:bg-gold/90"
+              className="font-outfit mt-3 mx-4 w-[calc(100%-2rem)] transition-all duration-500 px-4 py-2 rounded-full text-xs tracking-widest uppercase font-medium bg-gold text-white hover:bg-gold/90"
             >
               Meu Convite
             </button>

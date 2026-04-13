@@ -72,11 +72,11 @@ const Autoridade = () => {
             AUTORIDADE
           </div>
           
-          <h2 className="text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
+          <h2 className="font-outfit text-4xl md:text-5xl text-white text-center mb-12 leading-tight">
             Diretamente das maiores<br />referências do Brasil
           </h2>
           
-          <p className="text-lg text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
+          <p className="font-outfit text-lg text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto">
             Profissionais que hoje são destaque nacional estarão presentes para compartilhar o que realmente funciona no mercado.
           </p>
         </div>
@@ -110,7 +110,7 @@ const Autoridade = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                      <p className="text-white font-medium text-sm mb-1">{speaker.name}</p>
+                      <p className="font-outfit text-white font-medium text-sm mb-1">{speaker.name}</p>
                       <p className="text-gold text-xs font-playfair italic">{speaker.role}</p>
                     </div>
                   </>
@@ -126,7 +126,7 @@ const Autoridade = () => {
                         className="w-20 h-20 mb-4 opacity-50 object-contain"
                         loading="lazy"
                       />
-                      <p className="text-white/70 text-xs font-playfair italic text-center">
+                      <p className="font-outfit text-white/70 text-xs italic text-center">
                         Convidado especial
                       </p>
                     </div>
@@ -138,7 +138,7 @@ const Autoridade = () => {
                       <div className={`transform transition-transform duration-500 ${
                         clickedCards[index] ? 'translate-y-0' : 'translate-y-4'
                       }`}>
-                        <p className="text-white font-medium text-sm mb-2 text-center">{speaker.name}</p>
+                        <p className="font-outfit text-white font-medium text-sm mb-2 text-center">{speaker.name}</p>
                         <p className="text-gold text-xs font-playfair italic text-center">{speaker.role}</p>
                       </div>
                     </div>
@@ -149,7 +149,7 @@ const Autoridade = () => {
           ))}
         </div>
         
-        <div className="text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
+        <div className="font-outfit text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
           <p className="font-playfair text-2xl text-gold italic font-semibold">
