@@ -7,7 +7,7 @@ const skills = [
   { icon: '💋', name: 'Micropigmentação Labial', img: '/assets/img/aquarelle-lips.webp', objectPosition: 'center 55%' },
   { icon: '✨', name: 'Brow Lamination', img: '/assets/img/brow-lamination.webp', objectPosition: 'center 35%' },
   { icon: '👑', name: 'Posicionamento', img: '/assets/img/posicionamento.webp', objectPosition: 'center 40%' },
-  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.webp', objectPosition: 'center 35%' },
+  { icon: '📈', name: 'Marketing', img: '/assets/img/marketing.webp', objectPosition: '20% 30%' },
 ];
 
 const Diferencial = () => {
@@ -74,11 +74,16 @@ const Diferencial = () => {
                     src={`${process.env.PUBLIC_URL}${skill.img}`}
                     alt={skill.name}
                     className={`w-full h-full object-cover transition-transform duration-300 ${
-                      skill.name === 'Shadow' ? 'scale-150 hover:scale-[1.6]' : 'hover:scale-110'
+                      skill.name === 'Shadow' ? 'scale-150 hover:scale-[1.6]' : 
+                      skill.name === 'Marketing' ? 'scale-125 hover:scale-[1.35] translate-x-8' :
+                      'hover:scale-110'
                     } ${
                       skill.name === 'Posicionamento' ? 'scale-100' : ''
                     }`}
-                    style={skill.objectPosition ? { objectPosition: skill.objectPosition } : {}}
+                    style={{
+                      objectPosition: skill.objectPosition || 'center center',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
               ) : (
