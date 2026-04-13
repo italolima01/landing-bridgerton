@@ -25,7 +25,7 @@ const Footer = () => {
         
         <div className="mt-8">
           <img 
-            src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+            src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
             alt="Diamante"
             className="w-16 h-16 mx-auto opacity-50 object-contain"
           />

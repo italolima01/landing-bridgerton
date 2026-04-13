@@ -121,9 +121,10 @@ const Autoridade = () => {
                       clickedCards[index] ? 'opacity-0' : 'opacity-100'
                     }`}>
                       <img 
-                        src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+                        src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
                         alt="Diamante"
                         className="w-20 h-20 mb-4 opacity-50 object-contain"
+                        loading="lazy"
                       />
                       <p className="text-white/70 text-xs font-playfair italic text-center">
                         Convidado especial

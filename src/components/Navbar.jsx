@@ -47,7 +47,7 @@ const Navbar = () => {
             className="flex items-end space-x-1 hover:opacity-80 transition-all duration-300 hover:scale-105"
           >
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+              src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
               alt="Diamante"
               className="w-6 h-6 object-contain mb-0.5"
             />

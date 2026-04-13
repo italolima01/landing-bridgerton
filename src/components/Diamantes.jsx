@@ -21,7 +21,7 @@ const Diamantes = () => {
       {/* Diamante decorativo na parte inferior central */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20" style={{ opacity: 0.7 }}>
         <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+          src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
           alt="Diamante decorativo"
           className="w-24 md:w-32 animate-fade-in"
         />

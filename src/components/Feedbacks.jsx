@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const feedbacks = [
-  'feedback-1.PNG',
-  'feedback-2.PNG',
-  'feedback-3.jpeg',
-  'feedback-4.jpeg',
-  'feedback-5.jpeg',
-  'feedback-6.jpeg',
-  'feedback-7.jpeg',
-  'feedback-8.jpeg',
+  'feedback-1.webp',
+  'feedback-2.webp',
+  'feedback-3.webp',
+  'feedback-4.webp',
+  'feedback-5.webp',
+  'feedback-6.webp',
+  'feedback-7.webp',
+  'feedback-8.webp',
 ];
 
 const Feedbacks = () => {

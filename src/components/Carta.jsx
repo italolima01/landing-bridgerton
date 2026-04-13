@@ -15,7 +15,7 @@ const Carta = () => {
           }`}
         >
           <img 
-            src={`${process.env.PUBLIC_URL}/assets/img/diamante.png`}
+            src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
             alt="Diamante"
             className="w-32 h-32 md:w-40 md:h-40 object-contain opacity-80"
           />
