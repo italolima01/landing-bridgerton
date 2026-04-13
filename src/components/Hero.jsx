@@ -39,7 +39,7 @@ const Hero = () => {
         <div
           className="inline-block px-4 py-2 -mb-4 animate-fade-in"
         >
-          <span className="text-white text-base md:text-lg font-outfit font-semibold tracking-[10px] uppercase">IMERSÃO</span>
+          <span className="text-white text-base md:text-lg font-outfit font-light tracking-[10px] uppercase">IMERSÃO</span>
         </div>
 
         <h1 className="hero-title font-outfit font-semibold text-white mb-8 leading-tight flex flex-col items-center">
