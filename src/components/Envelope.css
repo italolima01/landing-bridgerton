@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: min(92vw, 700px);
+  width: min(92vw, 900px);
   perspective: 1200px;
   animation: envelopeFloat 4s ease-in-out infinite;
 }
@@ -80,7 +80,7 @@
   left: 50%;
   top: 110px;
   transform: translateX(-50%) translateY(150px);
-  width: min(55%, 380px);
+  width: min(85%, 750px);
   max-height: 220px;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(201,168,76,0.03) 0%, transparent 40%), #f4eddf;
@@ -96,7 +96,7 @@
 
 @media (max-width: 768px) {
   .carta-wrapper {
-    width: min(75%, 320px);
+    width: min(85%, 340px);
     max-height: 150px;
     top: 80px;
     transform: translateX(-50%) translateY(100px);
@@ -108,7 +108,7 @@
 }
 
 .carta-reveal-container.is-open .carta-wrapper {
-  transform: translateX(-50%) translateY(-100px);
+  transform: translateX(-50%) translateY(-50px);
   max-height: 2000px;
 }
 
@@ -276,31 +276,31 @@
   font-family: 'Playfair Display', Georgia, serif;
   text-align: center;
   color: #1a2340;
-  line-height: 1.9;
-  font-size: 1rem;
+  line-height: 2.2;
+  font-size: 1.35rem;
 }
 
 @media (max-width: 768px) {
   .carta-content {
-    font-size: 0.75rem;
-    line-height: 1.5;
+    font-size: 0.8rem;
+    line-height: 1.7;
   }
 }
 
 .carta-inner {
-  padding: 40px 32px;
+  padding: 90px 60px;
   background: rgba(247,242,234,0.55);
   text-align: center;
 }
 
 @media (max-width: 768px) {
   .carta-inner {
-    padding: 30px 20px;
+    padding: 45px 25px;
   }
 }
 
 .carta-inner p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .carta-inner .gold {
@@ -311,13 +311,13 @@
 
 .carta-cta-button {
   margin: 2rem 0 0;
-  padding: 12px 28px;
+  padding: 14px 32px;
   background: linear-gradient(135deg, #c9a85c 0%, #d9b86a 50%, #c9a85c 100%);
   border: 2px solid #d9b86a;
   border-radius: 50px;
   color: #1a2340;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
