@@ -16,6 +16,11 @@ const imagensParaComprimir = [
   { entrada: 'diamante-bg.png',               saida: 'diamante-bg.webp',               qualidade: 80 },
   { entrada: 'mask-invitation.jpg',           saida: 'mask-invitation.webp',           qualidade: 80 },
   { entrada: 'vertical-shot-red-textile-it-is-great-background.jpg', saida: 'vertical-shot-red-textile.webp', qualidade: 75 },
+  { entrada: 'dream-shadow.jpg',              saida: 'dream-shadow.webp',              qualidade: 80 },
+  { entrada: 'fios-realistas.jpeg',           saida: 'fios-realistas.webp',           qualidade: 80 },
+  { entrada: 'aquarelle-lips.jpeg',           saida: 'aquarelle-lips.webp',           qualidade: 80 },
+  { entrada: 'brow-lamination.jpg',           saida: 'brow-lamination.webp',           qualidade: 80 },
+  { entrada: 'marketing.JPG',                 saida: 'marketing.webp',                 qualidade: 80 },
 ];
 
 function tamanhokb(filepath) {
