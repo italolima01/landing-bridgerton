@@ -21,29 +21,20 @@ const Feedbacks = () => {
   const videoContainerRef = useRef(null);
 
   useEffect(() => {
-    // Carregar a API do Vimeo Player
-    const script = document.createElement('script');
-    script.src = 'https://player.vimeo.com/api/player.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
+    const initPlayer = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
 
-        // Garantir que o vídeo inicie mutado
         playerRef.current.setVolume(0).then(() => {
           setIsMuted(true);
         });
 
-        // Configurar Intersection Observer para controlar volume
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
               if (playerRef.current) {
                 const ratio = entry.intersectionRatio;
                 
-                // Se o vídeo está desmutado, ajustar volume baseado na visibilidade
                 playerRef.current.getVolume().then((currentVolume) => {
                   if (currentVolume > 0) {
                     const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
@@ -66,12 +57,17 @@ const Feedbacks = () => {
       }
     };
 
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (window.Vimeo) {
+      initPlayer();
+    } else {
+      const timer = setInterval(() => {
+        if (window.Vimeo) {
+          initPlayer();
+          clearInterval(timer);
+        }
+      }, 100);
+      return () => clearInterval(timer);
+    }
   }, []);
 
   const toggleMute = () => {
