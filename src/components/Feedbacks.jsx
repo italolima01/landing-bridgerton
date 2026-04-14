@@ -115,7 +115,7 @@ const Feedbacks = () => {
           {/* Carrossel Esquerdo (Desktop) - Sobe */}
           <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative">
             <div className="animate-scroll-left md:animate-scroll-up space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
-              {[...feedbacks, ...feedbacks].map((file, index) => (
+              {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`left-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
@@ -171,7 +171,7 @@ const Feedbacks = () => {
           {/* Carrossel Direito (Desktop) - Desce */}
           <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10">
             <div className="animate-scroll-right md:animate-scroll-down space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
-              {[...feedbacks, ...feedbacks].map((file, index) => (
+              {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
