@@ -108,12 +108,27 @@ const Formulario = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     
-    // Se for o campo whatsapp, permite apenas números
+    // Se for o campo whatsapp, aplica máscara
     if (name === 'whatsapp') {
       const numbersOnly = value.replace(/\D/g, '');
+      let formatted = numbersOnly;
+      
+      // Aplica máscara (XX) XXXXX-XXXX ou (XX) XXXX-XXXX
+      if (numbersOnly.length <= 11) {
+        if (numbersOnly.length <= 2) {
+          formatted = numbersOnly;
+        } else if (numbersOnly.length <= 7) {
+          formatted = `(${numbersOnly.slice(0, 2)}) ${numbersOnly.slice(2)}`;
+        } else if (numbersOnly.length <= 10) {
+          formatted = `(${numbersOnly.slice(0, 2)}) ${numbersOnly.slice(2, 6)}-${numbersOnly.slice(6)}`;
+        } else {
+          formatted = `(${numbersOnly.slice(0, 2)}) ${numbersOnly.slice(2, 7)}-${numbersOnly.slice(7, 11)}`;
+        }
+      }
+      
       setFormData({
         ...formData,
-        [name]: numbersOnly
+        [name]: formatted
       });
     } else {
       setFormData({
