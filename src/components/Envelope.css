@@ -79,8 +79,8 @@
   position: absolute;
   left: 50%;
   top: 110px;
-  transform: translateX(-50%) translateY(150px);
-  width: min(85%, 750px);
+  transform: translateX(-50%) translateY(180px);
+  width: min(75%, 650px);
   max-height: 220px;
   overflow: hidden;
   background: linear-gradient(135deg, rgba(201,168,76,0.03) 0%, transparent 40%), #f4eddf;

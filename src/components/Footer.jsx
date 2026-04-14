@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="py-24 px-4 text-center relative" style={{
+    <footer className="py-24 md:py-40 px-4 text-center relative" style={{
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
       backgroundSize: '100% auto',

@@ -527,11 +527,22 @@
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 30s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 30s linear infinite;
+}
+
+/* Desabilita animações horizontais no desktop */
+@media (min-width: 768px) {
+  .animate-scroll-left {
+    animation: none;
+  }
+  
+  .animate-scroll-right {
+    animation: none;
+  }
 }
 
   .animate-slide-from-left {
