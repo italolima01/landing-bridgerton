@@ -4,7 +4,7 @@ import Envelope from './Envelope';
 const Urgencia = () => {
   return (
     <>
-      <section className="py-24 px-4 relative bg-cover bg-center" style={{
+      <section className="py-24 md:py-40 px-4 relative bg-cover bg-center" style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/mask-invitation.webp)`,
       }}>
         {/* Overlay escuro para legibilidade */}

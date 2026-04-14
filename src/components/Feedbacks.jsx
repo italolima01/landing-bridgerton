@@ -87,7 +87,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="py-24 px-4 relative" style={{
+    <section className="py-24 md:py-40 px-4 relative" style={{
       backgroundColor: '#8B1A1A',
       backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
       backgroundSize: '100% auto',
@@ -111,16 +111,16 @@ const Feedbacks = () => {
         </div>
 
         {/* Layout com carrosséis e vídeo */}
-        <div className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-16 items-center mb-16">
-          {/* Carrossel Superior (Mobile) / Esquerdo (Desktop) - Sobe */}
+        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr_1fr] gap-12 md:gap-8 items-center mb-16">
+          {/* Carrossel Esquerdo (Desktop) - Sobe */}
           <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative">
-            <div className="animate-scroll-up md:animate-scroll-up animate-scroll-left md:space-y-4 flex md:flex-col space-x-4 md:space-x-0">
+            <div className="animate-scroll-left md:animate-scroll-up space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks].map((file, index) => (
-                <div key={`left-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:flex-shrink">
+                <div key={`left-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
                     alt={`Feedback ${index + 1}`}
-                    className="w-auto md:w-full h-[180px] md:h-auto object-contain md:max-h-[300px]"
+                    className="w-auto md:w-full h-[180px] md:h-[180px] object-cover"
                   />
                 </div>
               ))}
@@ -132,8 +132,8 @@ const Feedbacks = () => {
             ref={videoContainerRef}
             className="rounded-2xl overflow-hidden relative cursor-pointer"
             style={{
-              width: '350px',
-              height: '260px',
+              width: '550px',
+              height: '410px',
               maxWidth: '100%',
               margin: '0 auto',
               boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
@@ -148,7 +148,7 @@ const Feedbacks = () => {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               loading="lazy"
               className="pointer-events-none absolute"
-              style={{ width: '385px', height: '660px', top: '-200px', left: '-17.5px' }}
+              style={{ width: '605px', height: '1040px', top: '-315px', left: '-27.5px' }}
               title="Vídeo de Feedbacks"
             />
 
@@ -168,15 +168,15 @@ const Feedbacks = () => {
             )}
           </div>
 
-          {/* Carrossel Inferior (Mobile) / Direito (Desktop) - Desce */}
+          {/* Carrossel Direito (Desktop) - Desce */}
           <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10">
-            <div className="animate-scroll-down md:animate-scroll-down animate-scroll-right md:space-y-4 flex md:flex-col space-x-4 md:space-x-0">
+            <div className="animate-scroll-right md:animate-scroll-down space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks].map((file, index) => (
-                <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:flex-shrink">
+                <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/img/${file}`}
                     alt={`Feedback ${index + 1}`}
-                    className="w-auto md:w-full h-[180px] md:h-auto object-contain md:max-h-[300px]"
+                    className="w-auto md:w-full h-[180px] md:h-[180px] object-cover"
                   />
                 </div>
               ))}
