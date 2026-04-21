@@ -101,23 +101,17 @@ const Espaco = () => {
       <div className="absolute inset-0 bg-black/80"></div>
       <div className="absolute inset-0 bg-[#8B1A1A]/50 mix-blend-multiply"></div>
       
-      <div className="max-w-6xl mx-auto px-8 md:px-16 relative z-10">
+      <div className="relative z-10">
         {/* Texto acima do vídeo */}
-        <div className="text-center mb-12 space-y-6">
+        <div className="text-center mb-12 space-y-6 px-8 md:px-16">
           <p className="font-outfit text-lg md:text-xl text-white/90 leading-relaxed font-light max-w-4xl mx-auto animate-fade-in-down delay-100">
             A última temporada da Imersão Evolution Brows não será apenas um evento.
-          </p>
-          
-          <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug max-w-4xl mx-auto animate-zoom-in delay-300">
-            Será a oportunidade de viver o nível que poucas profissionais conseguem alcançar.
           </p>
         </div>
 
         <div 
-          className="relative overflow-hidden rounded-lg cursor-pointer mx-auto"
+          className="relative overflow-hidden cursor-pointer w-full"
           style={{ 
-            width: '100%',
-            maxWidth: '800px',
             aspectRatio: '16/9',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
             border: '2px solid rgba(217, 184, 106, 0.3)'
@@ -134,9 +128,10 @@ const Espaco = () => {
               position: 'absolute',
               top: '50%',
               left: '50%',
-              width: '110%',
-              height: '110%',
-              transform: 'translate(-50%, -50%)'
+              width: '100%',
+              height: '100%',
+              transform: 'translate(-50%, -50%)',
+              objectFit: 'cover'
             }}
             className="pointer-events-none"
             title="Evolution Brows"
@@ -159,7 +154,7 @@ const Espaco = () => {
         </div>
         
         {/* Botão CTA */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-12 px-8 md:px-16">
           <button
             onClick={() => document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' })}
             className="animated-button text-sm md:text-base px-6 md:px-12 py-3 md:py-4"
