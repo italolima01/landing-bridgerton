@@ -18,17 +18,10 @@ const Diamantes = () => {
         background: 'radial-gradient(circle at center, transparent 0%, transparent 30%, rgba(0,0,0,0.6) 100%)'
       }}></div>
       
-      {/* Diamante decorativo na parte inferior central */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20" style={{ opacity: 0.7 }}>
-        <img 
-          src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
-          alt="Diamante decorativo"
-          className="w-24 md:w-32 animate-fade-in"
-        />
-      </div>
+
       
-      <div className="container mx-auto max-w-5xl relative z-10 -mt-12">
-        <div className="flex flex-col items-center justify-center text-center gap-12 pt-8">
+      <div className="container mx-auto max-w-5xl relative z-10 mt-32">
+        <div className="flex flex-col items-center justify-center text-center gap-12 pt-16">
 
           <div 
             ref={contentRef}
