@@ -8,8 +8,11 @@ import Autoridade from './components/Autoridade';
 import Diamantes from './components/Diamantes';
 import Feedbacks from './components/Feedbacks';
 import Envelope from './components/Envelope';
-import Formulario from './components/Formulario';
-import Footer from './components/Footer';
+import UltimaEdicao from './components/UltimaEdicao';
+import Setores from './components/Setores';
+import SetoresDiamante from './components/SetoresDiamante';
+import FAQ from './components/FAQ';
+
 
 function App() {
   return (
@@ -23,8 +26,11 @@ function App() {
       <Diamantes />
       <Feedbacks />
       <Envelope />
-      <Formulario />
-      <Footer />
+      <UltimaEdicao />
+      <Setores />
+      <SetoresDiamante />
+      <FAQ />
+
     </div>
   );
 }
