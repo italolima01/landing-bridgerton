@@ -87,7 +87,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="py-24 md:py-40 px-4 relative" style={{
+    <section className="py-24 md:py-40 relative" style={{
       backgroundColor: '#D9B86A'
     }}>
       {/* Vinheta */}
@@ -96,10 +96,10 @@ const Feedbacks = () => {
       }}></div>
 
       
-      <div className="container mx-auto max-w-7xl">
+      <div className="w-full">
         <div
           ref={titleRef}
-          className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`transition-all duration-800 px-4 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           </div>
@@ -109,7 +109,7 @@ const Feedbacks = () => {
         </div>
 
         {/* Layout com carrosséis e vídeo */}
-        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr_1fr] gap-12 md:gap-8 items-center mb-16">
+        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr_1fr] md:gap-0 gap-12 items-center mb-16 w-full">
           {/* Carrossel Esquerdo (Desktop) - Sobe */}
           <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative">
             <div className="animate-scroll-left md:animate-scroll-up space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
@@ -128,9 +128,8 @@ const Feedbacks = () => {
           {/* Vídeo Central */}
           <div
             ref={videoContainerRef}
-            className="rounded-2xl overflow-hidden relative cursor-pointer"
+            className="rounded-2xl overflow-hidden relative cursor-pointer w-full"
             style={{
-              width: '550px',
               height: '410px',
               maxWidth: '100%',
               margin: '0 auto',
@@ -146,7 +145,13 @@ const Feedbacks = () => {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               loading="lazy"
               className="pointer-events-none absolute"
-              style={{ width: '605px', height: '1040px', top: '-315px', left: '-27.5px' }}
+              style={{ 
+                width: '100%', 
+                height: '100%',
+                top: '0',
+                left: '0',
+                objectFit: 'cover'
+              }}
               title="Vídeo de Feedbacks"
             />
 
