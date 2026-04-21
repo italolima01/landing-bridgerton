@@ -29,6 +29,7 @@ module.exports = {
         bodoni: ['"Bodoni Moda"', 'serif'],
         script: ['"Great Vibes"', 'cursive'],
         outfit: ['Outfit', 'sans-serif'],
+        geraldyn: ['"Geraldyn Brushko"', 'cursive'],
       },
     },
   },
