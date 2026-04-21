@@ -52,13 +52,12 @@ const Autoridade = () => {
 
   return (
     <section id="autoridade" className="py-24 md:py-40 px-4 scroll-mt-20 relative" style={{ 
-      backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center',
-      backgroundBlendMode: 'multiply',
-      backgroundRepeat: 'repeat'
+      backgroundColor: '#D9B86A'
     }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 100px rgba(184, 154, 88, 0.6), inset 0 0 200px rgba(184, 154, 88, 0.3)'
+      }}></div>
 
       
       <div className="container mx-auto max-w-5xl relative z-10">
@@ -151,8 +150,7 @@ const Autoridade = () => {
         
         <div className="font-outfit text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
-          <p>Sem fórmulas genéricas.</p>
-          <p className="font-playfair text-2xl text-white italic font-semibold">
+          <p className="font-playfair text-2xl text-white italic font-light">
             Apenas direcionamentos validados que já transformaram empreendedoras comuns em grandes referências.
           </p>
         </div>

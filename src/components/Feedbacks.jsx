@@ -88,13 +88,12 @@ const Feedbacks = () => {
 
   return (
     <section className="py-24 md:py-40 px-4 relative" style={{
-      backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center',
-      backgroundBlendMode: 'multiply',
-      backgroundRepeat: 'repeat'
+      backgroundColor: '#D9B86A'
     }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 100px rgba(184, 154, 88, 0.6), inset 0 0 200px rgba(184, 154, 88, 0.3)'
+      }}></div>
 
       
       <div className="container mx-auto max-w-7xl">

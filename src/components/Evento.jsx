@@ -75,16 +75,14 @@ const Evento = () => {
       id="evento" 
       className="relative" 
       style={{ 
-        backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-        backgroundSize: '100% auto',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
-        backgroundRepeat: 'repeat',
+        backgroundColor: '#D9B86A',
         scrollMarginTop: '56px'
       }}
     >
-
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 100px rgba(184, 154, 88, 0.6), inset 0 0 200px rgba(184, 154, 88, 0.3)'
+      }}></div>
       
       <div className="relative z-10 w-full pt-8 md:pt-12">
         <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">

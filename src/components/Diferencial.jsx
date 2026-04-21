@@ -15,25 +15,11 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: '#540810' }}>
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile.webp)`,
-          backgroundSize: '50%',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'multiply'
-        }}
-      />
-
-      {/* Vinheta - escurecimento nas bordas */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.6) 100%)'
-        }}
-      />
+    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: '#320000' }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 100px rgba(20, 0, 0, 0.8), inset 0 0 200px rgba(20, 0, 0, 0.5)'
+      }}></div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <div
