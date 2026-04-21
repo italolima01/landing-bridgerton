@@ -5,17 +5,17 @@ const faqs = [
   {
     question: 'Vale a pena participar presencialmente?',
     answer:
-      'Sim! A experiência presencial é completamente diferente. Você vai absorver conteúdo de alto nível, fazer conexões reais com profissionais do mercado e sair com uma visão transformada do seu negócio.',
+      'Sim. Cursos online transferem informação, mas a imersão presencial transfere energia, conexão e entendimento profundo. Ver uma referência executando uma técnica ao vivo, observando a pressão, os ângulos e os detalhes sem edição de vídeo é insubstituível.',
   },
   {
     question: 'E se eu ainda não me sinto pronta ou estou começando?',
     answer:
-      'Este evento foi pensado para profissionais em todos os estágios. Se você está começando, vai sair com uma base sólida e acelerada. Se já tem experiência, vai elevar seu nível de forma significativa.',
+      'Esse evento acelera o seu crescimento. Ele te poupa anos de erros que iniciantes costumam cometer. Você vai sair com um caminho claro, clareza técnica e a mentalidade de uma profissional de alto padrão.',
   },
   {
     question: 'Eu vou realmente conseguir aplicar o que aprender?',
     answer:
-      'Sim! O evento é totalmente prático. Você aprenderá técnicas e estratégias aplicáveis imediatamente no seu dia a dia, com demonstrações ao vivo e materiais de apoio para levar para casa.',
+      'Esse evento foi desenhado exatamente para a execução. Não é apenas teoria — são estratégias práticas e demonstrações técnicas reais. A gente foca em clareza para que você saiba exatamente o que fazer na segunda-feira de manhã.',
   },
   {
     question: 'O evento é somente para profissionais de estética?',

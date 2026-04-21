@@ -12,6 +12,7 @@ import UltimaEdicao from './components/UltimaEdicao';
 import Setores from './components/Setores';
 import SetoresDiamante from './components/SetoresDiamante';
 import FAQ from './components/FAQ';
+import CTAFinal from './components/CTAFinal';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Setores />
       <SetoresDiamante />
       <FAQ />
+      <CTAFinal />
 
     </div>
   );
