@@ -104,8 +104,8 @@ const Espaco = () => {
       <div className="relative z-10">
         {/* Título */}
         <div className="text-center mb-12 space-y-6 px-8 md:px-16">
-          <h2 className="font-outfit text-4xl md:text-5xl text-white leading-tight font-semibold max-w-4xl mx-auto animate-fade-in-down delay-100">
-            A última temporada da Imersão Evolution Brows não será apenas um evento.
+          <h2 className="font-outfit text-3xl md:text-4xl text-white leading-tight font-semibold max-w-4xl mx-auto animate-fade-in-down delay-100">
+            A última temporada da<br />Imersão Evolution Brows não será apenas um evento.
           </h2>
         </div>
 

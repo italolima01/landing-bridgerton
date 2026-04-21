@@ -92,7 +92,7 @@ const Feedbacks = () => {
     }}>
       {/* Vinheta */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        boxShadow: 'inset 0 0 100px rgba(184, 154, 88, 0.6), inset 0 0 200px rgba(184, 154, 88, 0.3)'
+        boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2), inset 0 0 180px rgba(0,0,0,0.1)'
       }}></div>
 
       

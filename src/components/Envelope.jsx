@@ -43,16 +43,15 @@ export default function Envelope() {
   return (
     <div 
       ref={envelopeRef}
-      className="stage" 
+      className="stage relative" 
       style={{ 
-        backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
-        backgroundAttachment: 'scroll'
+        backgroundColor: 'rgb(74, 7, 14)'
       }}
     >
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
       <div className={`carta-reveal-container ${opened ? "is-open" : ""}`}>
 
         <div className="envelope-back" />

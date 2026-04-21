@@ -158,14 +158,13 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-16 md:py-32 px-4 scroll-mt-20" style={{
-      backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center',
-      backgroundBlendMode: 'multiply',
-      backgroundRepeat: 'repeat'
+    <section id="formulario" className="py-16 md:py-32 px-4 scroll-mt-20 relative" style={{
+      backgroundColor: 'rgb(74, 7, 14)'
     }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
       {/* Cursor de pena customizado */}
       {cursorPosition.show && !submitted && (
         <div 

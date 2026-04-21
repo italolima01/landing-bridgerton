@@ -3,13 +3,12 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="py-24 md:py-40 px-4 text-center relative" style={{
-      backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center',
-      backgroundBlendMode: 'multiply',
-      backgroundRepeat: 'repeat'
+      backgroundColor: 'rgb(74, 7, 14)'
     }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
 
       
       <div className="container mx-auto max-w-5xl relative z-10">
