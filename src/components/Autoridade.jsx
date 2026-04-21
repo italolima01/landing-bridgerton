@@ -68,7 +68,6 @@ const Autoridade = () => {
           }`}
         >
           <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8">
-            AUTORIDADE
           </div>
           
           <h2 className="font-outfit text-4xl md:text-5xl text-white text-center mb-12 leading-tight">

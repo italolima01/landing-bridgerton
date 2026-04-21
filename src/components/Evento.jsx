@@ -98,7 +98,6 @@ const Evento = () => {
             <div className={`text-white text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              Sobre o Evento
             </div>
             
             <h2 className={`font-outfit text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${

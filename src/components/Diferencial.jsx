@@ -28,16 +28,11 @@ const Diferencial = () => {
             }`}
         >
           <div className="text-center text-white text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
-            O DIFERENCIAL
           </div>
 
-          <h2 className="font-outfit text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
-            Nem todas estão preparadas<br />para o que será revelado aqui…
+          <h2 className="font-outfit text-2xl md:text-3xl text-white text-center mb-16 leading-tight font-light animate-flip-in delay-200">
+            Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio. Unindo técnica, estratégia e posicionamento.
           </h2>
-
-          <p className="font-outfit text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
-            Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
-          </p>
         </div>
 
         <div
