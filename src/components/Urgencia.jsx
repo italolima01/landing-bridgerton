@@ -12,7 +12,7 @@ const Urgencia = () => {
         <div className="absolute inset-0 bg-[#8B1A1A]/50 mix-blend-multiply"></div>
         
         <div className="container mx-auto max-w-5xl relative z-10">      
-          <h2 className="font-outfit text-4xl md:text-5xl text-white text-center mb-12 leading-tight animate-flip-in delay-100">
+          <h2 className="font-outfit text-3xl md:text-4xl text-white text-center mb-12 leading-tight animate-flip-in delay-100">
             O último e mais aguardado espetáculo da temporada está prestes a começar
           </h2>
           

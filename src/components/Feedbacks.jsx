@@ -103,15 +103,15 @@ const Feedbacks = () => {
         >
           <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           </div>
-          <h2 className="font-outfit text-4xl md:text-5xl text-white text-center mb-16 leading-tight animate-rotate-in delay-200">
+          <h2 className="font-outfit text-3xl md:text-4xl text-white text-center mb-16 leading-tight animate-rotate-in delay-200">
             Algumas experiências terminam. Outras deixam marcas para sempre.
           </h2>
         </div>
 
         {/* Layout com carrosséis e vídeo */}
-        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr_1fr] md:gap-0 gap-12 items-center mb-16 w-full">
+        <div className="flex flex-col md:grid md:grid-cols-[0.6fr_2fr_0.6fr] md:gap-0 gap-12 items-center mb-16 w-full">
           {/* Carrossel Esquerdo (Desktop) - Sobe */}
-          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative">
+          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative md:-mr-6 z-10">
             <div className="animate-scroll-left md:animate-scroll-up space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`left-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
@@ -172,7 +172,7 @@ const Feedbacks = () => {
           </div>
 
           {/* Carrossel Direito (Desktop) - Desce */}
-          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10">
+          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10 md:-ml-6">
             <div className="animate-scroll-right md:animate-scroll-down space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
