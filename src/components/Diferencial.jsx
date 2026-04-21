@@ -15,10 +15,10 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: '#320000' }}>
+    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: 'rgb(74, 7, 14)' }}>
       {/* Vinheta */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        boxShadow: 'inset 0 0 100px rgba(20, 0, 0, 0.8), inset 0 0 200px rgba(20, 0, 0, 0.5)'
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
       }}></div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
@@ -83,7 +83,7 @@ const Diferencial = () => {
           style={{ transitionDelay: '600ms' }}
         >
           <p className="font-outfit text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
-            Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
+            Tudo isso conectado a uma visão que te<br />posiciona em outro nível no mercado.
           </p>
 
           <p className="font-playfair text-3xl md:text-4xl text-white text-center italic font-bold mt-8 animate-bounce-in delay-700">
