@@ -7,6 +7,7 @@ import Diferencial from './components/Diferencial';
 import Autoridade from './components/Autoridade';
 import Diamantes from './components/Diamantes';
 import Feedbacks from './components/Feedbacks';
+import Envelope from './components/Envelope';
 import Formulario from './components/Formulario';
 import Footer from './components/Footer';
 
@@ -21,6 +22,7 @@ function App() {
       <Autoridade />
       <Diamantes />
       <Feedbacks />
+      <Envelope />
       <Formulario />
       <Footer />
     </div>
