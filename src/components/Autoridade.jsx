@@ -68,7 +68,7 @@ const Autoridade = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="text-center text-gold text-sm font-bold tracking-[3px] mb-8">
+          <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8">
             AUTORIDADE
           </div>
           
@@ -111,7 +111,7 @@ const Autoridade = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
                       <p className="font-outfit text-white font-medium text-sm mb-1">{speaker.name}</p>
-                      <p className="text-gold text-xs font-playfair italic">{speaker.role}</p>
+                      <p className="text-white text-xs font-playfair italic">{speaker.role}</p>
                     </div>
                   </>
                 ) : (
@@ -139,7 +139,7 @@ const Autoridade = () => {
                         clickedCards[index] ? 'translate-y-0' : 'translate-y-4'
                       }`}>
                         <p className="font-outfit text-white font-medium text-sm mb-2 text-center">{speaker.name}</p>
-                        <p className="text-gold text-xs font-playfair italic text-center">{speaker.role}</p>
+                        <p className="text-white text-xs font-playfair italic text-center">{speaker.role}</p>
                       </div>
                     </div>
                   </>
@@ -152,7 +152,7 @@ const Autoridade = () => {
         <div className="font-outfit text-center space-y-4 text-lg text-white/90 max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-300">
           <p>Sem teoria vazia.</p>
           <p>Sem fórmulas genéricas.</p>
-          <p className="font-playfair text-2xl text-gold italic font-semibold">
+          <p className="font-playfair text-2xl text-white italic font-semibold">
             Apenas direcionamentos validados que já transformaram empreendedoras comuns em grandes referências.
           </p>
         </div>

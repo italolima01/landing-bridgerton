@@ -21,7 +21,7 @@ const Footer = () => {
         </p>
         
         <p className="font-outfit text-base text-white/75 mb-4">Com expectativa,</p>
-        <p className="text-gold text-4xl md:text-5xl font-script font-normal">— Lady Erika Sousa</p>
+        <p className="text-white text-4xl md:text-5xl font-script font-normal">— Lady Erika Sousa</p>
         
         <div className="mt-8">
           <img 

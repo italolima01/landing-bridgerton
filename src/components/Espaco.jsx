@@ -108,7 +108,7 @@ const Espaco = () => {
             A última temporada da Imersão Evolution Brows não será apenas um evento.
           </p>
           
-          <p className="font-playfair text-2xl md:text-3xl text-gold italic leading-snug max-w-4xl mx-auto animate-zoom-in delay-300">
+          <p className="font-playfair text-2xl md:text-3xl text-white italic leading-snug max-w-4xl mx-auto animate-zoom-in delay-300">
             Será a oportunidade de viver o nível que poucas profissionais conseguem alcançar.
           </p>
         </div>

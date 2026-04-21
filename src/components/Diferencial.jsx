@@ -41,7 +41,7 @@ const Diferencial = () => {
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
-          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
+          <div className="text-center text-white text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
             O DIFERENCIAL
           </div>
 
@@ -91,7 +91,7 @@ const Diferencial = () => {
                   <div className="text-5xl mb-4">{skill.icon}</div>
                 </div>
               )}
-              <div className={`text-base text-gold ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
+              <div className={`text-base text-white ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
             </div>
           ))}
         </div>
@@ -105,7 +105,7 @@ const Diferencial = () => {
             Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
           </p>
 
-          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8 animate-bounce-in delay-700">
+          <p className="font-playfair text-3xl md:text-4xl text-white text-center italic font-bold mt-8 animate-bounce-in delay-700">
             Porque talento sem estratégia… passa despercebido.
           </p>
         </div>
