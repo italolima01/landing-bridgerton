@@ -158,14 +158,13 @@ const Formulario = () => {
   };
 
   return (
-    <section id="formulario" className="py-16 md:py-32 px-4 scroll-mt-20" style={{
-      backgroundColor: '#8B1A1A',
-      backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center',
-      backgroundBlendMode: 'multiply',
-      backgroundRepeat: 'repeat'
+    <section id="formulario" className="py-16 md:py-32 px-4 scroll-mt-20 relative" style={{
+      backgroundColor: 'rgb(74, 7, 14)'
     }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
       {/* Cursor de pena customizado */}
       {cursorPosition.show && !submitted && (
         <div 
@@ -187,7 +186,7 @@ const Formulario = () => {
       <div className="container mx-auto max-w-6xl">
         <div 
           ref={titleRef}
-          className={`text-center md:text-left text-gold text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
+          className={`text-center md:text-left text-white text-sm font-bold tracking-[3px] mb-12 transition-all duration-800 ${
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -209,7 +208,7 @@ const Formulario = () => {
               Se você deseja parar de ser apenas mais uma profissional
               e finalmente se tornar uma referência no seu mercado…
             </p>
-            <p className="text-2xl md:text-3xl text-gold font-playfair italic font-bold leading-snug">
+            <p className="text-2xl md:text-3xl text-white font-playfair italic font-bold leading-snug">
               Este é o seu momento.
             </p>
           </div>
@@ -235,7 +234,7 @@ const Formulario = () => {
                   <h3 className="font-playfair text-2xl md:text-3xl text-navy italic">
                     {formData.nome ? (
                       <>
-                        {formData.nome.split(' ')[0]}, este é seu convite exclusivo
+                        Olá, {formData.nome.split(' ')[0]},<br />este é seu convite exclusivo
                       </>
                     ) : (
                       'Seu Convite Exclusivo'
@@ -314,11 +313,11 @@ const Formulario = () => {
             ) : (
               <div className="text-center py-12 animate-fade-in">
                 <div className="text-6xl mb-6 animate-bounce-slow">✉️</div>
-                <h3 className="font-playfair text-2xl text-gold mb-4">
-                  Seu pedido foi enviado ao Palácio
+                <h3 className="font-playfair text-2xl text-white mb-4">
+                  {formData.nome.split(' ')[0]}, seu convite foi enviado ao Palácio.
                 </h3>
-                <p className="text-lg text-white/90">
-                  Verifique sua correspondência (e-mail) em instantes.
+                <p className="text-lg text-white/90 italic">
+                  Agora você receberá o link exclusivo para entrar no grupo VIP do WhatsApp.
                 </p>
               </div>
             )}

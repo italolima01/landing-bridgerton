@@ -75,16 +75,14 @@ const Evento = () => {
       id="evento" 
       className="relative" 
       style={{ 
-        backgroundColor: '#8B1A1A',
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/textile-material-texture.webp)`,
-        backgroundSize: '100% auto',
-        backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
-        backgroundRepeat: 'repeat',
+        backgroundColor: '#D9B86A',
         scrollMarginTop: '56px'
       }}
     >
-
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2), inset 0 0 180px rgba(0,0,0,0.1)'
+      }}></div>
       
       <div className="relative z-10 w-full pt-8 md:pt-12">
         <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">
@@ -97,10 +95,9 @@ const Evento = () => {
           >
 
             
-            <div className={`text-gold text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
+            <div className={`text-white text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              Sobre o Evento
             </div>
             
             <h2 className={`font-outfit text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
@@ -159,27 +156,9 @@ const Evento = () => {
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">
-              <p className="font-outfit text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-left delay-300">
-                A primeira temporada foi extraordinária.
+              <p className="font-playfair text-xl md:text-3xl text-white/90 italic leading-snug animate-fade-in-up delay-700">
+                E é a última vez que este evento irá acontecer.
               </p>
-              
-              <p className="font-outfit text-lg md:text-xl text-white/90 leading-relaxed font-light animate-slide-in-right delay-400">
-                A segunda superou todas as expectativas.
-              </p>
-              
-              <p className="font-outfit text-2xl md:text-3xl text-white italic leading-snug mt-10 animate-bounce-in delay-500">
-                Mas dessa vez… será histórico.
-              </p>
-              
-              <div className="space-y-4 mt-8">
-                <p className="font-playfair text-2xl md:text-4xl text-gold italic leading-tight animate-rotate-in delay-600">
-                  Porque essa será a última temporada da Imersão <span className="whitespace-nowrap">Evolution Brows.</span>
-                </p>
-                
-                <p className="font-playfair text-xl md:text-3xl text-gold/90 italic leading-snug animate-fade-in-up delay-700">
-                  A última vez que esse evento vai acontecer.
-                </p>
-              </div>
             </div>
           </div>
         </div>

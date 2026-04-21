@@ -15,25 +15,11 @@ const Diferencial = () => {
   const [gridRef, gridVisible] = useScrollAnimation();
 
   return (
-    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: '#540810' }}>
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/vertical-shot-red-textile.webp)`,
-          backgroundSize: '50%',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'multiply'
-        }}
-      />
-
-      {/* Vinheta - escurecimento nas bordas */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.6) 100%)'
-        }}
-      />
+    <section id="diferencial" className="relative py-24 md:py-40 px-4 scroll-mt-20" style={{ backgroundColor: 'rgb(74, 7, 14)' }}>
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <div
@@ -41,17 +27,12 @@ const Diferencial = () => {
           className={`transition-all duration-800 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
-          <div className="text-center text-gold text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
-            O DIFERENCIAL
+          <div className="text-center text-white text-base font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           </div>
 
-          <h2 className="font-outfit text-5xl md:text-6xl text-white text-center mb-12 leading-tight animate-flip-in delay-200">
-            Nem todas estão preparadas<br />para o que será revelado aqui…
+          <h2 className="font-outfit text-2xl md:text-3xl text-white text-center mb-16 leading-tight font-light animate-flip-in delay-200">
+            Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio. Unindo técnica, estratégia e posicionamento.
           </h2>
-
-          <p className="font-outfit text-xl text-white/90 text-center mb-16 leading-relaxed max-w-3xl mx-auto animate-zoom-in delay-300">
-            Durante esse encontro, você terá acesso a uma nova forma de enxergar o seu negócio — unindo técnica, estratégia e posicionamento.
-          </p>
         </div>
 
         <div
@@ -91,7 +72,7 @@ const Diferencial = () => {
                   <div className="text-5xl mb-4">{skill.icon}</div>
                 </div>
               )}
-              <div className={`text-base text-gold ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
+              <div className={`text-base text-white ${skill.img ? 'p-4' : 'pb-8'}`}>{skill.name}</div>
             </div>
           ))}
         </div>
@@ -102,10 +83,10 @@ const Diferencial = () => {
           style={{ transitionDelay: '600ms' }}
         >
           <p className="font-outfit text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
-            Tudo isso conectado a uma visão que te posiciona em outro nível no mercado.
+            Tudo isso conectado a uma visão que te<br />posiciona em outro nível no mercado.
           </p>
 
-          <p className="font-playfair text-3xl md:text-4xl text-gold text-center italic font-bold mt-8 animate-bounce-in delay-700">
+          <p className="font-playfair text-3xl md:text-4xl text-white text-center italic font-bold mt-8 animate-bounce-in delay-700">
             Porque talento sem estratégia… passa despercebido.
           </p>
         </div>

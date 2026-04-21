@@ -29,20 +29,7 @@ module.exports = {
         bodoni: ['"Bodoni Moda"', 'serif'],
         script: ['"Great Vibes"', 'cursive'],
         outfit: ['Outfit', 'sans-serif'],
-      },
-      keyframes: {
-        scrollUp: {
-          '0%': { transform: 'translateY(0)' },
-          '100%': { transform: 'translateY(-50%)' },
-        },
-        scrollDown: {
-          '0%': { transform: 'translateY(-50%)' },
-          '100%': { transform: 'translateY(0)' },
-        },
-      },
-      animation: {
-        'scroll-up': 'scrollUp 40s linear infinite',
-        'scroll-down': 'scrollDown 40s linear infinite',
+        geraldyn: ['"Geraldyn Brushko"', 'cursive'],
       },
     },
   },

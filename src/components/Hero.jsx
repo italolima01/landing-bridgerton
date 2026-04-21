@@ -47,7 +47,7 @@ const Hero = () => {
           <span className="animate-handwriting-brows tracking-wider">BROWS</span>
         </h1>
 
-        <h2 className="text-xl md:text-2xl text-gold mb-8 font-outfit font-extralight tracking-[0.3em] animate-fade-in-up delay-200 whitespace-nowrap" style={{
+        <h2 className="text-xl md:text-2xl text-white mb-8 font-outfit font-extralight tracking-[0.3em] animate-fade-in-up delay-200 whitespace-nowrap" style={{
           textShadow: '1px 1px 4px rgba(0, 0, 0, 0.4)'
         }}>
           UM CONVITE EXCLUSIVO
