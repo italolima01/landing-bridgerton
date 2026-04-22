@@ -7,11 +7,16 @@ const UltimaEdicao = () => {
   return (
     <section
       className="py-20 md:py-32 px-6 relative"
-      style={{ backgroundColor: 'rgb(130 29 35)' }}
+      style={{ backgroundColor: 'rgb(74, 7, 14)' }}
     >
+      {/* Vinheta */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        boxShadow: 'inset 0 0 150px rgba(20, 0, 0, 0.9), inset 0 0 300px rgba(20, 0, 0, 0.6)'
+      }}></div>
+
       <div
         ref={ref}
-        className={`max-w-2xl mx-auto text-center transition-all duration-800 ${
+        className={`relative z-10 max-w-2xl mx-auto text-center transition-all duration-800 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
