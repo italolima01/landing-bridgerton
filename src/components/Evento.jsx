@@ -85,11 +85,11 @@ const Evento = () => {
       }}></div>
       
       <div className="relative z-10 w-full pt-8 md:pt-12">
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-12 pb-0 md:py-16">
           {/* Conteúdo */}
           <div 
             ref={leftRef}
-            className={`space-y-8 mb-12 ${
+            className={`space-y-8 mb-0 md:mb-12 ${
               leftVisible ? '' : ''
             }`}
           >
@@ -156,7 +156,7 @@ const Evento = () => {
             )}
           </div>
 
-        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-8 pb-12 md:pb-16">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-2 pb-12 md:pt-8 md:pb-16">
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">
