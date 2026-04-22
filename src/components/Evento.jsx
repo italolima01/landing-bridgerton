@@ -85,11 +85,11 @@ const Evento = () => {
       }}></div>
       
       <div className="relative z-10 w-full pt-8 md:pt-12">
-        <div className="max-w-6xl mx-auto px-8 md:px-16 py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-12 pb-0 md:py-16">
           {/* Conteúdo */}
           <div 
             ref={leftRef}
-            className={`space-y-8 mb-12 ${
+            className={`space-y-8 mb-0 md:mb-12 ${
               leftVisible ? '' : ''
             }`}
           >
@@ -100,42 +100,45 @@ const Evento = () => {
             }`}>
             </div>
             
-            <h2 className={`font-outfit text-3xl md:text-4xl lg:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
+            <h2 className={`font-outfit text-3xl md:text-4xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               O evento que transforma profissionais comuns em nomes de referência
             </h2>
           </div>
-          
-          {/* Vídeo */}
-          <div 
-            className="relative overflow-hidden rounded-lg mb-8 cursor-pointer mx-auto"
-            style={{ 
+        </div>
+
+        {/* Vídeo Edge-to-Edge */}
+        <div 
+          className="relative overflow-hidden cursor-pointer w-full mx-auto"
+          style={{ 
+            width: '100%',
+            aspectRatio: '16/9',
+            minHeight: '400px',
+            boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
+            borderTop: '2px solid rgba(217, 184, 106, 0.3)',
+            borderBottom: '2px solid rgba(217, 184, 106, 0.3)'
+          }}
+          onClick={toggleMute}
+        >
+          <iframe
+            ref={iframeRef}
+            src="https://player.vimeo.com/video/1180600420?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            loading="lazy"
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
               width: '100%',
-              maxWidth: '800px',
-              aspectRatio: '16/9',
-              boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
-              border: '2px solid rgba(217, 184, 106, 0.3)'
+              height: '100%',
+              transform: 'translate(-50%, -50%)',
+              objectFit: 'cover'
             }}
-            onClick={toggleMute}
-          >
-            <iframe
-              ref={iframeRef}
-              src="https://player.vimeo.com/video/1180600420?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              loading="lazy"
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                width: '110%',
-                height: '110%',
-                transform: 'translate(-50%, -50%)'
-              }}
-              className="pointer-events-none"
-              title="Vídeo do Evento"
-            />
+            className="pointer-events-none"
+            title="Vídeo do Evento"
+          />
             
             {/* Ícone de mute/unmute */}
             {showIcon && (
@@ -153,6 +156,7 @@ const Evento = () => {
             )}
           </div>
 
+        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-2 pb-12 md:pt-8 md:pb-16">
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">

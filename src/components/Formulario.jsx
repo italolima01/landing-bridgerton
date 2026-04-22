@@ -201,7 +201,7 @@ const Formulario = () => {
               leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <h2 className="font-playfair text-4xl md:text-5xl text-white leading-tight font-semibold">
+            <h2 className="font-playfair text-3xl md:text-4xl text-white leading-tight font-semibold">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
             <p className="text-lg md:text-xl text-white/80 leading-relaxed">
