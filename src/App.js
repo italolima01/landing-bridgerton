@@ -29,7 +29,6 @@ function App() {
       <Envelope />
       <UltimaEdicao />
       <Setores />
-      <SetoresDiamante />
       <FAQ />
       <CTAFinal />
 
