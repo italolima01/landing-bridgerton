@@ -11,7 +11,7 @@ const Setores = () => {
   const [ref, visible] = useScrollAnimation();
 
   return (
-    <section className="py-20 md:py-32 px-6 bg-[#0d0d0d]">
+    <section id="setores" className="py-20 md:py-32 px-6 bg-[#0d0d0d]">
       <div
         ref={ref}
         className={`max-w-2xl mx-auto text-center transition-all duration-800 ${

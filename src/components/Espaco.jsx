@@ -156,7 +156,7 @@ const Espaco = () => {
         {/* Botão CTA */}
         <div className="flex justify-center mt-12 px-8 md:px-16">
           <button
-            onClick={() => document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('setores')?.scrollIntoView({ behavior: 'smooth' })}
             className="animated-button text-sm md:text-base px-6 md:px-12 py-3 md:py-4"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">

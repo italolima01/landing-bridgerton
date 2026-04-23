@@ -89,11 +89,11 @@ export default function Envelope() {
               <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
                 <button
                   onClick={() => {
-                    document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('setores')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                   className="carta-cta-button"
                 >
-                  DESEJO RECEBER MEU CONVITE
+                  QUERO MUDAR A MINHA HISTÓRIA
                 </button>
               </div>
             </div>
