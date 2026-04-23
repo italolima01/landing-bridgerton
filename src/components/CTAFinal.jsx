@@ -30,7 +30,7 @@ const CTAFinal = () => {
 
         {/* Botão CTA principal */}
         <button
-          className="w-full py-5 font-outfit font-bold text-lg tracking-widest text-white uppercase transition-all duration-300 hover:brightness-110 hover:scale-[1.02] rounded-sm mb-4"
+          className="w-full py-5 font-outfit font-bold text-lg tracking-widest text-white uppercase transition-all duration-300 hover:brightness-110 hover:scale-[1.02] rounded-xl mb-4"
           style={{ backgroundColor: 'rgb(130 29 35)' }}
           onClick={() => document.getElementById('formulario')?.scrollIntoView({ behavior: 'smooth' })}
         >
@@ -39,7 +39,7 @@ const CTAFinal = () => {
 
         {/* Botão secundário dourado */}
         <button
-          className="w-full py-5 font-outfit font-bold text-lg tracking-widest uppercase transition-all duration-300 hover:bg-gold/10 rounded-sm mb-4"
+          className="w-full py-5 font-outfit font-bold text-lg tracking-widest uppercase transition-all duration-300 hover:bg-gold/10 rounded-xl mb-4"
           style={{
             backgroundColor: 'transparent',
             border: '1px solid #c9a84c',
@@ -51,7 +51,7 @@ const CTAFinal = () => {
 
         {/* Botão terciário branco */}
         <button
-          className="w-full py-5 font-outfit font-bold text-lg tracking-widest text-white uppercase transition-all duration-300 hover:bg-white/5 rounded-sm mb-12"
+          className="w-full py-5 font-outfit font-bold text-lg tracking-widest text-white uppercase transition-all duration-300 hover:bg-white/5 rounded-xl mb-12"
           style={{
             backgroundColor: 'transparent',
             border: '1px solid rgba(255,255,255,0.2)',
