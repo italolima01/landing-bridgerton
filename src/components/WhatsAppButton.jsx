@@ -1,10 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const WhatsAppButton = () => {
   const [position, setPosition] = useState({ x: window.innerWidth - 80, y: window.innerHeight - 80 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const buttonRef = useRef(null);
+
+  const snapToEdge = useCallback(() => {
+    const centerX = position.x + 32; // 32 é metade do tamanho do botão (64px)
+    const screenWidth = window.innerWidth;
+    
+    // Decide se vai para esquerda ou direita baseado na posição central
+    const newX = centerX < screenWidth / 2 ? 16 : screenWidth - 80;
+    
+    setPosition({
+      x: newX,
+      y: position.y
+    });
+  }, [position]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -59,20 +72,7 @@ const WhatsAppButton = () => {
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleMouseUp);
     };
-  }, [isDragging, dragStart, position, snapToEdge]);
-
-  const snapToEdge = () => {
-    const centerX = position.x + 32; // 32 é metade do tamanho do botão (64px)
-    const screenWidth = window.innerWidth;
-    
-    // Decide se vai para esquerda ou direita baseado na posição central
-    const newX = centerX < screenWidth / 2 ? 16 : screenWidth - 80;
-    
-    setPosition({
-      x: newX,
-      y: position.y
-    });
-  };
+  }, [isDragging, dragStart, snapToEdge]);
 
   const handleMouseDown = (e) => {
     e.preventDefault();
