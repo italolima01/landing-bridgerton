@@ -77,6 +77,7 @@ const Setores = () => {
             {/* CTA */}
             <button className="mt-10 w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
               style={{ backgroundColor: 'rgb(130 29 35)' }}
+              onClick={() => window.open('https://pay.kiwify.com.br/nZOtrKF', '_blank')}
             >
               Garantir minha vaga
             </button>
@@ -113,7 +114,7 @@ const Setores = () => {
 
             {/* Nome do setor */}
             <h3 className="font-playfair text-3xl md:text-4xl text-white font-semibold mb-6">
-              Setor Diamante
+              Setor Diamond
             </h3>
 
             {/* Preços */}
@@ -156,6 +157,7 @@ const Setores = () => {
             <button
               className="mt-10 w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
               style={{ background: 'linear-gradient(135deg, #c9a84c, #f0d060, #c9a84c)', color: 'black' }}
+              onClick={() => window.open('https://pay.kiwify.com.br/CDDj4pN', '_blank')}
             >
               Garantir minha vaga
             </button>

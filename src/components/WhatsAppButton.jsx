@@ -59,7 +59,7 @@ const WhatsAppButton = () => {
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleMouseUp);
     };
-  }, [isDragging, dragStart, position]);
+  }, [isDragging, dragStart, position, snapToEdge]);
 
   const snapToEdge = () => {
     const centerX = position.x + 32; // 32 é metade do tamanho do botão (64px)
