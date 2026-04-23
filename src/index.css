@@ -19,6 +19,23 @@
 }
 
 @layer utilities {
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulseSubtle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 3s infinite;
+  }
+  
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
