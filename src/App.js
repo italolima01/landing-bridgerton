@@ -12,6 +12,7 @@ import UltimaEdicao from './components/UltimaEdicao';
 import Setores from './components/Setores';
 import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
+import WhatsAppButton from './components/WhatsAppButton';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <Setores />
       <FAQ />
       <CTAFinal />
-
+      <WhatsAppButton />
     </div>
   );
 }
