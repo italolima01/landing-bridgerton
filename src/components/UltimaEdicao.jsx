@@ -30,14 +30,14 @@ const UltimaEdicao = () => {
 
         {/* Parágrafo principal */}
         <p className="font-outfit text-base md:text-lg text-white/90 leading-relaxed mb-10">
-          Estamos encerrando este capítulo para abrir uma nova era. Não haverá outra
-          oportunidade como essa. Esta é a sua chance final de participar do evento que
-          definiu a carreira das principais profissionais do mercado.
+          Será histórico. Será inesquecível. E será sem repetição.
         </p>
 
         {/* Frase em itálico */}
         <p className="font-playfair text-lg md:text-xl text-white/80 italic leading-relaxed">
-          Será histórico. Será inesquecível. E será sem repetição.
+          Estamos encerrando este capítulo para abrir uma nova era. Não haverá outra
+          oportunidade como essa. Esta é a sua chance final de participar do evento que
+          definiu a carreira das principais profissionais do mercado.
         </p>
       </div>
     </section>

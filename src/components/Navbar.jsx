@@ -47,9 +47,9 @@ const Navbar = () => {
             className="flex items-end space-x-1 hover:opacity-80 transition-all duration-300 hover:scale-105"
           >
             <img 
-              src={`${process.env.PUBLIC_URL}/assets/img/diamante.webp`}
+              src={`${process.env.PUBLIC_URL}/assets/img/diamante-outline.png`}
               alt="Diamante"
-              className="w-6 h-6 object-contain mb-0.5"
+              className="w-6 h-6 object-contain mb-0.5 brightness-0 invert"
             />
             <span className="font-outfit text-lg font-light tracking-wide text-white transition-colors duration-500">
               Evolution Brows

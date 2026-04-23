@@ -18,11 +18,11 @@ const faqs = [
       'Esse evento foi desenhado exatamente para a execução. Não é apenas teoria — são estratégias práticas e demonstrações técnicas reais. A gente foca em clareza para que você saiba exatamente o que fazer na segunda-feira de manhã.',
   },
   {
-    question: 'O evento é somente para profissionais de estética?',
+    question: 'O evento é somente para micropigmentadoras? ',
     answer:
-      'O evento é voltado para profissionais da área de beleza e estética que desejam crescer, se posicionar no mercado e transformar sua carreira.',
+      'Não. O evento é para profissionais que desejam dominar design com henna, Brow lamination, micropigmentação, posicionamento e marketing.',
   },
-  {
+  { 
     question: 'Como funciona o pagamento?',
     answer:
       'Você pode pagar via cartão de crédito, PIX ou boleto bancário. Parcelamento disponível no cartão em até 12x.',

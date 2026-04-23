@@ -10,7 +10,6 @@ import Feedbacks from './components/Feedbacks';
 import Envelope from './components/Envelope';
 import UltimaEdicao from './components/UltimaEdicao';
 import Setores from './components/Setores';
-import SetoresDiamante from './components/SetoresDiamante';
 import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
 
@@ -29,7 +28,6 @@ function App() {
       <Envelope />
       <UltimaEdicao />
       <Setores />
-      <SetoresDiamante />
       <FAQ />
       <CTAFinal />
 
