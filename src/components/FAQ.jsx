@@ -20,7 +20,7 @@ const faqs = [
   {
     question: 'O evento é somente para micropigmentadoras? ',
     answer:
-      'Não. O evento é para profissionais que desejam dominar design com henna, Brow lamination, micropigmentação, posicionamento e marketing.',
+      'Não. O evento é para profissionais que desejam dominar design com henna, brow lamination, micropigmentação, posicionamento e marketing.',
   },
   { 
     question: 'Como funciona o pagamento?',
