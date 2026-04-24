@@ -24,7 +24,7 @@ const CTAFinal = () => {
         {/* Parágrafo */}
         <p className="font-outfit text-base md:text-xl text-white/70 leading-relaxed mb-12">
           Essa decisão define o seu crescimento.<br />
-          Esta é a última edição. As portas para se tornar uma verdadeira Referência estão se fechando. <br />Você vai estar do lado de dentro?
+          Esta é a última edição.<br /> As portas para se tornar uma<br /> verdadeira referência estão se fechando. <br />Você vai estar do lado de dentro?
         </p>
 
         {/* Botão CTA principal */}

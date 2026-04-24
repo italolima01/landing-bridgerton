@@ -7,8 +7,6 @@ import Diferencial from './components/Diferencial';
 import Autoridade from './components/Autoridade';
 import Diamantes from './components/Diamantes';
 import Feedbacks from './components/Feedbacks';
-import Envelope from './components/Envelope';
-import UltimaEdicao from './components/UltimaEdicao';
 import Setores from './components/Setores';
 import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
@@ -28,8 +26,6 @@ function App() {
       <Autoridade />
       <Diamantes />
       <Feedbacks />
-      <Envelope />
-      <UltimaEdicao />
       <Setores />
       <FAQ />
       <CTAFinal />

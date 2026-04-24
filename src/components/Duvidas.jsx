@@ -17,7 +17,7 @@ const Duvidas = () => {
       >
         {/* Título */}
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-black leading-tight mb-4">
-          Ainda tem dúvida?<br />Fala com a gente.
+          Ainda tem alguma dúvida?<br />Fala com a gente.
         </h2>
 
         {/* Descrição */}
