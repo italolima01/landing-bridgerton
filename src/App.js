@@ -12,6 +12,7 @@ import UltimaEdicao from './components/UltimaEdicao';
 import Setores from './components/Setores';
 import FAQ from './components/FAQ';
 import CTAFinal from './components/CTAFinal';
+import Duvidas from './components/Duvidas';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -32,6 +33,7 @@ function App() {
       <Setores />
       <FAQ />
       <CTAFinal />
+      <Duvidas />
       <Footer />
       <WhatsAppButton />
     </div>

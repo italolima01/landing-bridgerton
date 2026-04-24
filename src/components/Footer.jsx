@@ -6,9 +6,6 @@ const Footer = () => {
       <div className="container mx-auto max-w-5xl">
         {/* Logo ou Nome */}
         <div className="mb-8">
-          <h3 className="text-white text-3xl md:text-4xl font-geraldyn font-normal mb-2">
-            Erika Sousa
-          </h3>
           <p className="font-outfit text-white/60 text-sm">
             Transformando profissionais em referências
           </p>

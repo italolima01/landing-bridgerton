@@ -12,11 +12,11 @@ const Evento = () => {
     const initPlayer = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
-        
+
         playerRef.current.setVolume(0).then(() => {
           setIsMuted(true);
         });
-        
+
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -71,10 +71,10 @@ const Evento = () => {
   };
 
   return (
-    <section 
-      id="evento" 
-      className="relative" 
-      style={{ 
+    <section
+      id="evento"
+      className="relative"
+      style={{
         backgroundColor: '#D9B86A',
         scrollMarginTop: '56px'
       }}
@@ -83,35 +83,32 @@ const Evento = () => {
       <div className="absolute inset-0 pointer-events-none" style={{
         boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2), inset 0 0 180px rgba(0,0,0,0.1)'
       }}></div>
-      
+
       <div className="relative z-10 w-full py-20 md:py-32">
         <div className="max-w-6xl mx-auto md:px-8 md:px-16 mb-12">
           {/* Conteúdo */}
-          <div 
+          <div
             ref={leftRef}
-            className={`space-y-8 px-8 md:px-0 ${
-              leftVisible ? '' : ''
-            }`}
+            className={`space-y-8 px-8 md:px-0 ${leftVisible ? '' : ''
+              }`}
           >
 
-            
-            <div className={`text-white text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
+
+            <div className={`text-white text-xs font-bold tracking-[3px] uppercase text-center transition-all duration-800 ${leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
             </div>
-            
-            <h2 className={`font-outfit text-3xl md:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
+
+            <h2 className={`font-outfit text-3xl md:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}>
               O evento que transforma<br className="md:hidden" /> profissionais<br className="hidden md:block" /> comuns em nomes de referência.
             </h2>
           </div>
         </div>
 
         {/* Vídeo */}
-        <div 
+        <div
           className="relative overflow-hidden cursor-pointer w-full md:max-w-5xl md:mx-auto md:px-8 md:px-16"
-          style={{ 
+          style={{
             aspectRatio: '16/9',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
             border: '2px solid rgba(217, 184, 106, 0.3)'
@@ -136,29 +133,29 @@ const Evento = () => {
             className="pointer-events-none"
             title="Vídeo do Evento"
           />
-            
-            {/* Ícone de mute/unmute */}
-            {showIcon && (
-              <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-3 animate-fade-in pointer-events-none">
-                {isMuted ? (
-                  <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                ) : (
-                  <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clipRule="evenodd" />
-                  </svg>
-                )}
-              </div>
-            )}
-          </div>
+
+          {/* Ícone de mute/unmute */}
+          {showIcon && (
+            <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-3 animate-fade-in pointer-events-none">
+              {isMuted ? (
+                <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clipRule="evenodd" />
+                </svg>
+              )}
+            </div>
+          )}
+        </div>
 
         <div className="max-w-6xl mx-auto px-8 md:px-16 mt-12">
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">
               <p className="font-playfair text-xl md:text-3xl text-white/90 italic leading-snug animate-fade-in-up delay-700">
-                E é a última vez que este evento irá acontecer.
+                E é a última vez que este<br /> evento irá acontecer.
               </p>
             </div>
           </div>
