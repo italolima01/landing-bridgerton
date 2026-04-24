@@ -5,24 +5,25 @@ const Duvidas = () => {
   const [ref, visible] = useScrollAnimation();
 
   return (
-    <section className="py-20 px-6" style={{ backgroundColor: '#0d0d0d' }}>
+    <section className="py-20 md:py-32 px-6" style={{ backgroundColor: '#0d0d0d' }}>
       <div
         ref={ref}
-        className={`max-w-md mx-auto rounded-3xl px-8 py-12 text-center shadow-2xl transition-all duration-800 ${
+        className={`max-w-2xl mx-auto rounded-3xl px-8 md:px-12 py-16 md:py-20 text-center shadow-2xl transition-all duration-800 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
         style={{
-          background: 'linear-gradient(135deg, #c9a84c 0%, #a07830 60%, #7a5a1e 100%)',
+          backgroundColor: '#D9B86A',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
         }}
       >
         {/* Título */}
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-black leading-tight mb-4">
+        <h2 className="font-playfair text-2xl md:text-4xl font-bold text-black leading-tight mb-4">
           Ainda tem alguma dúvida?<br />Fala com a gente.
         </h2>
 
         {/* Descrição */}
-        <p className="font-outfit text-base md:text-lg text-black/80 leading-relaxed mb-10">
-          Nosso time vai entender o seu perfil e indicar o melhor ingresso para você sem pressão, sem enrolação.
+        <p className="font-outfit text-base md:text-lg text-black/85 leading-relaxed mb-12">
+          Nosso time vai entender o seu perfil<br /> e indicar o melhor ingresso para você<br /> sem pressão, sem enrolação.
         </p>
 
         {/* Botão WhatsApp */}
@@ -30,7 +31,7 @@ const Duvidas = () => {
           href="https://wa.me/5585989148031"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 w-full py-4 rounded-full font-outfit font-bold text-base tracking-widest uppercase text-black mb-4 transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+          className="flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full font-outfit font-bold text-base md:text-lg tracking-widest uppercase text-black mb-4 transition-all duration-300 hover:brightness-110 hover:scale-[1.02] hover:shadow-xl shadow-lg"
           style={{ backgroundColor: '#25D366' }}
         >
           Suporte WhatsApp
@@ -47,8 +48,8 @@ const Duvidas = () => {
             e.preventDefault();
             document.getElementById('setores')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="flex items-center justify-center gap-3 w-full py-4 rounded-full font-outfit font-bold text-base tracking-widest uppercase text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
-          style={{ backgroundColor: '#8B6010' }}
+          className="flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full font-outfit font-bold text-base md:text-lg tracking-widest uppercase text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+          style={{ backgroundColor: '#b8963f' }}
         >
           Garantir minha vaga
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
