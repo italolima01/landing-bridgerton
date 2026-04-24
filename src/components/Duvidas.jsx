@@ -48,7 +48,7 @@ const Duvidas = () => {
             e.preventDefault();
             document.getElementById('setores')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full font-outfit font-bold text-base md:text-lg tracking-widest uppercase text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] hover:shadow-xl shadow-lg"
+          className="flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full font-outfit font-bold text-base md:text-lg tracking-widest uppercase text-black transition-all duration-300 hover:brightness-110 hover:scale-[1.02] hover:shadow-xl shadow-lg"
           style={{ backgroundColor: '#b8963f' }}
         >
           Garantir minha vaga
