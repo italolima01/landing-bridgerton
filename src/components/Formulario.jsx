@@ -204,7 +204,7 @@ const Formulario = () => {
             <h2 className="font-playfair text-3xl md:text-4xl text-white leading-tight font-semibold">
               Garanta seu lugar antes<br />da abertura oficial
             </h2>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-lg md:text-2xl text-white/80 leading-relaxed">
               Se você deseja parar de ser apenas mais uma profissional
               e finalmente se tornar uma referência no seu mercado…
             </p>

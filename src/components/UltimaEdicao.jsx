@@ -29,12 +29,12 @@ const UltimaEdicao = () => {
         <div className="w-20 h-px bg-white/50 mx-auto mb-8" />
 
         {/* Parágrafo principal */}
-        <p className="font-outfit text-base md:text-lg text-white/90 leading-relaxed mb-10">
+        <p className="font-outfit text-base md:text-xl text-white/90 leading-relaxed mb-10">
           Será histórico. Será inesquecível. E será sem repetição.
         </p>
 
         {/* Frase em itálico */}
-        <p className="font-playfair text-lg md:text-xl text-white/80 italic leading-relaxed">
+        <p className="font-playfair text-lg md:text-2xl text-white/80 italic leading-relaxed">
           Estamos encerrando este capítulo para abrir uma nova era. Não haverá outra
           oportunidade como essa. Esta é a sua chance final de participar do evento que
           definiu a carreira das principais profissionais do mercado.

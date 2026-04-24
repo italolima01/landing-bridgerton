@@ -517,11 +517,11 @@
 }
 
 .animate-scroll-up {
-  animation: scrollUp 20s linear infinite;
+  animation: scrollUp 40s linear infinite;
 }
 
 .animate-scroll-down {
-  animation: scrollDown 20s linear infinite;
+  animation: scrollDown 40s linear infinite;
 }
 
 /* Animações de carrossel horizontal (mobile) */
@@ -551,7 +551,7 @@
   animation: scrollRight 30s linear infinite;
 }
 
-/* Desabilita animações horizontais no desktop */
+/* Desabilita animações horizontais no desktop e habilita verticais */
 @media (min-width: 768px) {
   .animate-scroll-left {
     animation: none;
@@ -559,6 +559,14 @@
   
   .animate-scroll-right {
     animation: none;
+  }
+  
+  .md\:animate-scroll-up {
+    animation: scrollUp 40s linear infinite !important;
+  }
+  
+  .md\:animate-scroll-down {
+    animation: scrollDown 40s linear infinite !important;
   }
 }
 

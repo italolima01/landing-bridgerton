@@ -87,7 +87,7 @@ const Feedbacks = () => {
   };
 
   return (
-    <section className="py-24 md:py-40 relative" style={{
+    <section className="py-16 md:py-40 relative overflow-hidden" style={{
       backgroundColor: '#D9B86A'
     }}>
       {/* Vinheta */}
@@ -103,15 +103,15 @@ const Feedbacks = () => {
         >
           <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           </div>
-          <h2 className="font-outfit text-3xl md:text-4xl text-white text-center mb-16 leading-tight animate-rotate-in delay-200">
-            Algumas experiências terminam. Outras deixam marcas para sempre.
+          <h2 className="font-outfit text-3xl md:text-4xl text-white text-center mb-8 md:mb-12 leading-tight animate-rotate-in delay-200">
+            Algumas experiências terminam.<br />Outras deixam marcas para sempre.
           </h2>
         </div>
 
         {/* Layout com carrosséis e vídeo */}
-        <div className="flex flex-col md:grid md:grid-cols-[0.6fr_2fr_0.6fr] md:gap-0 gap-12 items-center mb-16 w-full">
+        <div className="flex flex-col md:grid md:grid-cols-[1fr_2fr_1fr] gap-6 md:gap-12 md:items-start items-stretch mb-16 w-full">
           {/* Carrossel Esquerdo (Desktop) - Sobe */}
-          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative md:-mr-6 z-10">
+          <div className="w-full h-[200px] md:h-[800px] overflow-hidden relative z-10 md:-mt-32">
             <div className="animate-scroll-left md:animate-scroll-up space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`left-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">
@@ -128,7 +128,7 @@ const Feedbacks = () => {
           {/* Vídeo Central */}
           <div
             ref={videoContainerRef}
-            className="rounded-2xl overflow-hidden relative cursor-pointer w-full"
+            className="overflow-hidden relative cursor-pointer w-full md:self-center md:px-4 md:rounded-2xl"
             style={{
               height: '410px',
               maxWidth: '100%',
@@ -172,7 +172,7 @@ const Feedbacks = () => {
           </div>
 
           {/* Carrossel Direito (Desktop) - Desce */}
-          <div className="w-full md:h-[600px] h-[200px] overflow-hidden relative z-10 md:-ml-6">
+          <div className="w-full h-[200px] md:h-[800px] overflow-hidden relative z-10 md:-mt-32">
             <div className="animate-scroll-right md:animate-scroll-down space-x-4 md:space-x-0 md:space-y-4 flex flex-row md:flex-col">
               {[...feedbacks, ...feedbacks, ...feedbacks, ...feedbacks].map((file, index) => (
                 <div key={`right-${index}`} className="rounded-xl overflow-hidden border border-gold/20 flex-shrink-0 md:w-full">

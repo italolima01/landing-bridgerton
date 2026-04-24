@@ -82,7 +82,7 @@ const Diferencial = () => {
             }`}
           style={{ transitionDelay: '600ms' }}
         >
-          <p className="font-outfit text-lg text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
+          <p className="font-outfit text-lg md:text-xl text-white/90 text-center mb-6 leading-relaxed animate-slide-in-up delay-600">
             Tudo isso conectado a uma visão que te<br />posiciona em outro nível no mercado.
           </p>
 

@@ -105,12 +105,12 @@ const Espaco = () => {
         {/* Título */}
         <div className="text-center mb-12 space-y-6 px-8 md:px-16">
           <h2 className="font-outfit text-3xl md:text-4xl text-white leading-tight font-semibold max-w-4xl mx-auto animate-fade-in-down delay-100">
-            A última temporada da<br />Imersão Evolution Brows não será apenas um evento.
+            A última temporada da<br className="md:hidden" /> Imersão Evolution Brows<br className="hidden md:block" /> não será apenas mais um evento.
           </h2>
         </div>
 
         <div 
-          className="relative overflow-hidden cursor-pointer w-full"
+          className="relative overflow-hidden cursor-pointer w-full md:max-w-5xl md:mx-auto md:px-8 md:px-16"
           style={{ 
             aspectRatio: '16/9',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
