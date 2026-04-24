@@ -84,12 +84,12 @@ const Evento = () => {
         boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2), inset 0 0 180px rgba(0,0,0,0.1)'
       }}></div>
       
-      <div className="relative z-10 w-full pt-8 md:pt-12">
-        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-12 pb-0 md:py-16">
+      <div className="relative z-10 w-full py-20 md:py-32">
+        <div className="max-w-6xl mx-auto md:px-8 md:px-16 mb-12">
           {/* Conteúdo */}
           <div 
             ref={leftRef}
-            className={`space-y-8 mb-0 md:mb-12 ${
+            className={`space-y-8 px-8 md:px-0 ${
               leftVisible ? '' : ''
             }`}
           >
@@ -100,24 +100,21 @@ const Evento = () => {
             }`}>
             </div>
             
-            <h2 className={`font-outfit text-3xl md:text-4xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
+            <h2 className={`font-outfit text-3xl md:text-5xl text-white leading-tight font-semibold text-center transition-all duration-800 delay-100 ${
               leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              O evento que transforma profissionais comuns em nomes de referência
+              O evento que transforma<br className="md:hidden" /> profissionais<br className="hidden md:block" /> comuns em nomes de referência.
             </h2>
           </div>
         </div>
 
-        {/* Vídeo Edge-to-Edge */}
+        {/* Vídeo */}
         <div 
-          className="relative overflow-hidden cursor-pointer w-full mx-auto"
+          className="relative overflow-hidden cursor-pointer w-full md:max-w-5xl md:mx-auto md:px-8 md:px-16"
           style={{ 
-            width: '100%',
             aspectRatio: '16/9',
-            minHeight: '400px',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
-            borderTop: '2px solid rgba(217, 184, 106, 0.3)',
-            borderBottom: '2px solid rgba(217, 184, 106, 0.3)'
+            border: '2px solid rgba(217, 184, 106, 0.3)'
           }}
           onClick={toggleMute}
         >
@@ -156,7 +153,7 @@ const Evento = () => {
             )}
           </div>
 
-        <div className="max-w-6xl mx-auto px-8 md:px-16 pt-2 pb-12 md:pt-8 md:pb-16">
+        <div className="max-w-6xl mx-auto px-8 md:px-16 mt-12">
           {/* Continuação do conteúdo */}
           <div className="space-y-8 text-center">
             <div className="space-y-6">

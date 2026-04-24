@@ -1,7 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 
 const WhatsAppButton = () => {
-  const [position, setPosition] = useState({ x: window.innerWidth - 80, y: window.innerHeight - 80 });
+  const [position, setPosition] = useState(() => ({
+    x: typeof window !== 'undefined' ? window.innerWidth - 80 : 0,
+    y: typeof window !== 'undefined' ? window.innerHeight - 100 : 0
+  }));
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const buttonRef = useRef(null);
@@ -107,11 +110,13 @@ const WhatsAppButton = () => {
       onMouseDown={handleMouseDown}
       onTouchStart={handleTouchStart}
       onClick={handleClick}
-      className="fixed z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl cursor-move select-none animate-pulse-subtle"
+      className="fixed z-[9999] bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl cursor-move select-none animate-pulse-subtle"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         touchAction: 'none',
+        width: '64px',
+        height: '64px',
         transition: isDragging ? 'none' : 'left 0.3s ease-out, top 0.3s ease-out'
       }}
       aria-label="Fale conosco no WhatsApp"

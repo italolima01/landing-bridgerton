@@ -14,21 +14,21 @@ const Setores = () => {
     <section id="setores" className="py-20 md:py-32 px-6 bg-[#0d0d0d]">
       <div
         ref={ref}
-        className={`max-w-2xl mx-auto text-center transition-all duration-800 ${
+        className={`mx-auto text-center transition-all duration-800 ${
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         {/* Cabeçalho */}
-        <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold leading-tight mb-4">
+        <h2 className="font-playfair text-4xl md:text-5xl text-white font-bold leading-tight mb-4 max-w-2xl mx-auto">
           Escolha a sua experiência
         </h2>
-        <p className="font-outfit text-base md:text-lg text-white/70 leading-relaxed mb-16">
+        <p className="font-outfit text-base md:text-xl text-white/70 leading-relaxed mb-16 max-w-2xl mx-auto">
           Selecione o setor que está alinhado com a visão que você tem do seu futuro.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 mx-auto md:items-stretch px-4 md:px-16">
           {/* Card Setor Gold */}
-          <div className="bg-[#181818] rounded-2xl p-8 md:p-10 text-left border-2 border-gold">
+          <div className="bg-[#181818] rounded-2xl p-8 md:p-10 text-left border-2 border-gold flex flex-col">
 
             {/* Badge lote */}
             <span className="text-xs font-bold tracking-[3px] uppercase text-gold mb-3 block">
@@ -55,7 +55,7 @@ const Setores = () => {
             <div className="w-full h-px bg-white/10 mb-8" />
 
             {/* Lista de benefícios */}
-            <ul className="space-y-4">
+            <ul className="space-y-4 mb-12">
               {[
                 'Acesso ao dia do evento',
                 'Demonstrações ao vivo no palco (sobrancelhas, lábios e brow lamination)',
@@ -75,7 +75,7 @@ const Setores = () => {
             </ul>
 
             {/* CTA */}
-            <button className="mt-10 w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
+            <button className="mt-auto w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
               style={{ backgroundColor: 'rgb(130 29 35)' }}
               onClick={() => window.open('https://pay.kiwify.com.br/nZOtrKF', '_blank')}
             >
@@ -84,8 +84,10 @@ const Setores = () => {
           </div>
 
           {/* Card Setor Diamante */}
-          <div className="bg-[#181818] rounded-2xl p-8 md:p-10 text-left relative overflow-hidden transform md:-translate-y-4 border-2" style={{
-            borderImage: 'linear-gradient(135deg, #b9f2ff, #ffffff, #b9f2ff, #ffffff) 1',
+          <div className="bg-[#181818] rounded-2xl p-8 md:p-10 text-left relative overflow-hidden flex flex-col" style={{
+            background: 'linear-gradient(#181818, #181818) padding-box, linear-gradient(135deg, #b9f2ff, #ffffff, #b9f2ff, #ffffff) border-box',
+            border: '2px solid transparent',
+            borderRadius: '1rem',
             boxShadow: '0 0 40px rgba(185, 242, 255, 0.3), inset 0 0 20px rgba(185, 242, 255, 0.1)'
           }}>
 
@@ -132,7 +134,7 @@ const Setores = () => {
             <div className="w-full h-px bg-white/10 mb-8" />
 
             {/* Lista de benefícios */}
-            <ul className="space-y-4">
+            <ul className="space-y-4 mb-12">
               <li className="font-outfit font-bold text-white text-base mb-2">
                 Tudo do Gold, MAIS:
               </li>
@@ -155,7 +157,7 @@ const Setores = () => {
 
             {/* CTA */}
             <button
-              className="mt-10 w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
+              className="mt-auto w-full py-4 rounded-xl font-outfit font-bold text-lg tracking-wide text-white transition-all duration-300 hover:brightness-110 hover:scale-[1.02] animate-pulse-subtle"
               style={{ background: 'linear-gradient(135deg, #c9a84c, #f0d060, #c9a84c)', color: 'black' }}
               onClick={() => window.open('https://pay.kiwify.com.br/CDDj4pN', '_blank')}
             >
