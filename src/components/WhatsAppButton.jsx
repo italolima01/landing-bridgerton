@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 const WhatsAppButton = () => {
   const [position, setPosition] = useState(() => ({
     x: typeof window !== 'undefined' ? window.innerWidth - 80 : 0,
-    y: typeof window !== 'undefined' ? window.innerHeight - 100 : 0
+    y: typeof window !== 'undefined' ? window.innerHeight - 120 : 0
   }));
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
