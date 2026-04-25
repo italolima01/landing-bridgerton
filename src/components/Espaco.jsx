@@ -11,11 +11,11 @@ const Espaco = () => {
     const initPlayer = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
-        
+
         playerRef.current.setVolume(0).then(() => {
           setIsMuted(true);
         });
-        
+
         const playObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -30,7 +30,7 @@ const Espaco = () => {
         if (sectionRef.current) {
           playObserver.observe(sectionRef.current);
         }
-        
+
         const volumeObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -87,20 +87,20 @@ const Espaco = () => {
   };
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className="py-20 md:py-32 bg-cover bg-center relative" 
-      style={{ 
+      className="py-20 md:py-32 bg-cover bg-center relative"
+      style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/writing-letter.webp)`,
       }}
     >
       {/* Degradê superior para transição suave */}
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#4a3f35] to-transparent z-0"></div>
-      
+
       {/* Overlay escuro para legibilidade */}
       <div className="absolute inset-0 bg-black/80"></div>
       <div className="absolute inset-0 bg-[#8B1A1A]/50 mix-blend-multiply"></div>
-      
+
       <div className="relative z-10">
         {/* Título */}
         <div className="text-center mb-12 space-y-6 px-8 md:px-16">
@@ -109,9 +109,9 @@ const Espaco = () => {
           </h2>
         </div>
 
-        <div 
+        <div
           className="relative overflow-hidden cursor-pointer w-full md:max-w-5xl md:mx-auto md:px-8 md:px-16"
-          style={{ 
+          style={{
             aspectRatio: '16/9',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
             border: '2px solid rgba(217, 184, 106, 0.3)'
@@ -123,7 +123,7 @@ const Espaco = () => {
             src="https://player.vimeo.com/video/1185651442?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=0&loop=1&muted=0&controls=0&title=0&byline=0&portrait=0&dnt=1&background=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            loading="lazy"
+            loading="eager"
             style={{
               position: 'absolute',
               top: '50%',
@@ -136,7 +136,7 @@ const Espaco = () => {
             className="pointer-events-none"
             title="Evolution Brows"
           />
-          
+
           {/* Ícone de mute/unmute */}
           {showIcon && (
             <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-3 animate-fade-in pointer-events-none">
@@ -152,7 +152,7 @@ const Espaco = () => {
             </div>
           )}
         </div>
-        
+
         {/* Botão CTA */}
         <div className="flex justify-center mt-12 px-8 md:px-16">
           <button
