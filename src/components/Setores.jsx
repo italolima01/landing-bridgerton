@@ -58,7 +58,7 @@ const Setores = () => {
             <ul className="space-y-4 mb-12">
               {[
                 'Acesso ao dia oficial do evento',
-                'Palestras com demonstração (Brow lamination, micropigmentação e marketing)',
+                'Palestras com demonstração (brow lamination, micropigmentação e marketing)',
                 'Grupo de acompanhamento',
                 'Kit de boas vindas',
                 'Stand de vendas (com descontos exclusivos)',
