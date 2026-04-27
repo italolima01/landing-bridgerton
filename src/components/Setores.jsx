@@ -57,15 +57,13 @@ const Setores = () => {
             {/* Lista de benefícios */}
             <ul className="space-y-4 mb-12">
               {[
-                'Acesso ao dia do evento',
-                'Demonstrações ao vivo no palco (sobrancelhas, lábios e brow lamination)',
-                'Estratégias de marketing e posicionamento',
-                'Assento confortável (mesa e cadeira)',
-                'Kit educacional',
-                'Networking com outras participantes',
-                'Acesso aos estandes com condições especiais',
-                'Certificado de participação',
-                'Brindes dos patrocinadores',
+                'Acesso ao dia oficial do evento',
+                'Palestras com demonstração (Brow lamination, micropigmentação e marketing)',
+                'Grupo de acompanhamento',
+                'Kit de boas vindas',
+                'Stand de vendas (com descontos exclusivos)',
+                'Networking com os congressistas',
+                'Certificado de participação digital',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   {checkIcon}
@@ -135,18 +133,20 @@ const Setores = () => {
 
             {/* Lista de benefícios */}
             <ul className="space-y-4 mb-12">
-              <li className="font-outfit font-bold text-white text-base mb-2">
-                Tudo do Gold, MAIS:
-              </li>
               {[
-                'Assento premium na primeira fila',
-                'Welcome kit premium',
-                'Encontro estratégico pós-evento',
-                'Grupo exclusivo de acompanhamento',
-                'Brindes especiais dos patrocinadores',
-                'Networking VIP com as palestrantes',
-                'Jantar e festa de encerramento',
-                'Experiência ampliada e proximidade do palco',
+                'Acesso ao dia oficial do evento',
+                'Encontro pós evento',
+                'Palestras com demonstração (brow lamination, micropigmentação e marketing)',
+                'Diagnóstico do seu negócio',
+                'Grupo de acompanhamento',
+                'Kit de boas vindas PREMIUM',
+                'Brindes de patrocinadores',
+                'Assento privilegiado (frente ao palco)',
+                'Stand de vendas (com descontos exclusivos)',
+                'Networking com os palestrantes',
+                'Coffe break',
+                'Festa e jantar de encerramento',
+                'Certificado de participação digital',
               ].map((item, i) => (
                 <li key={`diamante-${i}`} className="flex items-start gap-3">
                   {checkIcon}
