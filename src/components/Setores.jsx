@@ -57,15 +57,13 @@ const Setores = () => {
             {/* Lista de benefícios */}
             <ul className="space-y-4 mb-12">
               {[
-                'Acesso ao dia do evento',
-                'Demonstrações ao vivo no palco (sobrancelhas, lábios e brow lamination)',
-                'Estratégias de marketing e posicionamento',
-                'Assento confortável (mesa e cadeira)',
-                'Kit educacional',
-                'Networking com outras participantes',
-                'Acesso aos estandes com condições especiais',
-                'Certificado de participação',
-                'Brindes dos patrocinadores',
+                'Acesso ao dia oficial do evento',
+                'Palestras com demonstração (brow lamination, micropigmentação e marketing)',
+                'Grupo de acompanhamento',
+                'Kit de boas vindas',
+                'Stand de vendas (com descontos exclusivos)',
+                'Networking com os congressistas',
+                'Certificado de participação digital',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   {checkIcon}
