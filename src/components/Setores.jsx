@@ -135,11 +135,14 @@ const Setores = () => {
 
             {/* Lista de benefícios */}
             <ul className="space-y-4 mb-12">
-              <li className="font-outfit font-bold text-white text-base mb-2">
-                Tudo do Gold, MAIS:
-              </li>
               {[
+                'Acesso ao dia do evento',
+                'Demonstrações ao vivo no palco (sobrancelhas, lábios e brow lamination)',
+                'Estratégias de marketing e posicionamento',
                 'Assento premium na primeira fila',
+                'Kit educacional',
+                'Networking com outras participantes',
+                'Acesso aos estandes com condições especiais',
                 'Welcome kit premium',
                 'Encontro estratégico pós-evento',
                 'Grupo exclusivo de acompanhamento',
@@ -147,6 +150,7 @@ const Setores = () => {
                 'Networking VIP com as palestrantes',
                 'Jantar e festa de encerramento',
                 'Experiência ampliada e proximidade do palco',
+                'Certificado de participação',
               ].map((item, i) => (
                 <li key={`diamante-${i}`} className="flex items-start gap-3">
                   {checkIcon}
