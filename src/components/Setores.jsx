@@ -57,8 +57,8 @@ const Setores = () => {
             {/* Lista de benefícios */}
             <ul className="space-y-4 mb-12">
               {[
-                'Acesso ao dia oficial do evento',
-                'Palestras com demonstração (brow lamination, micropigmentação e marketing)',
+                'Acesso ao dia do evento',
+                'Palestras com demonstração (brow lamination, lábios e micropigmentação)',
                 'Grupo de acompanhamento',
                 'Kit de boas vindas',
                 'Stand de vendas (com descontos exclusivos)',
@@ -135,7 +135,7 @@ const Setores = () => {
             <ul className="space-y-4 mb-12">
               {[
                 'Acesso ao dia do evento',
-                'Demonstrações ao vivo no palco (micropigmentação, lábios e brow lamination)',
+                'Palestras com demonstração (brow lamination, lábios e micropigmentação)',
                 'Estratégias de marketing e posicionamento',
                 'Assento premium na primeira fila',
                 'Kit educacional',
