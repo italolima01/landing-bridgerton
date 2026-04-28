@@ -103,7 +103,7 @@ const Feedbacks = () => {
         >
           <div className="text-center text-white text-sm font-bold tracking-[3px] mb-8 animate-fade-in delay-100">
           </div>
-          <h2 className="font-outfit text-2xl md:text-3xl text-white text-center mb-8 md:mb-12 leading-tight animate-rotate-in delay-200">
+          <h2 className="font-outfit text-2xl md:text-4xl text-white text-center mb-8 md:mb-12 leading-tight animate-rotate-in delay-200">
             Algumas experiências terminam.<br />Outras deixam marcas<br /> para sempre.
           </h2>
         </div>
