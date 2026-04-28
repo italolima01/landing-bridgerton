@@ -135,12 +135,12 @@ const Setores = () => {
             <ul className="space-y-4 mb-12">
               {[
                 'Acesso ao dia do evento',
-                'Demonstrações ao vivo no palco (sobrancelhas, lábios e brow lamination)',
+                'Demonstrações ao vivo no palco (micropigmentação, lábios e brow lamination)',
                 'Estratégias de marketing e posicionamento',
                 'Assento premium na primeira fila',
                 'Kit educacional',
                 'Networking com outras participantes',
-                'Acesso aos estandes com condições especiais',
+                'Acesso aos stands com condições especiais',
                 'Welcome kit premium',
                 'Encontro estratégico pós-evento',
                 'Grupo exclusivo de acompanhamento',
