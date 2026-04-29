@@ -4,7 +4,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative flex items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '100vh' }}>
+    <section id="hero" className="relative flex flex-col items-center justify-center text-center px-4 py-8 md:py-16" style={{ backgroundColor: '#4a3f35', minHeight: '100vh' }}>
       {/* Background Image */}
       <div
         className="absolute inset-0 animate-zoom-out"
@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black via-black/70 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl pt-0 md:pt-16 px-4 md:px-8 -mt-12">
+      <div className="relative z-10 max-w-4xl pt-0 md:pt-16 px-4 md:px-8 -mt-12 flex-1 flex flex-col justify-center">
         {/* SVG Filter para textura de tinta */}
         <svg width="0" height="0" style={{ position: 'absolute' }}>
           <defs>
@@ -68,6 +68,13 @@ const Hero = () => {
             </svg>
           </button>
         </div>
+      </div>
+
+      {/* Data na parte inferior */}
+      <div className="relative z-10 mb-12 animate-fade-in-up delay-400">
+        <p className="font-outfit text-white/60 text-sm md:text-base tracking-widest uppercase">
+          21 DE SETEMBRO <span className="mx-3">•</span> FORTALEZA, CEARÁ
+        </p>
       </div>
     </section>
   );
