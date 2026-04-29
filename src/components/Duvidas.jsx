@@ -28,7 +28,7 @@ const Duvidas = () => {
 
         {/* Botão WhatsApp */}
         <a
-          href="https://wa.me/5585989148031"
+          href="https://wa.me/5585997736430"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 w-full py-4 md:py-5 rounded-full font-outfit font-bold text-base md:text-lg tracking-widest uppercase text-black mb-4 transition-all duration-300 hover:brightness-110 hover:scale-[1.02] hover:shadow-xl shadow-lg"
