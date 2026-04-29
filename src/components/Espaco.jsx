@@ -122,10 +122,7 @@ const Espaco = () => {
             aspectRatio: '16/9',
             boxShadow: '0 0 30px rgba(217, 184, 106, 0.4), 0 0 60px rgba(217, 184, 106, 0.2), inset 0 0 20px rgba(217, 184, 106, 0.1)',
             border: '2px solid rgba(217, 184, 106, 0.3)',
-            backgroundColor: '#000',
-            backgroundImage: 'url("https://vumbnail.com/1185651442.jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundColor: '#000'
           }}
           onClick={toggleMute}
         >
