@@ -14,7 +14,8 @@ const feedbacks = [
 
 const Feedbacks = () => {
   const [titleRef, titleVisible] = useScrollAnimation();
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
+  const isMutedRef = useRef(false);
   const [showIcon, setShowIcon] = useState(false);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
@@ -25,22 +26,22 @@ const Feedbacks = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
 
-        playerRef.current.setVolume(0).then(() => {
+        playerRef.current.setVolume(0.3).then(() => {
+          setIsMuted(false);
+          isMutedRef.current = false;
+        }).catch(() => {
+          // Fallback if browser blocks unmuting
           setIsMuted(true);
+          isMutedRef.current = true;
         });
 
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current) {
+              if (playerRef.current && !isMutedRef.current) {
                 const ratio = entry.intersectionRatio;
-                
-                playerRef.current.getVolume().then((currentVolume) => {
-                  if (currentVolume > 0) {
-                    const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
-                    playerRef.current.setVolume(newVolume);
-                  }
-                });
+                const newVolume = Math.max(0, Math.min(0.3, 0.3 * ratio));
+                playerRef.current.setVolume(newVolume);
               }
             });
           },
@@ -76,9 +77,11 @@ const Feedbacks = () => {
         if (volume > 0) {
           playerRef.current.setVolume(0);
           setIsMuted(true);
+          isMutedRef.current = true;
         } else {
           playerRef.current.setVolume(0.3);
           setIsMuted(false);
+          isMutedRef.current = false;
         }
         setShowIcon(true);
         setTimeout(() => setShowIcon(false), 1000);
@@ -140,7 +143,7 @@ const Feedbacks = () => {
           >
             <iframe
               ref={iframeRef}
-              src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&title=0&byline=0&portrait=0&dnt=1"
+              src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=0&controls=0&title=0&byline=0&portrait=0&dnt=1"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               loading="lazy"
