@@ -150,7 +150,7 @@ const Feedbacks = () => {
               src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&playsinline=1&title=0&byline=0&portrait=0&dnt=1"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              loading="lazy"
+              loading="eager"
               className="pointer-events-none absolute"
               style={{ 
                 width: '100%', 
