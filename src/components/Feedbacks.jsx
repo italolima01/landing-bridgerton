@@ -98,7 +98,7 @@ const Feedbacks = () => {
         boxShadow: 'inset 0 0 80px rgba(0,0,0,0.2), inset 0 0 180px rgba(0,0,0,0.1)'
       }}></div>
 
-      
+
       <div className="w-full">
         <div
           ref={titleRef}
@@ -144,13 +144,13 @@ const Feedbacks = () => {
           >
             <iframe
               ref={iframeRef}
-              src="https://player.vimeo.com/video/1181745272?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&playsinline=1&title=0&byline=0&portrait=0&dnt=1"
+              src="https://player.vimeo.com/video/1187866391?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&controls=0&playsinline=1&title=0&byline=0&portrait=0&dnt=1"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               loading="eager"
               className="pointer-events-none absolute"
-              style={{ 
-                width: '100%', 
+              style={{
+                width: '100%',
                 height: '100%',
                 top: '0',
                 left: '0',
@@ -193,7 +193,7 @@ const Feedbacks = () => {
           </div>
         </div>
       </div>
-      
+
 
     </section>
   );
