@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const Espaco = () => {
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
+  const isMutedRef = useRef(false);
   const [showIcon, setShowIcon] = useState(false);
   const iframeRef = useRef(null);
   const playerRef = useRef(null);
@@ -12,8 +13,12 @@ const Espaco = () => {
       if (iframeRef.current && window.Vimeo) {
         playerRef.current = new window.Vimeo.Player(iframeRef.current);
 
-        playerRef.current.setVolume(0).then(() => {
+        playerRef.current.setVolume(0.5).then(() => {
+          setIsMuted(false);
+          isMutedRef.current = false;
+        }).catch(() => {
           setIsMuted(true);
+          isMutedRef.current = true;
         });
 
         const playObserver = new IntersectionObserver(
@@ -34,7 +39,7 @@ const Espaco = () => {
         const volumeObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (playerRef.current && !isMuted) {
+              if (playerRef.current && !isMutedRef.current) {
                 const ratio = entry.intersectionRatio;
                 const newVolume = Math.max(0, Math.min(0.5, 0.5 * ratio));
                 playerRef.current.setVolume(newVolume);
@@ -68,7 +73,7 @@ const Espaco = () => {
       }, 100);
       return () => clearInterval(timer);
     }
-  }, [isMuted]);
+  }, []);
 
   const toggleMute = () => {
     if (playerRef.current) {
@@ -76,9 +81,11 @@ const Espaco = () => {
         if (volume > 0) {
           playerRef.current.setVolume(0);
           setIsMuted(true);
+          isMutedRef.current = true;
         } else {
           playerRef.current.setVolume(0.5);
           setIsMuted(false);
+          isMutedRef.current = false;
         }
         setShowIcon(true);
         setTimeout(() => setShowIcon(false), 1000);
@@ -120,7 +127,7 @@ const Espaco = () => {
         >
           <iframe
             ref={iframeRef}
-            src="https://player.vimeo.com/video/1185651442?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=0&loop=1&muted=0&controls=0&title=0&byline=0&portrait=0&dnt=1&background=1"
+            src="https://player.vimeo.com/video/1185651442?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=0&controls=0&title=0&byline=0&portrait=0&dnt=1"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             loading="eager"

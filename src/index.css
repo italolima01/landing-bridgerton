@@ -552,11 +552,11 @@
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 15s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 15s linear infinite;
 }
 
 /* Desabilita animações horizontais no desktop e habilita verticais */
